@@ -1,0 +1,36 @@
+Day 1 – Setup + Ingestion
+- Load PDFs/CSVs using LangChain loaders
+- Clean + chunk text
+- Create embeddings
+- Store in FAISS/Chroma
+
+Day 2 – RAG Pipeline
+- Build retrieval pipeline
+- Connect retriever → LLM
+- Add prompt template
+- Test Q&A accuracy
+
+Day 3 – UI + Logging
+- Build Streamlit UI
+- Add chat history
+- Log responses + latency
+
+Day 4 – Evaluation + Optimization
+- Add simple evaluation metrics (faithfulness, relevance)
+- Optimize chunk size + retriever settings
+
+Day 5 (Optional) – Deployment
+- Dockerize app
+- Deploy on HuggingFace Spaces
+
+
+rag-assistant/
+├── app.py
+├── ingestion.py   done
+├── retriever.py   done
+├── prompts.py
+├── vector_store/
+├── logs/
+├── Dockerfile
+├── requirements.txt
+└── README.md
