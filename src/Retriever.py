@@ -7,13 +7,7 @@ This stage includes:
 3. Context construction
 """
 
-# import dependencies
-import faiss
-import pickle
-import numpy as np
-from sentence_transformers import SentenceTransformer
-
-def search_query(index,query,k,chunks):
+def search_query(embedding_model,index,query,k,chunks):
     """
     returns top K results for given query
 
@@ -115,23 +109,3 @@ def build_context(results,debug=False):
     Final_context = "\n\n".join(Final_context)
     return Final_context
 
-# restoring persistent data
-index = faiss.read_index("Persistent_data/FAISS.index") # index
-
-with open('Persistent_data/embeddings.pkl', 'rb') as f: # Load embeddings from Pickle
-    embeddings = pickle.load(f)
-
-with open('Persistent_data/text_chunks.pkl', 'rb') as f: # Load chunks from pickle
-    text_chunks = pickle.load(f)
-
-# embedding model 'e5-base-v2' loading
-embedding_model = SentenceTransformer('intfloat/e5-base-v2')
-
-while 1:
-    query = str(input("enter your query: "))
-    # searching query in Database
-    results = search_query(index,query,5,text_chunks)
-    print(results)
-    print(build_context(results))
-
-    

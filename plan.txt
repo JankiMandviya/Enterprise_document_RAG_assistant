@@ -8,16 +8,18 @@ Day 2 – RAG Pipeline
 - Build retrieval pipeline
 - Connect retriever → LLM
 - Add prompt template
-- Test Q&A accuracy
+- Test Q&A accuracy with strict and relax prompt
+- selecting strict/relax prompt according to query.
+- Tool calling + structured outputs
 
 Day 3 – UI + Logging
 - Build Streamlit UI
-- Add chat history
+- Add chat history + structured outputs
 - Log responses + latency
 
 Day 4 – Evaluation + Optimization
-- Add simple evaluation metrics (faithfulness, relevance)
-- Optimize chunk size + retriever settings
+- Add simple evaluation metrics (faithfulness, relevance, recall)
+- Optimize chunk size + retriever settings, overlap, llm temperature etc.
 
 Day 5 (Optional) – Deployment
 - Dockerize app
@@ -29,8 +31,264 @@ rag-assistant/
 ├── ingestion.py   done
 ├── retriever.py   done
 ├── prompts.py
-├── vector_store/
+├── vector_store/  done
 ├── logs/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+
+
+strict/relax prompt selection according to query or domain
+reranking
+
+Stage 6: Tool calling + structured outputs
+
+Stage 7: Chat history / conversational RAG
+
+Stage 8: Evaluation + metrics (faithfulness, recall) + optimization of chunk length,overlap, llm temperature etc.
+
+Stage 9: Caching, streaming, latency optimization
+
+Stage 10: Multi-document + multi-modal
+UI with streamlit
+deployment using docker in hugging face spaces
+
+
+
+
+🟢 STAGE 1 — Data Ingestion & Indexing (Foundation)
+
+Goal: clean, searchable knowledge base
+
+Tasks
+
+Load PDFs / CSVs
+
+Normalize text
+
+Chunking strategy
+
+Metadata enrichment
+
+Embedding generation
+
+Vector store (FAISS)
+
+Key decisions
+
+Chunk size (300–600 tokens)
+
+Overlap (50–100 tokens)
+
+Metadata fields:
+
+page
+
+source
+
+title
+
+section
+
+📌 Output: vector index + metadata
+
+🟢 STAGE 2 — Retrieval Layer
+
+Goal: fetch the right context
+
+Tasks
+
+Top-k retrieval
+
+Score thresholding
+
+Metadata filtering
+
+Domain-aware retrieval
+
+Enhancements
+
+Query expansion
+
+Hybrid retrieval (BM25 + vectors)
+
+Re-ranking (cross encoder)
+
+📌 Output: ranked context chunks
+
+🟢 STAGE 3 — Prompt Orchestration (Your core strength)
+
+Goal: hallucination control
+
+Prompt types
+
+STRICT
+
+factual
+
+medical
+
+legal
+
+RELAXED
+
+explanatory
+
+conceptual
+
+Logic
+Query → classifier → strict / relax prompt
+
+Rules
+
+Answer only from context
+
+Mandatory citations
+
+Explicit “Not found” fallback
+
+📌 Output: final prompt
+
+🟢 STAGE 4 — LLM Orchestrator
+
+Goal: stable + fast inference
+
+Tasks
+
+Ollama adapter
+
+Streaming support
+
+Retry logic
+
+Timeout handling
+
+Model switching
+
+Dev vs Prod
+Purpose	Model
+Dev	mistral / phi3
+Eval	llama3
+Prod	llama3 / remote API
+
+📌 Output: raw LLM response
+
+🟢 STAGE 5 — Post-Processing Layer
+
+Goal: structure + safety
+
+Tasks
+
+Parse answer
+
+Validate citations
+
+Remove hallucinated refs
+
+Enforce schema (JSON)
+
+Tools
+
+Regex
+
+Pydantic
+
+JSON schema validation
+
+📌 Output: trusted answer object
+
+🟢 STAGE 6 — Tool Calling + Structured Output
+
+Goal: future extensibility
+
+Examples
+
+Document lookup
+
+Page jump
+
+Summary tool
+
+Explanation tool
+
+Output format
+{
+  "answer": "...",
+  "citations": [...],
+  "confidence": 0.87
+}
+
+🟢 STAGE 7 — Conversational RAG
+
+Goal: memory without drift
+
+Tasks
+
+Chat history compression
+
+Context window control
+
+Follow-up question handling
+
+Rule
+
+Never retrieve on full history
+
+Only last user intent
+
+🟢 STAGE 8 — Evaluation & Metrics
+
+Goal: measurable quality
+
+Metrics
+
+Faithfulness
+
+Context recall
+
+Citation precision
+
+Latency
+
+Tools
+
+Manual eval set
+
+LLM-as-judge (optional)
+
+🟢 STAGE 9 — Performance Optimization
+
+Goal: sub-5s responses
+
+Techniques
+
+Caching embeddings
+
+Context caching
+
+Streaming
+
+Chunk tuning
+
+Model switching
+
+Async calls
+
+🟢 STAGE 10 — UI + Deployment
+UI
+
+Streamlit
+
+Chat history
+
+Source viewer
+
+Latency display
+
+Deployment
+
+Docker
+
+HuggingFace Spaces
+
+CPU first, GPU later
