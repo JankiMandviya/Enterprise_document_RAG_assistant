@@ -11,8 +11,10 @@ This stage includes:
 """
 import requests
 from langchain_core.prompts import PromptTemplate
+import time
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
+LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
 
 # load prompt : first test with strict prompt
 def promptBuilder(Final_context, user_query):
@@ -37,24 +39,64 @@ def promptBuilder(Final_context, user_query):
     prompt = t.format(content = Final_context, query = user_query)
     return prompt
 
-def CallLLM(prompt):
-    headers = {
-    "Content-Type": "application/json"
-    }
+# def CallLLM(prompt):  # using ollama
+#     headers = {
+#     "Content-Type": "application/json"
+#     }
 
+#     payload = {
+#         "model" : "mistral:7b-instruct-q4_0",
+#         "prompt" : prompt,
+#         "stream" : False,
+#         "options": {
+#             "temperature": 0.1,
+#             "top_p": 0.9,
+#             "num_predict": 512
+#         }
+#     }
+#     print("hello 1")
+#     start = time.time()
+#     response = requests.post(OLLAMA_URL, json=payload, headers = headers)
+#     print("hello 2")
+#     end = time.time()
+#     print(end-start)
+#     response.raise_for_status() # raises HTTP error if any occurs.
+
+#     return response.json()["response"]
+
+def CallLLM(final_prompt):   # using LM studio
+    """
+    Call LLM and pass final prompt to it and return text response
+
+    Args:
+    final_prompt: final prompt with context and query in string format
+
+    Returns:
+    response content
+    """
+
+    # LM studio requires following format of input data to model
     payload = {
-        "model" : "mistral:7b-instruct-q4_0",
-        "prompt" : prompt,
-        "stream" : False,
-        "options": {
-            "temperature": 0.1,
-            "top_p": 0.9,
-            "num_predict": 512
-        }
+        "model": "mistralai/mistral-7b-instruct-v0.3",
+        "messages": [
+            {
+                "role": "user",
+                "content": final_prompt
+            }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 512,
+        "stream": False
     }
-    print("hello 1")
-    response = requests.post(OLLAMA_URL, json=payload, headers = headers)
-    print("hello 2")
-    response.raise_for_status() # raises HTTP error if any occurs.
 
-    return response.json()["response"]
+    headers = {"Content-Type": "application/json"}  
+    print("hello 1")
+    start = time.time()
+    response = requests.post(LM_STUDIO_URL, json=payload, headers=headers)
+    end = time.time()
+    print(end-start)
+    print("hello 2")
+    response.raise_for_status()
+
+    return response.json()["choices"][0]["message"]["content"]
