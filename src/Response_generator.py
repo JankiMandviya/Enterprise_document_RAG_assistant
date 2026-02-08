@@ -28,7 +28,7 @@ def promptBuilder(Final_context, user_query):
     Returns:
     Final prompt containing all information ready to be fed to LLM
     """
-    with open('src/Strict_LLM_prompt.txt','r') as f:
+    with open('src/Relaxed_LLM_prompt.txt','r') as f:
         prompt_template = f.read()
 
     t = PromptTemplate(

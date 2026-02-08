@@ -1,13 +1,13 @@
-Day 1 – Setup + Ingestion
+Day 1 – Setup + Ingestion    -- done
 - Load PDFs/CSVs using LangChain loaders
 - Clean + chunk text
 - Create embeddings
 - Store in FAISS/Chroma
 
-Day 2 – RAG Pipeline
+Day 2 – RAG Pipeline         
 - Build retrieval pipeline
 - Connect retriever → LLM
-- Add prompt template
+- Add prompt template                  -- done getting response from llm
 - Test Q&A accuracy with strict and relax prompt
 - selecting strict/relax prompt according to query.
 - Tool calling + structured outputs
@@ -30,7 +30,7 @@ rag-assistant/
 ├── app.py
 ├── ingestion.py   done
 ├── retriever.py   done
-├── prompts.py
+├── prompts.py     done llms 
 ├── vector_store/  done
 ├── logs/
 ├── Dockerfile
@@ -56,42 +56,6 @@ deployment using docker in hugging face spaces
 
 
 
-🟢 STAGE 1 — Data Ingestion & Indexing (Foundation)
-
-Goal: clean, searchable knowledge base
-
-Tasks
-
-Load PDFs / CSVs
-
-Normalize text
-
-Chunking strategy
-
-Metadata enrichment
-
-Embedding generation
-
-Vector store (FAISS)
-
-Key decisions
-
-Chunk size (300–600 tokens)
-
-Overlap (50–100 tokens)
-
-Metadata fields:
-
-page
-
-source
-
-title
-
-section
-
-📌 Output: vector index + metadata
-
 🟢 STAGE 2 — Retrieval Layer
 
 Goal: fetch the right context
@@ -104,15 +68,15 @@ Score thresholding
 
 Metadata filtering
 
-Domain-aware retrieval
+Domain-aware retrieval     **
 
-Enhancements
+Enhancements            **
 
-Query expansion
+Query expansion                 **
 
-Hybrid retrieval (BM25 + vectors)
+Hybrid retrieval (BM25 + vectors)   **
 
-Re-ranking (cross encoder)
+Re-ranking (cross encoder)     **
 
 📌 Output: ranked context chunks
 
