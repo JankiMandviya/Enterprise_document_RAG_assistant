@@ -16,21 +16,52 @@ import time
 OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
 
+def promptSelector(query,chunks):
+    # query intent selection:(strict/relax)
+    threshold = 0.80
+    StrongChunks = 0
+    query = query.lower()
+
+    strict_triggers = [
+        "what is", "what are", "who", "why", "when", "where", "according to", "define", "how to", "what"
+    ]
+
+    for chunk in chunks:
+        if chunk['similarity_score'] >= threshold:
+            StrongChunks += 1
+
+    for trigger in strict_triggers:
+        if trigger in query:
+            return "strict"
+
+    if StrongChunks<1:
+        return "strict"
+
+    return "relax"
+
+
 # load prompt : first test with strict prompt
-def promptBuilder(Final_context, user_query):
+def promptBuilder(Final_context, user_query, mode):
     """
     take prompt template and insert custom context and query in it.
 
     Args:
     Final_context: take context in string format
     user_query: original query entered by user
+    mode: decides template selection. Possible values:["relax","strict"]
 
     Returns:
     Final prompt containing all information ready to be fed to LLM
     """
-    with open('src/Relaxed_LLM_prompt.txt','r') as f:
-        prompt_template = f.read()
-
+    if mode == "relax":
+        print("relaxed mode")
+        with open('src/Relaxed_LLM_prompt.txt','r') as f:
+            prompt_template = f.read()
+    else:
+        print("strict mode")
+        with open('src/Strict_LLM_prompt.txt','r') as f:
+            prompt_template = f.read()
+        
     t = PromptTemplate(
         input_variables = ["content", "query"],
         template = prompt_template
@@ -96,7 +127,6 @@ def CallLLM(final_prompt):   # using LM studio
     response = requests.post(LM_STUDIO_URL, json=payload, headers=headers)
     end = time.time()
     print(end-start)
-    print("hello 2")
     response.raise_for_status()
 
     return response.json()["choices"][0]["message"]["content"]

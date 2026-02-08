@@ -4,7 +4,7 @@ Rules:
 - Use ONLY the provided CONTEXT.
 - Do NOT add external knowledge or assumptions.
 - Use short paragraphs or bullet points where helpful.
-- You may rephrase or summarize, but do not add new information.
+- You may rephrase, summarize, reason, or explain, but do not add new information.
 - If partially answered, answer only supported parts and state limits.
 - If the user asks for instructions, steps, methods, recipes, or procedures, and the context does not explicitly describe those steps, you MUST respond only with "I don' know based on the provided context." Do not add related information.
 - If the context does not contain the answer, respond:

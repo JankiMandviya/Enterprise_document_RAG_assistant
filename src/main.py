@@ -23,9 +23,16 @@ while 1:
     # searching query in Database
     results = Retriever.search_query(embedding_model,index,query,5,text_chunks)
     # print(results)
-    Final_context = Retriever.build_context(results)
-    Final_prompt = Response_generator.promptBuilder(Final_context, query)
-    print(Final_prompt)
+
+    # select whether to take relaxed prompt or strict prompt
+    mode = Response_generator.promptSelector(query,results)
+
+    # build context ready to be fed to LLM
+    Final_context = Retriever.build_context(results, debug=True)
+    print(Final_context)
+    # build prompt by replacing context and query in selected mode's template
+    Final_prompt = Response_generator.promptBuilder(Final_context, query, mode)
+    # print(Final_prompt)
     RAW_response = Response_generator.CallLLM(Final_prompt)
     print(RAW_response)
 
