@@ -20,13 +20,18 @@ print("3")
 # embedding model 'e5-base-v2' loading
 embedding_model = SentenceTransformer('intfloat/e5-base-v2')
 print("4")
+
 while 1:
     session = "abc123"
+
     query = str(input("enter your query: "))
-    chat_history.save_message(session, "user", query) # save user message to db
+
     print("10")
     # session_history = chat_history.get_session_history(session)      # get session history from in memory store
     session_history = chat_history.load_session_history(session, conversations = 5) # get session history from db
+
+    chat_history.save_message(session,"random", "user", query) # save user message to db
+    
     print("15")
     rewritten_query = chat_history.rewrite_query(query,session_history)
 
@@ -45,10 +50,10 @@ while 1:
     # print(Final_prompt)
     RAW_response = Response_generator.CallLLM(Final_prompt)
     # print(RAW_response)
-    clean_answer = chat_history.extract_clean_response(RAW_response)
+    # clean_answer = chat_history.extract_clean_response(RAW_response)
 
     # print(chat_history.save_session_history(session,query,clean_answer)) # save history to local in memory store
-    chat_history.save_message(session, "AI", clean_answer) # save AI message to db
+    chat_history.save_message(session, "random","AI", RAW_response) # save original raw response in AI message to db
     # print(store)
 
 

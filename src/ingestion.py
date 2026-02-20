@@ -13,10 +13,19 @@ This stage includes:
 # import dependencies
 import faiss
 import pickle
+import os
 import numpy as np
+import chat_history
+from threading import Lock
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
+
+
+# embedding model 'e5-base-v2' loading
+embedding_model = SentenceTransformer('intfloat/e5-base-v2')
+index_path = "../Persistent_data/FAISS.index"
+faiss_lock = Lock()  # lock to prevent two/multiple simultaneous read/write operations on FAISS. It stops FAISS from getting corrupted and multiple overwrites of each other's data.
 
 def text_cleaner(docs):
     """
@@ -45,12 +54,28 @@ def sentence_transformer_inputData(chunks):
         inputData.append("passage: "+chunk.page_content)
     return inputData
 
-if __name__ == "__main__":
-    # embedding model 'e5-base-v2' loading
-    embedding_model = SentenceTransformer('intfloat/e5-base-v2')
+def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
+    print("inside document embedding generator")
+    db = next(chat_history.get_db())
+    chunk_ids = []
+    current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
 
-    # loading documents
-    file_path = "Documentation_demo/book.pdf"
+    # ----------------------------
+    # Check document exists
+    # ----------------------------
+    current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+
+    if not current_doc:
+        print("Document does not exist. Aborting.")
+        return
+    
+    current_doc.status = "processing" # The document is in processing stage. # type: ignore
+
+    # ----------------------------
+    # Load & process document
+    # ----------------------------
+
+    file_path = filepath
     loader = PyPDFLoader(file_path)
     docs = loader.load()
     # print(docs[5].page_content[:300])  # extract first 300 characters of content on 6th page 
@@ -79,7 +104,7 @@ if __name__ == "__main__":
     # Dot product == cosine similarity
     # Ready for:
     # manual similarity
-    embeddings = embedding_model.encode(input_texts, normalize_embeddings=True)  
+    embeddings = embedding_model.encode(input_texts, normalize_embeddings=True).astype("float32")
     print(embeddings.shape)
     print(embeddings[0].dtype)
     #--------------test code------------------------------------------
@@ -94,22 +119,74 @@ if __name__ == "__main__":
     #     print(text_chunks[k])
     #-------------------------------------------------------------------
 
-    # Adding data in FAISS database
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatIP(dimension)  # using flat index which uses Internal product while searching. since we already have normalized index, we can get cosine similarity by directly doing dot products of vectors.
-    print("index: ",index)
-    index.add(embeddings) # type: ignore
-    print("Total vectors in index:", index.ntotal)
+    # Appending document data in FAISS database
+    # saving original chunks (cleaned chunk content[not embedding of it], metadata[title, source, page], index at which this chunk is stored in vector DB, session id and document id of this chunk) in SQLite db.
+    try:
 
-    # persisting data for other modules in Disk.
-    faiss.write_index(index, "Persistent_data/FAISS.index")  # saving index with data 
-    
-    # Save embeddings to Pickle
-    with open('Persistent_data/embeddings.pkl', 'wb') as f:
-        pickle.dump(embeddings, f)
+        # ----------------------------
+        # FAISS + DB
+        # ----------------------------
 
-    # save chunks to pickle
-    with open('Persistent_data/text_chunks.pkl', 'wb') as f:
-        pickle.dump(text_chunks, f)
+        with faiss_lock:
 
+            # Re-check document not deleted
+            db.expire_all()
+            current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+
+            if not current_doc:
+                print("Document deleted mid-process. Aborting safely.")
+                return
+            
+            # load existing index file or create new if doesn't exist
+            if os.path.exists(index_path):
+                index = faiss.read_index(index_path)
+            else:
+                dimension = embeddings.shape[1]
+                index = faiss.IndexIDMap(faiss.IndexFlatIP(dimension)) # using flat index which uses Internal product while searching. since we already have normalized index, we can get cosine similarity by directly doing dot products of vectors.
+
+            # save metadata and chunk content with vector position in FAISS in db first
+            for i,chunk in enumerate(text_chunks):
+                chunk_entry = chat_history.DocumentChunk(session_id = session_id, document_id = doc_id, chunk_text= chunk.page_content, doc_title = chunk.metadata.get('title',"Title unavailable"), doc_source = chunk.metadata.get('source',"Source unavailable") ,page_number = chunk.metadata.get('page',0))
+                db.add(chunk_entry)  # db.add() does NOT save to database. it just asks sqlalchemy to remember the object to add later during commit()
+            
+            db.commit()  # Nothing is permanently written to SQLite until you commit(). commit() saves all pending changes permanently to the database. If app crashes before commit(), the data is lost. 
+
+            # update FAISS index with this documents chunks. For each embedding give respective unique chunk id as well to map between FAISS chunk embedding and SQLite chunk metadata and content.
+            chunks = db.query(chat_history.DocumentChunk).filter(chat_history.DocumentChunk.document_id == doc_id).all()  # get all chunks of document whose id matches with doc_id. returns list of objects of type DocumentChunk
+            for chunk in chunks:                    # for each chunk in chunks, find unique primary key chunk id from object and append it in list
+                chunk_ids.append(chunk.id)
+            chunk_ids = np.array(chunk_ids).astype("int64")  # this ids must be in numpy array.
+            index.add_with_ids(embeddings, chunk_ids)  # add new document embeddings in index (already existing index or new index) along with respective chunk id. # type: ignore
+            print("new embeddings will be stored from {}".format(index.ntotal))
+            
+            # persisting data for other modules in Disk.
+            faiss.write_index(index, index_path)  # saving index with data   
+            
+            # ----------------------------
+            # Final status update
+            # ----------------------------
+            db.expire_all()
+            current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+
+            if current_doc:
+                current_doc.status = "completed" # type: ignore
+                db.commit()
+            else:
+                print("Document deleted before completion update.")
+
+    except chat_history.SQLAlchemyError:
+        print("Error adding chunks to SQLite")
+        db.rollback()
+
+        # Try marking failed only if doc still exists
+        doc_check = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+
+        if doc_check:
+            doc_check.status = "failed" # type: ignore
+            db.commit()
+
+    finally:
+        db.close()
+
+    print("returning from document_embedding_generator")
 
