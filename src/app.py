@@ -4,89 +4,14 @@ This module contain User interface for RAG system.
 """
 import os
 import uuid
+import hashlib
 import streamlit as st
-import ingestion
 import chat_history
+import ingestion
 import Retriever
 import Response_generator
 
 st.header(":blue[DocuMind] : Chat with your documents !")
-
-# initialize session variables at the start once
-# if 'model' not in st.session_state:
-    # st.session_state['model'] = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
-# if 'messages' not in st.session_state:
-#     st.session_state['messages'] = []
-
-
-# Using object notation
-# add_selectbox = st.sidebar.selectbox(
-#     "Advanced Settings",
-#     ("User mode","Developer mode")
-# )
-
-# sidebar = st.sidebar
-# with sidebar:
-#     if st.button("Advanced settings"):
-#         add_selectbox = st.sidebar.selectbox(
-#             "Advanced Settings",
-#             ("User mode","Developer mode")
-#         )
-
-# Using "with" notation
-# with st.sidebar:
-#     history_pannel = st.radio(
-#         "Choose a shipping method",
-#         ("Standard (5-15 days)", "Express (2-5 days)")
-#     )
-
-
-# update the interface with the previous messages
-# for message in st.session_state['messages']:
-#     with st.chat_message(message['role']):
-#         st.markdown(message['content'])
-
-# create the chat interface
-# if prompt := st.chat_input(
-#     "Ask a query and/or attach an image",
-#     accept_file=True,
-#     file_type=["pdf"],
-# ):
-#     st.session_state['messages'].append({"role": "user", "content": prompt})
-#     with st.chat_message('user'):
-#         st.markdown(prompt.text)
-#         st.session_state['messages'].append({"role": "assistant", "content": prompt.text})
-
-    # get response from the model
-    # with st.chat_message('assistant'):
-    #     client = st.session_state['model']
-    #     stream = client.chat.completions.create(
-    #         model='gpt-3.5-turbo',
-    #         messages=[
-    #             {"role": message["role"], "content": message["content"]} for message in st.session_state['messages']
-    #         ],
-    #         temperature=temperature,
-    #         max_tokens=max_tokens,
-    #         stream=True
-    #     )
-
-        # response = st.write_stream(stream)
-    # st.session_state['messages'].append({"role": "assistant", "content": prompt.text})
-
-
-
-# prompt = st.chat_input(
-#     "Ask a query and/or attach an image",
-#     accept_file=True,
-#     file_type=["pdf"],
-# )
-
-# if prompt and prompt.text:
-#     st.markdown(prompt.text)
-# if prompt and prompt["files"]:
-#     st.markdown("got a file")
-#     st.pdf(prompt["files"][0])
 
 sessions = chat_history.return_all_sessions()
 DOCUMENT_FOLDER = "../stored_documents"
@@ -158,6 +83,9 @@ def create_or_load_session(isNewChat:bool):
 # if 'session_id' not in st.session_state:
 #     st.session_state['session_id'] = uuid.uuid4()
 
+if "processed_files" not in st.session_state:     # check if "processed_files" exists inside session_state dictionary maintained by streamlit
+    st.session_state.processed_files = {}         # if session_state dictionary empty during app initialization, create new processed_files dictionary inside session_state in memory.
+
 
 # button for new chat/session creation
 if st.sidebar.button("➕ New Chat"):
@@ -196,39 +124,55 @@ if docs:
     for doc in docs:
         st.write(f"📄 {doc.filename}")
 
-# if a new file is uploaded
+#----------------------{ if a new file is uploaded }-------------------------
+
+# st.session_state = {
+#     "processed_files": {
+#         "current_session_id": set()
+#     }
+# }
+
+# check if current session id exists as key in processed_files dictionary.
+# if no -> create new key with current_session_id and make a set for it to store document hash to prevent duplication of documents in vector DB and SQlite.
+if current_Session_id not in st.session_state.processed_files:
+    st.session_state.processed_files[current_Session_id] = set()
+
 if uploaded_file:
-    db = next(chat_history.get_db())
+    # create unique hash for a document(not document id).
+    # getvalue() : returns raw bytes of file
+    # md5() : creates a fingerprint
+    # haxdigest() : converts to string
+    file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
 
-    # Save file to disk
-    file_path = os.path.join(DOCUMENT_FOLDER, uploaded_file.name)
+    # if the file_hash doesn't exist in set(), process this new document and then add the hash to the set.
+    if file_hash not in st.session_state.processed_files[current_Session_id]:
+        db = next(chat_history.get_db())
 
-    with open(file_path, "wb") as f:
-        f.write(uploaded_file.getbuffer())
-    
-    # get session in which the document is uploaded and save this document in Document table
-    doc_Session = st.query_params["key"]
-    doc_id,session_id = chat_history.save_doc_to_table(doc_Session, uploaded_file.name)
-    
-    # inject embeddings of this document in DocumentChunk table
-    ingestion.document_embedding_generator(file_path, doc_id, session_id) # type: ignore
+        # Save file to disk
+        file_path = os.path.join(DOCUMENT_FOLDER, uploaded_file.name)
 
-    # show document below uploader in UI
-    docs = chat_history.return_all_documents(session_id)
-    st.markdown("### Uploaded Documents")
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.getbuffer())
+        
+        # get session in which the document is uploaded and save this document in Document table
+        doc_Session = st.query_params["key"]
+        doc_id,session_id = chat_history.save_doc_to_table(doc_Session, uploaded_file.name)
+        
+        # inject embeddings of this document in DocumentChunk table
+        ingestion.document_embedding_generator(file_path, doc_id, session_id) # type: ignore
 
-    for doc in docs:
-        st.write(f"📄 {doc.filename}")
-    
-    # Clear uploader
-    st.session_state.pdf_uploader = None
+        st.session_state.processed_files[current_Session_id].add(file_hash)
+        st.success("Document processed Successfully.")
 
-    # Now rerun the script
-    st.rerun()
+        # show document below uploader in UI
+        docs = chat_history.return_all_documents(session_id)
+        st.markdown("### Uploaded Documents")
 
-
-
-# if user enters a prompt/query
+        for doc in docs:
+            st.write(f"📄 {doc.filename}")
+    else:
+        st.error("document already exists")
+#----------------------{ if user enters a prompt/query }-----------------------------
 if prompt:
     query = prompt
     session_history = chat_history.load_session_history(current_Session_id, conversations = 5) # get session history from db

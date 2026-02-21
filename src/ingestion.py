@@ -27,6 +27,16 @@ embedding_model = SentenceTransformer('intfloat/e5-base-v2')
 index_path = "../Persistent_data/FAISS.index"
 faiss_lock = Lock()  # lock to prevent two/multiple simultaneous read/write operations on FAISS. It stops FAISS from getting corrupted and multiple overwrites of each other's data.
 
+dimension = 768  # Sentence transformer 'intfloat/e5-base-v2' outputs embedding vector of dimension 768.
+
+if os.path.exists(index_path):
+    index = faiss.read_index(index_path)
+else:
+    index = faiss.IndexIDMap(
+        faiss.IndexFlatIP(dimension)
+    )
+    faiss.write_index(index, index_path)
+
 def text_cleaner(docs):
     """
     cleans text by removing leading, trailing whitespaces and removing tabs and replacing it with 1 whitespace.

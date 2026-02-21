@@ -21,14 +21,8 @@ from sqlalchemy.orm import sessionmaker, relationship, declarative_base
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Mapped, mapped_column
 from langchain_core.prompts import PromptTemplate
-# from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-# from langchain.chains.combine_documents import create_stuff_documents_chain
-# from langchain_chroma import Chroma
 from langchain_community.chat_message_histories import ChatMessageHistory
-# from langchain_community.document_loaders import WebBaseLoader
 from langchain_core.chat_history import BaseChatMessageHistory
-# from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-# from langchain_core.runnables.history import RunnableWithMessageHistory
 
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
 DATABASE_URL = "sqlite:///../Persistent_data/chat_history.db"   # Use SQLite, Create (or open) a file named chat_history.db
