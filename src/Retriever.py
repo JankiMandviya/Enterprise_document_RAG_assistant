@@ -9,8 +9,7 @@ This stage includes:
 
 import os
 import numpy as np
-import ingestion
-import chat_history
+import initialize
 
 def search_query(embedding_model,session_id:int,query,k):
     """
@@ -26,8 +25,8 @@ def search_query(embedding_model,session_id:int,query,k):
     final_result = final sorted list(primary:similarity, secondary: page) of max_chunks chunks which contain
     content, page, title, source, similarity score.
     """
-    if os.path.exists(ingestion.index_path):
-        index = ingestion.faiss.read_index(ingestion.index_path)
+    if os.path.exists(initialize.index_path):
+        index = initialize.faiss.read_index(initialize.index_path)
     else:
         print("Faiss index doesn't exist")
         return []
@@ -35,7 +34,7 @@ def search_query(embedding_model,session_id:int,query,k):
     if index.ntotal == 0:
         return []
     
-    db = next(chat_history.get_db())
+    db = next(initialize.get_db())
     results = []
     threshold = 0.70
     max_chunks = 3               # allow maximum 3 chunks to get into LLM prompt.
@@ -60,7 +59,7 @@ def search_query(embedding_model,session_id:int,query,k):
     # if the index type were L2, then Distances will contain euclidean distance. smaller the better, therefore take k elements with smallest distances.
     # For index type IP, Distances will contain cosine similarity. Bigger the better, therefore take k elements with largest distances.
     # query to db to find all the chunk objects with indexes in valid_ids and are in current session_id.
-    valid_chunks = db.query(chat_history.DocumentChunk).filter(chat_history.DocumentChunk.id.in_(valid_ids), chat_history.DocumentChunk.session_id == session_id).all()
+    valid_chunks = db.query(initialize.DocumentChunk).filter(initialize.DocumentChunk.id.in_(valid_ids), initialize.DocumentChunk.session_id == session_id).all()
 
     # extract information about these valid chunks from DB.
     for chunk in valid_chunks:

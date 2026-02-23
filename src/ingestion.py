@@ -11,31 +11,15 @@ This stage includes:
 """
 
 # import dependencies
+import os
 import faiss
 import pickle
-import os
 import numpy as np
+import initialize
 import chat_history
-from threading import Lock
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from sentence_transformers import SentenceTransformer
 
-
-# embedding model 'e5-base-v2' loading
-embedding_model = SentenceTransformer('intfloat/e5-base-v2')
-index_path = "../Persistent_data/FAISS.index"
-faiss_lock = Lock()  # lock to prevent two/multiple simultaneous read/write operations on FAISS. It stops FAISS from getting corrupted and multiple overwrites of each other's data.
-
-dimension = 768  # Sentence transformer 'intfloat/e5-base-v2' outputs embedding vector of dimension 768.
-
-if os.path.exists(index_path):
-    index = faiss.read_index(index_path)
-else:
-    index = faiss.IndexIDMap(
-        faiss.IndexFlatIP(dimension)
-    )
-    faiss.write_index(index, index_path)
 
 def text_cleaner(docs):
     """
@@ -66,14 +50,14 @@ def sentence_transformer_inputData(chunks):
 
 def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
     print("inside document embedding generator")
-    db = next(chat_history.get_db())
+    db = next(initialize.get_db())
     chunk_ids = []
-    current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+    current_doc = db.query(initialize.Document).filter(initialize.Document.doc_id == doc_id).first()
 
     # ----------------------------
     # Check document exists
     # ----------------------------
-    current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+    current_doc = db.query(initialize.Document).filter(initialize.Document.doc_id == doc_id).first()
 
     if not current_doc:
         print("Document does not exist. Aborting.")
@@ -114,7 +98,7 @@ def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
     # Dot product == cosine similarity
     # Ready for:
     # manual similarity
-    embeddings = embedding_model.encode(input_texts, normalize_embeddings=True).astype("float32")
+    embeddings = initialize.embedding_model.encode(input_texts, normalize_embeddings=True).astype("float32")
     print(embeddings.shape)
     print(embeddings[0].dtype)
     #--------------test code------------------------------------------
@@ -137,32 +121,32 @@ def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
         # FAISS + DB
         # ----------------------------
 
-        with faiss_lock:
+        with initialize.faiss_lock:
 
             # Re-check document not deleted
             db.expire_all()
-            current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+            current_doc = db.query(initialize.Document).filter(initialize.Document.doc_id == doc_id).first()
 
             if not current_doc:
                 print("Document deleted mid-process. Aborting safely.")
                 return
             
             # load existing index file or create new if doesn't exist
-            if os.path.exists(index_path):
-                index = faiss.read_index(index_path)
+            if os.path.exists(initialize.index_path):
+                index = faiss.read_index(initialize.index_path)
             else:
                 dimension = embeddings.shape[1]
                 index = faiss.IndexIDMap(faiss.IndexFlatIP(dimension)) # using flat index which uses Internal product while searching. since we already have normalized index, we can get cosine similarity by directly doing dot products of vectors.
 
             # save metadata and chunk content with vector position in FAISS in db first
             for i,chunk in enumerate(text_chunks):
-                chunk_entry = chat_history.DocumentChunk(session_id = session_id, document_id = doc_id, chunk_text= chunk.page_content, doc_title = chunk.metadata.get('title',"Title unavailable"), doc_source = chunk.metadata.get('source',"Source unavailable") ,page_number = chunk.metadata.get('page',0))
+                chunk_entry = initialize.DocumentChunk(session_id = session_id, document_id = doc_id, chunk_text= chunk.page_content, doc_title = chunk.metadata.get('title',"Title unavailable"), doc_source = chunk.metadata.get('source',"Source unavailable") ,page_number = chunk.metadata.get('page',0))
                 db.add(chunk_entry)  # db.add() does NOT save to database. it just asks sqlalchemy to remember the object to add later during commit()
             
             db.commit()  # Nothing is permanently written to SQLite until you commit(). commit() saves all pending changes permanently to the database. If app crashes before commit(), the data is lost. 
 
             # update FAISS index with this documents chunks. For each embedding give respective unique chunk id as well to map between FAISS chunk embedding and SQLite chunk metadata and content.
-            chunks = db.query(chat_history.DocumentChunk).filter(chat_history.DocumentChunk.document_id == doc_id).all()  # get all chunks of document whose id matches with doc_id. returns list of objects of type DocumentChunk
+            chunks = db.query(initialize.DocumentChunk).filter(initialize.DocumentChunk.document_id == doc_id).all()  # get all chunks of document whose id matches with doc_id. returns list of objects of type DocumentChunk
             for chunk in chunks:                    # for each chunk in chunks, find unique primary key chunk id from object and append it in list
                 chunk_ids.append(chunk.id)
             chunk_ids = np.array(chunk_ids).astype("int64")  # this ids must be in numpy array.
@@ -170,13 +154,13 @@ def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
             print("new embeddings will be stored from {}".format(index.ntotal))
             
             # persisting data for other modules in Disk.
-            faiss.write_index(index, index_path)  # saving index with data   
+            faiss.write_index(index, initialize.index_path)  # saving index with data   
             
             # ----------------------------
             # Final status update
             # ----------------------------
             db.expire_all()
-            current_doc = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+            current_doc = db.query(initialize.Document).filter(initialize.Document.doc_id == doc_id).first()
 
             if current_doc:
                 current_doc.status = "completed" # type: ignore
@@ -184,12 +168,12 @@ def document_embedding_generator(filepath:str, doc_id:int, session_id:int):
             else:
                 print("Document deleted before completion update.")
 
-    except chat_history.SQLAlchemyError:
+    except initialize.SQLAlchemyError:
         print("Error adding chunks to SQLite")
         db.rollback()
 
         # Try marking failed only if doc still exists
-        doc_check = db.query(chat_history.Document).filter(chat_history.Document.doc_id == doc_id).first()
+        doc_check = db.query(initialize.Document).filter(initialize.Document.doc_id == doc_id).first()
 
         if doc_check:
             doc_check.status = "failed" # type: ignore

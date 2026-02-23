@@ -6,6 +6,7 @@ import os
 import uuid
 import hashlib
 import streamlit as st
+import initialize
 import chat_history
 import ingestion
 import Retriever
@@ -16,7 +17,7 @@ st.header(":blue[DocuMind] : Chat with your documents !")
 sessions = chat_history.return_all_sessions()
 DOCUMENT_FOLDER = "../stored_documents"
 os.makedirs(DOCUMENT_FOLDER, exist_ok=True)
-db = next(chat_history.get_db())
+db = next(initialize.get_db())
 
 # read URL of streamlit current chat and check if session with session_id from url exist. if yes return the session id as it is. if not, create session with url's session id 
 def create_or_load_session(isNewChat:bool):
@@ -102,7 +103,7 @@ for s in sessions:
         st.query_params["key"] = s.session_id
         st.rerun()
 
-failed_docs = db.query(chat_history.Document).filter(chat_history.Document.status != "completed").all()
+failed_docs = db.query(initialize.Document).filter(initialize.Document.status != "completed").all()
 
 for doc in failed_docs:
     chat_history.delete_document(doc.doc_id) # type: ignore
@@ -114,7 +115,7 @@ uploaded_file = st.file_uploader("Upload document", type=["pdf"], key="pdf_uploa
 
 current_Session_id = st.query_params["key"]  # current open session in string
 # display documents uploaded in current session
-current_session_int = db.query(chat_history.Session).filter(chat_history.Session.session_id == current_Session_id).scalar().id # in int
+current_session_int = db.query(initialize.Session).filter(initialize.Session.session_id == current_Session_id).scalar().id # in int
 docs = chat_history.return_all_documents(current_session_int) # return all documents present in current session from SQLite Document table
 
 # display existing session's documents in SQLite whose embeddings are present in FAISS
@@ -146,7 +147,7 @@ if uploaded_file:
 
     # if the file_hash doesn't exist in set(), process this new document and then add the hash to the set.
     if file_hash not in st.session_state.processed_files[current_Session_id]:
-        db = next(chat_history.get_db())
+        db = next(initialize.get_db())
 
         # Save file to disk
         file_path = os.path.join(DOCUMENT_FOLDER, uploaded_file.name)
@@ -185,7 +186,7 @@ if prompt:
     rewritten_query = chat_history.rewrite_query(query,session_history)  # rewrite the query using LLM by providing chat history, query in prompt.
     
     # searching query in Database
-    results = Retriever.search_query(embedding_model = ingestion.embedding_model,session_id = current_session_int, query = rewritten_query, k = 5)  # change it
+    results = Retriever.search_query(embedding_model = initialize.embedding_model,session_id = current_session_int, query = rewritten_query, k = 5)  # change it
 
     # select whether to take relaxed prompt or strict prompt
     mode = Response_generator.promptSelector(rewritten_query,results)
