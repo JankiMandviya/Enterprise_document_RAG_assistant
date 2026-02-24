@@ -52,7 +52,7 @@ class Session(Base):
     # This is the ID used in APIs and frontend.
     # Must be unique and cannot be NULL.
 
-    session_title = Column(String, nullable=False)  
+    session_title = Column(String, default="New chat" ,nullable=False)  
     # Short title used to display the chat/session in the UI sidebar.
     # Not unique because multiple sessions can have similar titles.
 

@@ -23,15 +23,12 @@ OUTPUT FORMAT (MANDATORY)
    - Summarize ONLY relevant information from the context.
    - Do NOT add or interpret.
 
-2. User Query:
-   - Restate the query verbatim.
-
-3. Answer:
+2. Answer:
    - Answer ONLY using the context.
    - If unsupported, output:
      I don't know
 
-4. Citations:
+3. Citations:
    - List all supporting sources in this format:
      [page number | source | title]
 

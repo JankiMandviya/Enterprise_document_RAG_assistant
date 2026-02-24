@@ -25,8 +25,8 @@ Answer Guidelines:
 
 Response Format:
 
-Answer:
+1. Answer:
 <final answer>
 
-Sources:
+2. Citations:
 [page | source | title]

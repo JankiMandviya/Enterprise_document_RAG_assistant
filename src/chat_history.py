@@ -22,26 +22,66 @@ from langchain_core.chat_history import BaseChatMessageHistory
 
 
 # create new session
-def create_Session(session_id:str, session_title:str):
+def create_Session(session_id:str):
     db = next(initialize.get_db())
     session = db.query(initialize.Session).filter(initialize.Session.session_id == session_id).first()
     if not session:   # if session doesn't exist create it and save to db refresh to get session id.
-        session = initialize.Session(session_id=session_id, session_title = session_title)
+        session = initialize.Session(session_id=session_id)
         db.add(session)
         db.commit()
+
+        session.session_title = f"chat {session.id}" # type: ignore
+        db.commit()
+
     return session_id
 
 
+def delete_session(session_id:str):
+    db = next(initialize.get_db())
+    chunk_ids = []
+
+    try:
+        session = db.query(initialize.Session).filter_by(session_id=session_id).first()
+        if session:
+            internal_session_id = session.id
+            # To delete embeddings of this session from FAISS, fetch all chunk ids belonging to the documents of this session. 
+            chunks = db.query(initialize.DocumentChunk).filter(initialize.DocumentChunk.session_id == internal_session_id).all()
+            chunk_ids = [chunk.id for chunk in chunks]
+            
+            if chunk_ids:
+                chunk_ids = np.array(chunk_ids).astype("int64")
+                with initialize.faiss_lock:
+                    index = initialize.faiss.read_index(initialize.index_path)
+                    index.remove_ids(chunk_ids)
+                    initialize.faiss.write_index(index, initialize.index_path)
+                    print(f"faiss chunks deleted for session : {session_id}")
+
+            db.delete(session) # cascade automatically deletes related documents, messages and document chunks from table Documents, Messages and DocumentChunk respectively.
+            db.commit()
+        
+    except initialize.SQLAlchemyError as e:
+        db.rollback()
+        print("unexpected error: rolling back to last stage: " , e)
+
+    finally:
+        db.close()
+        print(f"session deleted: {session_id}")
+
 # Save ONE message to DB
-def save_message(session_id: str, session_title:str, role: str, content: str):
+def save_message(session_id: str, role: str, content: str):
     db = next(initialize.get_db())
     try:
         session = db.query(initialize.Session).filter(initialize.Session.session_id == session_id).first()
         if not session:   # if session doesn't exist create it and save to db refresh to get session id.
-            session = initialize.Session(session_id=session_id, session_title = session_title)
+            session = initialize.Session(session_id=session_id)
             db.add(session)
             db.commit()
+
+            session.session_title = f"chat {session.id}" # type: ignore
+            db.commit()
+
             db.refresh(session)
+
         db.add(initialize.Message(session_id=session.id, role=role, content=content))
         db.commit()
 
@@ -251,14 +291,24 @@ def extract_clean_response(response):
     returns:
     clean_ans: extracted answer
     """
-    start = "3. Answer:"
-    end = "4. Citations:"
+    start = "2. Answer:"
+    end = "3. Citations:"
     if start in response:
         clean_ans = response.split(start,1)[1]   # Only the first occurrence of start is used. split() splits response in two parts. response[0] contains part before start. and response[1] contains part after start.
         if end in clean_ans:
             clean_ans = clean_ans.split(end,1)[0]  # Only the first occurrence of end is used. split() splits response in two parts. clean_ans[0] contains part before end. and clean_ans[1] contains part after end.
         return clean_ans.strip() # remove extra leading and trailing whitespaces or \n.
-    return response
+    else:
+        start = "1. Answer:"
+        end = "2. Citations:"
+
+        if start in response:
+            clean_ans = response.split(start,1)[1]   # Only the first occurrence of start is used. split() splits response in two parts. response[0] contains part before start. and response[1] contains part after start.
+            if end in clean_ans:
+                clean_ans = clean_ans.split(end,1)[0]  # Only the first occurrence of end is used. split() splits response in two parts. clean_ans[0] contains part before end. and clean_ans[1] contains part after end.
+            return clean_ans.strip() # remove extra leading and trailing whitespaces or \n.
+        
+        return response
 
 # setting up SQLite database for persistent chat history
 

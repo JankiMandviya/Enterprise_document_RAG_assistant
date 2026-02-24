@@ -24,8 +24,7 @@ def create_or_load_session(isNewChat:bool):
 
     if isNewChat:  # new chat button pressed --> create new session with random uuid as session_id
         new_session_id = str(uuid.uuid4())
-        new_session_title = new_session_id
-        new_session_id = chat_history.create_Session(new_session_id,new_session_title)
+        new_session_id = chat_history.create_Session(new_session_id)
         st.query_params["key"] = new_session_id
         query_params = st.query_params
 
@@ -52,8 +51,7 @@ def create_or_load_session(isNewChat:bool):
             print("hello")
             if not sessions:   # if no previous session exist in sqlite database, create new session with new uuid4 session id.
                 new_session_id = str(uuid.uuid4())
-                new_session_title = new_session_id
-                new_session_id = chat_history.create_Session(new_session_id,new_session_title)
+                new_session_id = chat_history.create_Session(new_session_id)
                 st.query_params["key"] = new_session_id
                 query_params = st.query_params
 
@@ -99,9 +97,19 @@ new_id = create_or_load_session(isNewChat = False)
 
 # for any session from existing chats, if any button is clicked from side bar to navigate to other chats, change URL key of streamlit to open that chat and rerun the application.
 for s in sessions:
-    if st.sidebar.button(str(s.session_title)):
-        st.query_params["key"] = s.session_id
-        st.rerun()
+    col1, col2 = st.sidebar.columns([4, 1])
+
+    with col1:
+        if st.sidebar.button(str(s.session_title)):
+            st.query_params["key"] = s.session_id
+    with col2:
+        if st.button("🗑", key=f"delete_{s.id}"):
+            chat_history.delete_session(s.session_id) # type: ignore
+
+            # If deleted session was active
+            if st.query_params["key"] == s.session_id:
+                st.query_params["key"]  = sessions[0].session_id
+            st.rerun()
 
 failed_docs = db.query(initialize.Document).filter(initialize.Document.status != "completed").all()
 
@@ -177,7 +185,7 @@ if uploaded_file:
 if prompt:
     query = prompt
     session_history = chat_history.load_session_history(current_Session_id, conversations = 5) # get session history from db
-    chat_history.save_message(current_Session_id,current_Session_id, "user", query) # save user message to db
+    chat_history.save_message(current_Session_id, "user", query) # save user message to db
     
     # show message on UI
     with st.chat_message("user"):
@@ -202,7 +210,7 @@ if prompt:
     # Use the prompt to get response from LLM and store original response in RAW_response.
     RAW_response = Response_generator.CallLLM(Final_prompt)
 
-    chat_history.save_message(current_Session_id, current_Session_id ,"AI", RAW_response) # save original raw response in AI message to db
+    chat_history.save_message(current_Session_id, "AI", RAW_response) # save original raw response in AI message to db
     # show message on UI
     with st.chat_message("AI"):
         st.markdown(RAW_response)
