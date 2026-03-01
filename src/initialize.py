@@ -6,6 +6,8 @@ This module will act as a lower level module which will be used by all retriever
 import os
 import pytz
 import faiss
+import time
+import pandas as pd
 from threading import Lock
 from datetime import datetime
 from sqlalchemy import DateTime
@@ -210,3 +212,84 @@ else:
         faiss.IndexFlatIP(dimension)
     )
     faiss.write_index(index, index_path)
+
+# -----------------------Logging-----------------------
+
+query_csv = "../Evaluation/queries.csv"  # Log per query
+# stores :
+# query_id (unique for evaluation)
+# session_id
+# user query
+# timestamp
+# num_documents_in_session
+# retrieved_chunks_count (after threshold)
+# retrieval_time
+# generation_time
+# total_time
+# final_answer_length (tokens or characters)
+
+retrieval_csv = "../Evaluation/retrieval_details.csv"  # Log per retrieved chunk
+# stores:
+# query_id
+# rank (1 = most similar)
+# chunk_id
+# document_id
+# doc_title
+# doc_source
+# page_number
+# similarity_score
+# chunk_length (tokens/characters)
+
+evaluation_dataset = "../Evaluation/evaluation_dataset.csv" # A ground truth dataset to measure correctness.
+# stores:
+# question_text
+# ground_truth_answer (manual extraction from book)
+# source_chunk_ids (optional, but ideal)
+# source_page_numbers (optional)
+
+generation_eval = "../Evaluation/generation_eval.csv"  # Manual+LLM scoring of LLM answers
+# stores:
+# Metrics:
+#  - Faithfulness — Is answer grounded in retrieved chunks?
+#  - Relevance — Does answer address the question?
+#  - Hallucination — Does answer include information not in retrieved context?
+#  - Answer length — Optional, can detect truncation.
+
+headers_query = ["query_id", "session_id", "user_query","rewritten_query","mode", "timestamp", "num_documents_in_session", "retrieved_chunks_count", "LLM response", "retrieval_time(in s)", "generation_time(in s)", "total_time(in s)", "final_answer_length(in tokens)"]
+df_query = pd.DataFrame(columns = headers_query)
+# Check if file exists
+if os.path.exists(query_csv):
+    print("CSV already exists. Headers left unchanged.")
+else:
+    df_query.to_csv(query_csv, index=False)
+    print("CSV created with headers.")
+
+
+headers_retrieval = ["query_id", "rank", "chunk_id","document_id", "doc_title","doc_source", "page_number","similarity_score","chunk_length"]
+df_retrieval = pd.DataFrame(columns = headers_retrieval)
+# Check if file exists
+if os.path.exists(retrieval_csv):
+    print("CSV already exists. Headers left unchanged.")
+else:
+    df_retrieval.to_csv(retrieval_csv, index=False)
+    print("CSV created with headers.")
+
+
+headers_dataset = ["question_text", "ground_truth_answer","source_page_numbers"]
+df_dataset = pd.DataFrame(columns = headers_dataset)
+# Check if file exists
+if os.path.exists(evaluation_dataset):
+    print("CSV already exists. Headers left unchanged.")
+else:
+    df_dataset.to_csv(evaluation_dataset, index=False)
+    print("CSV created with headers.")
+
+
+headers_generation = ["Faithfulness", "Relevance","Hallucination","Answer_length"]
+df_generation = pd.DataFrame(columns = headers_generation)
+# Check if file exists
+if os.path.exists(generation_eval):
+    print("CSV already exists. Headers left unchanged.")
+else:
+    df_generation.to_csv(generation_eval, index=False)
+    print("CSV created with headers.")

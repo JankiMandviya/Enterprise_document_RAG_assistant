@@ -63,11 +63,14 @@ def search_query(embedding_model,session_id:int,query,k):
 
     # extract information about these valid chunks from DB.
     for chunk in valid_chunks:
+        chunk_dict['chunk_id'] = chunk.id
         chunk_dict['content'] = chunk.chunk_text
         chunk_dict['title'] = chunk.doc_title
         chunk_dict['source'] = chunk.doc_source
         chunk_dict['page'] = chunk.page_number
+        chunk_dict['doc_id'] = chunk.document_id
         chunk_dict['similarity_score'] = id_to_score.get(chunk.id,0.0)
+        chunk_dict['chunk_length'] = len(chunk.chunk_text.split())
         results.append(chunk_dict)
         chunk_dict = {}
             

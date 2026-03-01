@@ -117,16 +117,12 @@ def CallLLM(final_prompt):   # using LM studio
         ],
         "temperature": 0.1,
         "top_p": 0.9,
-        "max_tokens": 512,
+        "max_tokens": 200,
         "stream": False
     }
 
     headers = {"Content-Type": "application/json"}  
-    print("hello 1")
-    start = time.time()
     response = requests.post(LM_STUDIO_URL, json=payload, headers=headers)
-    end = time.time()
-    print(end-start)
     response.raise_for_status()
 
     return response.json()["choices"][0]["message"]["content"]
