@@ -1,0 +1,22 @@
+query_id,rank,chunk_id,document_id,doc_title,doc_source,page_number,similarity_score,chunk_length
+1,1,320,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,105,0.8258435726165771,148
+1,2,340,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,111,0.8162024021148682,117
+1,3,458,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,150,0.8084526062011719,151
+2,1,334,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,109,0.8920100927352905,147
+2,2,340,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,111,0.8820594549179077,117
+2,3,341,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,112,0.8720141649246216,47
+3,1,24,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,12,0.7887101769447327,146
+3,2,20,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,11,0.7849078178405762,123
+3,3,452,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,147,0.7797427177429199,128
+4,1,452,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,147,0.797854483127594,128
+4,2,24,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,12,0.7946881651878357,146
+4,3,20,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,11,0.7923532724380493,123
+5,1,451,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,147,0.8139179348945618,144
+5,2,380,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,124,0.8085228204727173,159
+5,3,54,1,Life�s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,20,0.8074518442153931,150
+1,1,451,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,147,0.8559622764587402,144
+1,2,53,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,20,0.8195027709007263,147
+1,3,54,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,20,0.8160152435302734,150
+1,1,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,55,0.8242820501327515,24
+1,2,186,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,62,0.820344090461731,51
+1,3,173,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,59,0.8126418590545654,123
