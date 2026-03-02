@@ -5,254 +5,192 @@ Day 1 – Setup + Ingestion    -- done
 - Store in FAISS/Chroma
 
 Day 2 – RAG Pipeline         
-- Build retrieval pipeline
-- Connect retriever → LLM
+- Build retrieval pipeline           -- done
+- Connect retriever → LLM           -- done
 - Add prompt template                  -- done getting response from llm
-- Test Q&A accuracy with strict and relax prompt
-- selecting strict/relax prompt according to query.
-- Tool calling + structured outputs
+- Test Q&A accuracy with strict and relax prompt  -- done
+- selecting strict/relax prompt according to query.  -- done
+- Tool calling + structured outputs -- done
 
-Day 3 – UI + Logging
-- Build Streamlit UI
-- Add chat history + structured outputs
+Day 3 – UI + Logging   
+- Build Streamlit UI   -- done
+- Add chat history + structured outputs  -- done
 - Log responses + latency
 
 Day 4 – Evaluation + Optimization
 - Add simple evaluation metrics (faithfulness, relevance, recall)
-- Optimize chunk size + retriever settings, overlap, llm temperature etc.
+- Optimize chunk size + retriever settings, overlap, llm temperature etc. 
 
 Day 5 (Optional) – Deployment
 - Dockerize app
 - Deploy on HuggingFace Spaces
 
 
-rag-assistant/
-├── app.py
-├── ingestion.py   done
-├── retriever.py   done
-├── prompts.py     done llms 
-├── vector_store/  done
-├── logs/
-├── Dockerfile
-├── requirements.txt
-└── README.md
-
-
-strict/relax prompt selection according to query or domain
-reranking
-
-Stage 6: Tool calling + structured outputs
-
-Stage 7: Chat history / conversational RAG
-
-Stage 8: Evaluation + metrics (faithfulness, recall) + optimization of chunk length,overlap, llm temperature etc.
-
-Stage 9: Caching, streaming, latency optimization
-
-Stage 10: Multi-document + multi-modal
-UI with streamlit
-deployment using docker in hugging face spaces
-
-
-
-
-🟢 STAGE 2 — Retrieval Layer
-
-Goal: fetch the right context
-
-Tasks
-
-Top-k retrieval
-
-Score thresholding
-
-Metadata filtering
-
-Domain-aware retrieval     **
-
-Enhancements            **
-
-Query expansion                 **
-
-Hybrid retrieval (BM25 + vectors)   **
-
-Re-ranking (cross encoder)     **
-
-📌 Output: ranked context chunks
-
-🟢 STAGE 3 — Prompt Orchestration (Your core strength)
-
-Goal: hallucination control
-
-Prompt types
-
-STRICT
-
-factual
-
-medical
-
-legal
-
-RELAXED
-
-explanatory
-
-conceptual
-
-Logic
-Query → classifier → strict / relax prompt
-
-Rules
-
-Answer only from context
-
-Mandatory citations
-
-Explicit “Not found” fallback
-
-📌 Output: final prompt
-
-🟢 STAGE 4 — LLM Orchestrator
-
-Goal: stable + fast inference
-
-Tasks
-
-Ollama adapter
-
-Streaming support
-
-Retry logic
-
-Timeout handling
-
-Model switching
-
-Dev vs Prod
-Purpose	Model
-Dev	mistral / phi3
-Eval	llama3
-Prod	llama3 / remote API
-
-📌 Output: raw LLM response
-
-🟢 STAGE 5 — Post-Processing Layer
-
-Goal: structure + safety
-
-Tasks
-
-Parse answer
-
-Validate citations
-
-Remove hallucinated refs
-
-Enforce schema (JSON)
-
-Tools
-
-Regex
-
-Pydantic
-
-JSON schema validation
-
-📌 Output: trusted answer object
-
-🟢 STAGE 6 — Tool Calling + Structured Output
-
-Goal: future extensibility
-
-Examples
-
-Document lookup
-
-Page jump
-
-Summary tool
-
-Explanation tool
-
-Output format
-{
-  "answer": "...",
-  "citations": [...],
-  "confidence": 0.87
-}
-
-🟢 STAGE 7 — Conversational RAG
-
-Goal: memory without drift
-
-Tasks
-
-Chat history compression
-
-Context window control
-
-Follow-up question handling
-
-Rule
-
-Never retrieve on full history
-
-Only last user intent
-
-🟢 STAGE 8 — Evaluation & Metrics
-
-Goal: measurable quality
-
-Metrics
-
-Faithfulness
-
-Context recall
-
-Citation precision
-
-Latency
-
-Tools
-
-Manual eval set
-
-LLM-as-judge (optional)
-
-🟢 STAGE 9 — Performance Optimization
-
-Goal: sub-5s responses
-
-Techniques
-
-Caching embeddings
-
-Context caching
-
-Streaming
-
-Chunk tuning
-
-Model switching
-
-Async calls
-
-🟢 STAGE 10 — UI + Deployment
-UI
-
-Streamlit
-
-Chat history
-
-Source viewer
-
-Latency display
-
-Deployment
-
-Docker
-
-HuggingFace Spaces
-
-CPU first, GPU later
+✅ FULL EVALUATION PLAN — Senior Engineer Style
+
+We divide it into 6 stages:
+
+✅ Stage 1 — Observability & Logging (Foundation)
+Goal:
+ - Make your system fully measurable so you can evaluate retrieval, generation, and system performance.
+
+Requirements:
+Log per query:
+ - query_id (unique for evaluation)
+ - session_id
+ - user query
+ - timestamp
+ - num_documents_in_session
+ - retrieved_chunks_count (after threshold)
+ - retrieval_time
+ - generation_time
+ - total_time
+ - final_answer_length (tokens or characters)
+
+Log per retrieved chunk:
+ - query_id
+ - rank (1 = most similar)
+ - chunk_id
+ - document_id
+ - doc_title
+ - doc_source
+ - page_number
+ - similarity_score
+ - chunk_length (tokens/characters)
+
+Notes:
+ - For your personal project, CSV is fine.
+ - Keep two CSVs: queries.csv and retrieval_details.csv.
+ - Include timing measurements for retrieval, generation, total.
+
+Your Task (Stage 1)
+ - Implement CSV logging while keeping your existing SQLite for production.
+ - Run 5–10 test queries from different books.
+
+Collect:
+ - Average retrieval time
+ - Average generation time
+ - Average total time
+ - Number of retrieved chunks after threshold
+ - Typical similarity score range
+We will analyze these numbers before moving to Stage 2.
+
+✅ Stage 2 — Gold Evaluation Dataset
+
+Goal:
+ - Create a ground truth dataset to measure correctness.
+
+Requirements:
+ - For each book/session, create 50–100 representative questions.
+ - Each entry should include:
+ - question_text
+ - ground_truth_answer (manual extraction from book)
+ - source_chunk_ids (optional, but ideal)
+ - source_page_numbers (optional)
+ - Store in CSV: evaluation_dataset.csv
+
+Tips:
+ - Mix easy factual questions + conceptual / narrative questions.
+ - Include multi-sentence answers, since books have context.
+ - Keep question diversity across your uploaded books.
+
+Your Task (Stage 2)
+ - Pick 1–2 books first.
+ - Create 20–30 gold questions manually.
+ - Include exact answer text from book for comparison.
+ - We will review your dataset before moving on.
+
+✅ Stage 3 — Retrieval Evaluation
+
+Goal:
+ - Measure how well FAISS retrieves relevant chunks.
+
+Metrics:
+ - Recall@k — Did the top-k retrieved chunks contain the ground truth chunk(s)?
+ - Hit@k — Binary: at least one ground truth chunk retrieved?
+ - MRR (Mean Reciprocal Rank) — Rank quality of first correct chunk.
+ - Similarity scores distribution — Are good chunks scoring high?
+ - Number of chunks retrieved — Check threshold behavior (you keep max 3).
+
+Your Task (Stage 3)
+ - For each question in gold dataset:
+ - Compare retrieved chunks vs. ground truth chunks.
+ - Log rank, score, hit/miss.
+ - Aggregate metrics across dataset.
+
+✅ Stage 4 — Generation Evaluation
+
+Goal:
+ - Measure quality of LLM-generated answers.
+
+Metrics:
+ - Faithfulness — Is answer grounded in retrieved chunks?
+ - Relevance — Does answer address the question?
+ - Hallucination — Does answer include information not in retrieved context?
+ - Answer length — Optional, can detect truncation.
+
+Evaluation Methods:
+ - Manual scoring (recommended for personal project)
+ - Optionally: LLM-as-judge (e.g., GPT-4) for quick scoring
+
+Scoring Example:
+ - Faithful: 0 / 1
+ - Relevant: 0 / 1
+ - Hallucination: 0 / 1
+
+Your Task (Stage 4)
+
+ - Pick 20 questions from gold dataset.
+ - Read LLM answer + retrieved chunks.
+ - Score manually and log in generation_eval.csv.
+
+✅ Stage 5 — Latency & System Metrics
+
+Goal:
+ - Measure performance characteristics.
+
+Metrics:
+ - Retrieval time per query
+ - Generation time per query
+ - Total latency per query
+ - Average tokens/chars per chunk and answer
+
+Analysis:
+ - Identify slow queries → check large chunks / long prompts
+ - Identify retrieval bottlenecks → FAISS filtering threshold
+
+Your Task (Stage 5)
+ - Compute averages + max/min values across evaluation dataset.
+ - Optional: plot histogram of latencies.
+
+✅ Stage 6 — Failure Analysis & Improvement
+
+Goal:
+ - Diagnose system weaknesses for future improvement.
+
+Steps:
+ - Categorize failures:
+ - Retrieval failure (relevant chunk not retrieved)
+ - Generation failure (LLM ignores context)
+ - Hallucination
+ - Prompt truncation (chunk too long)
+ - Count occurrences per failure type
+
+Observe patterns:
+ - Which books / domains fail more?
+ - Which chunk size / threshold causes more misses?
+ - Document lessons learned.
+
+Your Task (Stage 6)
+ - After Stage 3–5 are done, review failing queries.
+ - Write notes in CSV or notebook.
+
+✅ Summary — Minimum Required Artifacts
+ - queries.csv — Query + timing + summary
+ - retrieval_details.csv — Each retrieved chunk
+ - evaluation_dataset.csv — Gold questions + answers
+ - generation_eval.csv — Manual scoring of LLM answers
+
+Latency stats & analysis notebook
+Failure analysis notes
+If you have these, anyone can reproduce your evaluation and it will look like a professional ML project.
