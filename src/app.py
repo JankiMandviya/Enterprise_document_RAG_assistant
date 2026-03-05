@@ -252,6 +252,7 @@ if prompt:
         generation_time = initialize.time.time() - t2
     
     else:
+        mode = "strict"
         RAW_response = "I don't know. No information found for the entered query."
 
     chat_history.save_message(current_Session_id, "AI", RAW_response) # save original raw response in AI message to db

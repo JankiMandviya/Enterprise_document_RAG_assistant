@@ -12,6 +12,7 @@ Allowed rewrite triggers in original question (must be explicit):
 
 Hard constraints:
 - If the question contains a complete noun or concept and can stand alone, DO NOT rewrite, even if chat history exists.
+- Don't change the name of the person/object/place mentioned in the query. it must remain intact. 
 - If returning the original question, don't add any extra verbose around it or in between not even filler words like 'Return', 'again' ,'returning original question' or anything in brackets etc. You are supposed to strictly return the original question as it was.
 - NEVER add page numbers, sources, locations, or qualifiers (e.g., "as mentioned on page 112").
 - NEVER infer missing context or improve specificity.

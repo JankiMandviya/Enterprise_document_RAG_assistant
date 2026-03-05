@@ -1,8 +1,318 @@
-query_id,session_id,user_query,rewritten_query,mode,timestamp,num_documents_in_session,retrieved_chunks_count,retrieval_time(in s),generation_time(in s),total_time(in s),final_answer_length(in tokens)
-1,1,how to find purpose of life?," ""what was discussed earlier about finding one's purpose in life?""",strict,2026-02-28 23:24:46.004177+05:30,1,3,10.155952215194702,137.9891312122345,202.4166328907013,100
-1,1,explain ikigai," ""What is ikigai, as you mentioned it in relation to finding one's purpose in life?""",strict,2026-03-01 00:25:05.918859+05:30,1,3,7.4016969203948975,176.50406908988953,213.62285041809082,100
-1,1,what is sambar?, Return: what is sambar? (The provided context does not contain information about sambar.),strict,2026-03-01 00:52:59.667396+05:30,1,3,7.781582593917847,86.30832862854004,143.6728057861328,100
-1,1,what is sambar?," Return: ""What is sambar?"" (Since the question does not contain any explicit reference to earlier chat history)",strict,2026-03-01 00:55:57.235177+05:30,1,3,7.658863067626953,71.50694131851196,121.10871148109436,100
-1,1,what good news did lalita give?, Return: What good news did Lalita mention earlier in our conversation?,strict,2026-03-01 01:47:55.745291+05:30,1,3,8.868085384368896,96.6645679473877,134.018878698349,100
-1,1,why was lalita experiencing morning sickness ?," ""Why did Lalita, who you mentioned as expecting a child, experience morning sickness?""",strict,2026-03-01 02:34:31.526853+05:30,1,3,5.291172742843628,81.29505109786987,152.07334232330322,100
-1,1,how to practice being sensitive?, Return: how to practice being sensitive? (Since there is no explicit reference to earlier chat history in the question),strict,2026-03-01 02:38:23.320054+05:30,1,3,5.491241931915283,133.6771161556244,177.83131384849548,100
+query_id,session_id,user_query,rewritten_query,mode,timestamp,num_documents_in_session,retrieved_chunks_count,LLM response,retrieval_time(in s),generation_time(in s),total_time(in s),final_answer_length(in tokens)
+1,1,which car does harry own?,which car does harry own?,relax,2026-03-05 20:45:16.724095+05:30,1,3,"1. Answer:
+Harry currently owns a **Lexus**. He sold his previous Mercedes because its low chassis was unsuitable for the streets of Mumbai.
+
+2. Citations:
+[page 14 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+[page 17 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",2.4939656257629395,0.9480066299438477,5.059324264526367,100
+1,1,"what were harry's qualifications?
+",what were harry's qualifications?,strict,2026-03-05 20:45:48.973804+05:30,1,3,"1. **Context Summary:**
+   - Harry attended **Harvard** for an **MBA program** with a **full scholarship**.
+   - He initially pursued the MBA as a way to **escape his family and live independently**, not necessarily for career alignment.
+   - The context does not mention any other formal qualifications (e.g., undergraduate degrees, certifications, or technical expertise like software engineering).
+
+2. **Answer:**
+   Harry’s only explicitly mentioned qualification is a **Harvard MBA**.
+
+3. **Citations:**
+   [page 19 | Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com]",0.6177237033843994,1.5388157367706299,4.750993013381958,100
+1,1,"where does harry(hariprasad) and lalita live?
+",where does harry and lalita live?,strict,2026-03-05 20:46:55.529559+05:30,1,3,"1. **Context Summary:**
+   - The text describes Harry and Lalita as a cultured and courteous couple who live in an apartment building with multiple floors (at least 15 floors).
+   - Harry jokes about walking up to their apartment, implying they reside in a high-rise or multi-story building.
+   - The conversation takes place during a lunch visit, and Harry offers to drive Lalita to the ashram, suggesting their home is nearby or accessible by car.
+
+2. **Answer:**
+   I don't know
+
+3. **Citations:**
+   [page 15 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.5242831707000732,1.4365603923797607,4.223929405212402,100
+1,1,where do hosts live?,where do harry and lalita live?,strict,2026-03-05 20:47:58.799236+05:30,1,3,"1. **Context Summary:**
+   - The text describes Harry and Lalita as a cultured and courteous couple. Harry is a young director responsible for the firm’s Asia operations. They live in an apartment building with multiple floors (at least 15 floors, as referenced in the conversation). Harry offers to drive Lalita to the ashram instead of taking a cab, indicating their residence is nearby.
+
+2. **Answer:**
+   I don't know
+
+3. **Citations:**
+   - [page 14 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 15 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.843350887298584,2.2265963554382324,4.705528497695923,100
+1,1,where do hosts of author live?,where do Harry and Lalita live?,strict,2026-03-05 20:48:31.089520+05:30,1,3,"1. **Context Summary:**
+   - The text describes Harry and Lalita as a cultured and courteous couple who live in an apartment building with multiple floors (at least 15 floors).
+   - Harry mentions walking up to their room with friends, implying they reside in a high-rise or multi-story building.
+   - The conversation takes place during a lunch visit, and Harry offers to drive Lalita to the ashram, suggesting their home is nearby or they have a vehicle.
+
+2. **Answer:**
+   I don't know.
+
+3. **Citations:**
+   [page 15 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2511410713195801,14.202907800674438,15.525763750076294,100
+1,1,"why harry was not happy with his life?
+",why was Harry unhappy with his life?,strict,2026-03-05 20:49:11.614297+05:30,1,3,"1. **Context Summary:**
+   - Harry acknowledges external success (prestigious education, wealth, career, relationships) but feels uneasy and unhappy.
+   - He winces at seeing others with greater material success (e.g., a Rolls-Royce), suggesting dissatisfaction with his own achievements.
+   - The narrator implies Harry may have forgotten or neglected his happiness despite his success.
+   - Harry later reacts defensively (""What’s that got to do with my situation though?"") when discussing internal ""traffic jams"" (mental blocks) preventing fulfillment.
+
+2. **Answer:**
+   Harry was unhappy because he felt **stuck despite external success**, struggled with **comparison to others’ achievements**, and likely **overlooked internal fulfillment** (e.g., happiness, purpose) in favor of material or social validation.
+
+3. **Citations:**
+   - [page 16 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+  ",0.925342321395874,1.5288238525390625,4.3310840129852295,100
+1,1,"how should we train our mind to be positive?
+",how should we train our mind to be positive?,relax,2026-03-05 20:49:52.222830+05:30,1,3,"1. Answer:
+To train your mind to be positive, you can focus on **gratitude** and **conscious practice**, similar to how you would train a physical muscle. Gratitude helps shift your mindset by recognizing the good in your life and the world around you. This involves actively acknowledging positive aspects, even during difficult times, and understanding that these positives come from external realities (e.g., support from loved ones or small joys).
+
+The context emphasizes that gratitude is not an innate trait for everyone—it requires deliberate effort. Like any skill, the more you practice gratitude, the stronger it becomes. This means intentionally reflecting on what you’re thankful for, even in challenging situations, to rewire your mind toward positivity over time.
+
+---
+
+2. Citations:
+- **[page 35 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  *""Gratitude is a state of",0.8281664848327637,1.5157983303070068,3.5438263416290283,100
+1,1,"Explain the key to happiness and positivity?
+",Explain the key to happiness and positivity as described in the context of Harry’s situation and the mind-training techniques mentioned earlier.,relax,2026-03-05 20:51:31.204758+05:30,1,3,"1. **Answer:**
+The context describes the **key to happiness and positivity** through two interconnected ideas—**selflessness** and **gratitude**—illustrated by Harry’s emotional journey and the mind-training techniques emphasized in the book.
+
+- **Selflessness as the ""candle philosophy"":**
+  Happiness is not found in selfishness (like an ""ice cream"" that melts quickly) but in contributing to others (like a ""candle"" that gives light before burning out). Harry’s moment of calm after an emotional outburst shows how recognizing love for his wife—even in stress—shifts focus from personal turmoil to connection. This aligns with the idea that **purpose comes from serving others**, not just personal fulfillment.
+
+- **Gratitude as a mind-training tool:**
+  The book highlights gratitude as essential for maintaining positivity, especially in busy or chaotic lives (e.g., Harry’s ""emotional rollercoaster""). The dialogue emphasizes:
+ ",0.938957929611206,2.1048831939697266,4.925862550735474,100
+1,1,give citations of previous answer,give citations of the answer about Harry’s unhappiness,relax,2026-03-05 20:52:00.647205+05:30,1,3,"1. **Answer:**
+Harry’s unhappiness stems from **internal conflict and emotional turmoil** related to his marriage. He is **struggling with regret, fear of divorce, and self-doubt** about his relationship. His unhappiness is tied to:
+- **Fear of judgment** from family and friends if he divorces his wife.
+- **Guilt and resentment** over perceived carelessness (""being careless about little things can really prove to be fatal"").
+- **Unresolved anger and hurt** from his wife’s ""cruel and hurtful"" words, making forgiveness difficult despite his love for her.
+- A **contradiction between his external success** (implied by earlier context) and his **internal dissatisfaction**, as he questions whether he has neglected his happiness in pursuit of achievements.
+
+The context also highlights his **emotional instability** (""churning emotions"") and **self-reflection** (""I suppose so...""), suggesting his unhappiness is",1.1074903011322021,1.6366922855377197,4.893599510192871,100
+1,1,"How to practice gratitude?
+",How to practice gratitude as mentioned in the previous answer?,strict,2026-03-05 20:52:27.440291+05:30,1,3,"1. **Context Summary:**
+   The context explains that gratitude is a way of life that can be learned and practiced through intentional actions. It highlights three key ways to practice gratitude:
+   - Recognizing and expressing gratitude in the moment (e.g., saying ""thank you"").
+   - Remembering and reflecting on past kindnesses (contemplation).
+   - Reciprocating through actions of giving back and living by values of gratitude.
+   The text also emphasizes prioritizing time for gratitude practices, such as writing a gratitude log daily, and internalizing gratitude through silent contemplation.
+
+2. **Answer:**
+   To practice gratitude as mentioned:
+   - **Recognize and express gratitude** in the moment (e.g., saying ""thank you"" when someone helps you).
+   - **Remember and mean it** by contemplating past kindnesses (e.g., spending time in silence reflecting on who has helped you).
+   - **Reciprocate through actions** by giving back",0.8354058265686035,2.852299690246582,5.5689849853515625,100
+1,1,"what is the story of success of Whatsapp?
+",what is the story of success of Whatsapp?,strict,2026-03-05 20:53:14.985040+05:30,1,3,"1. **Context Summary:**
+   - WhatsApp was founded by **Brian Acton**, a Stanford graduate and software engineer.
+   - It was **incorporated in Silicon Valley, California**, in the same year Acton was rejected from jobs at major tech companies (e.g., Twitter, Facebook).
+   - The app grew **exponentially** and became a global success, reaching **1.5 billion active users by December 2017**.
+   - Facebook acquired WhatsApp for **$19 billion in 2014**.
+   - The rejection from jobs initially seemed like a setback but later proved beneficial.
+
+2. **Answer:**
+   WhatsApp was founded by Brian Acton, a Stanford graduate. Despite being rejected from jobs at companies like Twitter and Facebook, he went on to create WhatsApp, which became a global messaging app with 1.5 billion users by 2017. Facebook later acquired it for $19 billion",0.24834775924682617,1.4984655380249023,3.37921404838562,100
+1,1,"explain the ""why worry?"" concept.
+","explain the ""why worry?"" concept.",strict,2026-03-05 20:53:41.783882+05:30,1,3,"1. **Context Summary:**
+   The text explains the **""Why Worry?""** concept as a principle of **detachment from situations beyond one’s control**. It emphasizes that worrying about uncontrollable events is futile, as outcomes may change over time (e.g., rejections turning into opportunities). The idea is presented simply—if something is within your control, act; if not, accept it and avoid unnecessary stress. The concept is framed as a **universal truth**, often conveyed through straightforward explanations (e.g., an infographic or a viral lecture clip). Spiritual strength is suggested as a tool to cope with uncontrollable problems.
+
+---
+
+2. **Answer:**
+The **""Why Worry?""** concept teaches that **worrying about things outside your control is unnecessary**. The text states:
+- If a situation is **in your control**, take action.
+- If it is **not in your control**, you cannot change it, so why worry?
+This principle is rooted in **det",0.20980525016784668,1.637085199356079,3.338836908340454,100
+1,1,"explain the ""why worry?"" concept.
+","explain the ""why worry?"" concept.",strict,2026-03-05 20:56:58.228911+05:30,1,3,"1. **Context Summary:**
+   The ""Why Worry?"" concept emphasizes that many life situations are beyond our control. The text highlights that worrying about uncontrollable events is futile. It introduces a simple principle: if a situation is within your control, take action; if not, accept it and refrain from worrying. The idea is reinforced by a viral infographic titled *""Why Worry""* and the realization that perceived setbacks (like rejection or viral miscontextualization) can later become opportunities. Detachment from uncontrollable factors is presented as a key spiritual practice.
+
+2. **Answer:**
+   The ""Why Worry?"" concept teaches that worrying is unnecessary when a situation is beyond your control. The text states:
+   - *""Is this in my control? If yes, you can do something about it. If no, then you cannot do anything about it. Therefore, in both circumstances, why worry?""*
+   It also underscores that uncontrollable events (e.g., viral miscontextualization, external rejections) should not be sources of anxiety, as they may later prove beneficial. The principle is distilled into a simple, universally applicable truth: *""No fancy language or abstract concepts, just essential truths presented modestly to awaken the soul.""*
+
+3. **Citations:**
+   - [page 46 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 47 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 48 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.333782434463501,2.1274445056915283,4.892165660858154,100
+1,1,"What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?
+","What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?",strict,2026-03-05 20:57:26.553035+05:30,1,3,"1. **Context Summary:**
+   The text describes a **hierarchy of connections** in spiritual practice, dividing them into three types:
+   - **Connections outside ourselves** (e.g., networking, relationships, work).
+   - **Connections inside ourselves** (e.g., seeking solace within, self-reflection).
+   - **Connections to something above ourselves** (e.g., God, spiritual beings), emphasizing a higher purpose.
+
+2. **Answer:**
+   The three kinds of connections are:
+   - **Outside ourselves**: Involves external interactions like relationships, work, and social connections. These are essential but can mislead if prioritized over inner direction.
+   - **Inside ourselves**: Refers to inner exploration, self-work, and seeking solace within one’s own mind or spirit.
+   - **Above ourselves**: Connecting to a higher power or spiritual entity (e.g., God), which provides deeper meaning and the ability to spread joy.
+
+   These differ in their scope: the first two are earthly (external or internal), while the third transcends the self toward a spiritual or divine realm.
+
+3. **Citations:**
+   - [page 49 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 52 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8101060390472412,1.9514102935791016,4.8595006465911865,100
+1,1,"What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?
+","What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?",strict,2026-03-05 20:58:25.025642+05:30,1,3,"1. **Context Summary:**
+   The text uses the analogy of **trains bound by tracks, schedules, and destinations** to explain how meditation acts as a discipline to control the mind. Without this discipline, the mind wanders aimlessly like a train without constraints. The analogy signifies that meditation provides structure and direction, ensuring the mind reaches its intended ""destination"" (clarity, focus, or purpose).
+
+2. **Answer:**
+   The analogy used is **trains of Mumbai bound by tracks, schedule, and destinations**. It signifies that meditation requires discipline to guide the mind toward its goals, preventing it from straying off course.
+
+3. **Citations:**
+   [page 51 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.731163740158081,1.5301470756530762,3.7359778881073,100
+1,1,"who is the founder of ISKCON ?
+",who is the founder of ISKCON?,strict,2026-03-05 20:59:09.750277+05:30,1,3,"1. **Context Summary:**
+   The text mentions that ISKCON (International Society for Krishna Consciousness) was founded by **His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada**, who was affectionately called **Srila Prabhupada** by his followers.
+
+2. **Answer:**
+   His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada.
+
+3. **Citations:**
+   [page 57 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8515572547912598,1.1968398094177246,4.101845026016235,100
+1,1,"Why does the passage argue that treating inanimate objects with disrespect can negatively impact our relationships with people?
+",Why does the passage argue that showing disrespect to inanimate objects can harm or weaken our relationships with people?,strict,2026-03-05 20:59:40.600238+05:30,1,3,"1. **Context Summary:**
+   The passage explains that insensitivity toward inanimate objects (e.g., buckets, possessions) can seep into how we treat people. It describes a personal experience where the narrator lost friends due to a growing attitude of disrespect. The text also connects this to modern disposable culture (e.g., plastic waste) and warns that treating things carelessly may lead to treating relationships similarly. It emphasizes the interconnectedness of life’s aspects, suggesting that disrespect for objects reflects or corrupts our treatment of people.
+
+2. **Answer:**
+   The passage argues that **insensitivity toward inanimate objects becomes ingrained in our general attitude**, and since our instincts do not distinguish between things and people, treating objects with disrespect may cause us to gradually adopt the same insensitivity in our relationships. Additionally, the passage highlights that **all aspects of life are integrated**, meaning disrespect for objects can spill over into how we treat people we love.
+
+3. **Citations:**
+   [page 61 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 61 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.25378918647766113,4.455472707748413,6.052827596664429,100
+1,1,"What is the author’s “golden rule” for sensitivity in relationships, and how does it go beyond the common idea of treating others as you would like to be treated?
+","What is the author’s “golden rule” for sensitivity in relationships, as described in the passage about treating inanimate objects with disrespect?",strict,2026-03-05 21:00:21.441466+05:30,1,3,"1. **Context Summary:**
+   The author emphasizes that insensitivity toward inanimate objects can spill over into relationships with people. The passage introduces a **""golden rule""** for sensitivity in relationships: **treat someone better than you would like to be treated yourself**. The author also advises self-reflection on tone, body language, and behavior to ensure sensitivity.
+
+2. **Answer:**
+   The author’s “golden rule” for sensitivity in relationships is:
+   *""Treat someone better than you would like to be treated.""*
+
+3. **Citations:**
+   [page 59 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.26470255851745605,1.2109944820404053,3.3921711444854736,100
+1,1,"How to practice being sensitive?
+",How to practice being sensitive *as described in the author’s “golden rule” for sensitivity in relationships*?,strict,2026-03-05 21:00:39.801279+05:30,1,3,"1. **Context Summary:**
+   The author emphasizes that sensitivity in relationships is crucial for personal success and quality of life. The **""golden rule""** for sensitivity is to **""treat someone better than you would like to be treated.""** This involves reflecting on one’s **tone of voice, body language, and behavior** to ensure they align with sensitivity. The author also highlights the importance of **considering how others feel** before speaking or acting.
+
+2. **Answer:**
+   To practice sensitivity as described in the author’s golden rule:
+   - **Ask yourself:** *""Does my tone of voice, body language, and behavior reflect sensitivity?""*
+   - **Apply the golden rule:** Treat others **better than you would want to be treated yourself**.
+   - **Be mindful of others’ feelings** before speaking or acting.
+
+3. **Citations:**
+   [page 59 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 62 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2525138854980469,1.599034070968628,4.070207357406616,100
+1,1,"How does the “dirty window” story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a Type-1 person?
+","How does the **""bucket""** story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a person who treats inanimate objects with disrespect?",strict,2026-03-05 21:01:14.635580+05:30,1,3,"1. **Context Summary:**
+   - The text explains that treating inanimate objects (like buckets) with disrespect or insensitivity can influence how a person treats people.
+   - Insensitivity toward objects becomes part of a person’s general attitude, and their instinct does not distinguish between things and people.
+   - When a person loses friends, they may notice insensitivity creeping into their relationships with people, mirroring how they treat their possessions.
+   - The universe and life are interconnected, meaning disrespect toward objects can extend to relationships with loved ones.
+
+2. **Answer:**
+   The **""bucket""** story illustrates that when a person treats inanimate objects (like buckets) with disrespect, their insensitivity generalizes to how they treat people. This happens because insensitivity becomes part of their overall attitude, and their instinct does not differentiate between objects and people. Thus, disrespect toward things reflects poorly on their relationships with others.
+
+3. **Citations:**
+   [page 61 | Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com]",2.1009116172790527,1.5846610069274902,6.038776397705078,100
+1,1,"How does the “dirty window” story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a Type-1 person? don't change this query","How does the **""bucket""** story illustrate that our perception of others depends on our own mindset, and how does this relate to the **""golden rule""** for sensitivity (*""treat someone better than you would like to be treated""*)?",relax,2026-03-05 21:01:54.584510+05:30,1,3,"1. Answer:
+The **""bucket""** story illustrates that insensitivity toward inanimate objects (like buckets or possessions) can spill over into how we treat people. The context explains that when we treat our belongings with disrespect, our general attitude becomes less sensitive, and this insensitivity doesn’t distinguish between objects and people. This means our mindset shapes our behavior—if we’re careless or rude toward things, we’re more likely to be the same way with others.
+
+This connects to the **""golden rule""** (*""treat someone better than you would like to be treated""*) because both emphasize **mindful sensitivity**. The bucket story highlights how insensitivity starts with small, overlooked actions (e.g., neglecting objects), while the golden rule actively encourages treating others with extra care—preventing the gradual erosion of respect that the bucket example warns against. By consciously choosing kindness toward people (as the golden rule suggests), we avoid the mindset that leads to treating others (or even objects) poorly.
+
+---
+
+2. Citations:
+- [page 61 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+- [page 59 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*] (for the golden rule phrasing)",0.36219024658203125,2.0152747631073,4.699054479598999,100
+1,1,"How does the story of the intelligent dog illustrate the mindset of a Type-2 person, and what does it reveal about the tendency to focus on faults while neglecting consistent positive qualities?
+","How does the story of the intelligent dog illustrate the mindset of a Type-2 person, and what does it reveal about the tendency to focus on faults while neglecting consistent positive qualities?",strict,2026-03-05 21:02:34.839469+05:30,1,3,"1. **Context Summary:**
+   - The text describes **Type-2 people** as those who see both good and bad in others but **consciously choose to neglect the good** and focus only on the bad, akin to having a ""selective mindset.""
+   - It mentions a comparison to **selective hearing**—people of this type filter out positives and amplify negatives.
+   - The example of **dog videos** being more popular than other content highlights humanity’s tendency to **fixate on flaws** (e.g., forgetting keys) rather than appreciating consistent positive qualities (e.g., good deeds by loved ones).
+   - The narrative emphasizes how **Type-2 individuals overlook widespread goodness** and dwell on minor or repeated faults.
+
+2. **Answer:**
+   The story of the **intelligent dog** (referenced indirectly via the contrast with viral content) does not explicitly appear in the context. However, the **tendency to focus on faults** (e.g., forgetting keys) while neglecting broader positive qualities (e.g., loved ones’ good actions) is directly tied to **Type-2 people’s selective mindset**. The context explains that these individuals **consciously ignore the good** and magnify the bad, revealing their inability to appreciate consistent positives despite their presence.
+
+3. **Citations:**
+   - [page 66 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 67 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.7453691959381104,2.6354994773864746,5.412090539932251,100
+1,1,"In what ways we can perceive people?
+",In what ways we can perceive people?,strict,2026-03-05 21:03:12.509511+05:30,1,3,"1. **Context Summary:**
+   The context describes **five distinct ways** people perceive others in relationships:
+   - **Type-1:** Only sees the bad and magnifies it disproportionately.
+   - **Type-2:** Sees both good and bad but neglects the good, focusing only on the bad.
+   - **Type-3:** Sees good and bad but remains neutral to both.
+   - **Type-4:** Sees good and bad but chooses to focus on the good, neglecting the bad (ideal state for flourishing relationships).
+   - **Type-5:** Sees the good and magnifies it.
+
+2. **Answer:**
+   According to the context, we can perceive people in **five ways**:
+   - See only bad and magnify it.
+   - See good and bad, neglect the good and focus on the bad.
+   - See good and bad, and be neutral to both.
+   - See good and bad, choose to focus on the good and neglect the bad.
+   - See the good and magnify it.
+
+3. **Citations:**
+   - [page 69 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 65 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.21105551719665527,2.055511236190796,3.503546714782715,100
+1,1,"Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?
+","Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?",strict,2026-03-05 21:03:34.102474+05:30,1,3,"1. **Context Summary:**
+   The passage emphasizes that giving feedback while emotionally charged (""hot heads"") is ineffective. It suggests that timing is crucial—feedback should not be given immediately after a sensitive moment (e.g., a personal talk) but rather when both parties are in a calmer state. The text also implies that feedback should be explained rather than expressed impulsively, as this may lead to better understanding and empathy.
+
+2. **Answer:**
+   The phrase **""hot heads do not give good feedback""** means that providing feedback when emotionally reactive or angry is counterproductive. The passage implies that **timing matters**—feedback should be given when both the giver and receiver are composed, not in the heat of the moment. Giving feedback under emotional stress risks poor reception and ineffective communication.
+
+3. **Citations:**
+   - [page 76 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 76 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2598588466644287,2.025480270385742,3.4602463245391846,100
+1,1,"what principles we should know about forgiveness? 
+",what principles we should know about forgiveness?,strict,2026-03-05 21:04:03.338248+05:30,1,3,"1. **Context Summary:**
+   The text outlines key principles for understanding and practicing forgiveness:
+   - **Look beyond the situation**: Understand why someone acted harshly or spoke hurtfully, recognizing their potential suffering (empathy).
+   - **Separate the episode from the person**: Avoid labeling oneself or the other person as inherently wrong; focus on addressing the specific wrongdoing rather than personal guilt or anger.
+   - **Higher purpose**: Forgive based on a deeper principle (e.g., love, community duty) rather than personal resentment, which requires time and support.
+   - **Understand intentions**: Explore the reasons behind a person’s actions to ease forgiveness.
+   - **Forgiveness as a choice**: It is an active decision to heal relationships and achieve inner peace, described as ""warming the heart and cooling the sting.""
+
+2. **Answer:**
+   The principles we should know about forgiveness are:
+   - Look beyond the situation and understand why someone acted hurtfully.
+   - Separate the wrongful act from the person’s identity.
+   - Forgive based on a higher purpose or principle.
+   - Understand the intentions behind harmful actions.
+   - Recognize forgiveness as a conscious choice to restore peace and relationships.
+
+3. **Citations:**
+   - [page 88 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 151 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 80 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8628394603729248,3.3363420963287354,6.755181789398193,100
+1,1,"According to the passage, what does healthy competition mean, and how is it different from competing with others? And what speech did Matthew McConaughey give?
+","According to the passage, what does healthy competition mean, and how is it different from competing with others?",strict,2026-03-05 21:04:56.993702+05:30,1,3,"1. **Context Summary:**
+   - Healthy competition is defined as competing **with oneself** to become a better version of yourself, rather than focusing on others.
+   - Unhealthy competition involves competing with others, often driven by envy or uncontrolled ambition.
+   - The passage emphasizes that healthy competition is about personal growth, while unhealthy competition arises when comparing oneself to others with similar skills or mindsets.
+
+2. **Answer:**
+   Healthy competition means competing **with yourself** to improve and become a better version of yourself. It is different from competing with others because unhealthy competition involves rivalry with peers, driven by envy or ambition, rather than self-improvement.
+
+3. **Citations:**
+   - [page 104 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 104 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2733340263366699,2.2856318950653076,4.716666221618652,100
+1,1,what speech did Matthew McConaughey give?,what speech did Matthew McConaughey give?,strict,2026-03-05 21:05:28.114242+05:30,1,3,"1. **Context Summary:**
+   The provided context mentions that **Matthew McConaughey referenced a principle in his 2014 Oscar acceptance speech** about identifying one’s hero. The speech excerpt includes McConaughey saying:
+   - *""And to my hero. That’s who I chase.""*
+   - His response to being asked about his hero at age 15: *""I don’t know, I gotta think about that. Give me a couple of weeks.""*
+   - Later, at 25, he declared: *""You know who it is? It’s me in ten years.""*
+   - The context does not provide the full speech but references a **short video** of his Oscar acceptance speech.
+
+2. **Answer:**
+   The context does **not explicitly state the full speech** or its title. It only references a **2014 Oscar acceptance speech** where McConaughey discussed identifying one’s hero and his personal journey. The exact speech title or full content is not provided.
+
+   **I don't know** the full speech or its title.
+
+3. **Citations:**
+   [page 102 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2198479175567627,3.159247636795044,4.69231390953064,100

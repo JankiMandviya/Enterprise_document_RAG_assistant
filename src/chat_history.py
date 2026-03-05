@@ -10,16 +10,12 @@ This stage includes:
 # from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 import os
 import requests
-from datetime import datetime
 import initialize
 import numpy as np
 import pytz
-from sqlalchemy.orm import Mapped, mapped_column
+from datetime import datetime
 from langchain_core.prompts import PromptTemplate
 from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.chat_history import BaseChatMessageHistory
-
-
 
 # create new session
 def create_Session(session_id:str):
@@ -130,16 +126,17 @@ def get_all_messages(session_id: str):
     """
     Return list of all messages from a selected session to desplay in UI.
     """
+    messages = []
     db = next(initialize.get_db())
     session = db.query(initialize.Session).filter(initialize.Session.session_id == session_id).first()
     if session:
         session_id_int = session.id # type: ignore
-    messages = (
-        db.query(initialize.Message)
-        .filter(initialize.Message.session_id == session_id_int)
-        .order_by(initialize.Message.created_at.asc())
-        .all()
-    )
+        messages = (
+            db.query(initialize.Message)
+            .filter(initialize.Message.session_id == session_id_int)
+            .order_by(initialize.Message.created_at.asc())
+            .all()
+        )
     return messages
 
 def return_all_sessions():
@@ -250,7 +247,75 @@ def rewrite_query(query,chat_history):
     return rewritten_query
 
 
-def CallLLM_Rewrite_query(rewrite_query_prompt):   # using LM studio
+# def CallLLM_Rewrite_query(rewrite_query_prompt):  # using ollama
+#     """
+#     Call LLM and pass final prompt to it and return text response
+
+#     Args:
+#     final_prompt: final prompt with context and query in string format
+
+#     Returns:
+#     response content
+#     """
+
+#     headers = {
+#     "Content-Type": "application/json"
+#     }
+
+#     payload = {
+#         "model" : "mistral:7b-instruct-q4_0",
+#         "prompt" : rewrite_query_prompt,
+#         "stream" : False,
+#         "options": {
+#             "temperature": 0.0,
+#             "top_p": 0.9,
+#             "num_predict": 512
+#         }
+#     }
+#     print("hello 1")
+#     start = time.time()
+#     response = requests.post(initialize.OLLAMA_URL, json=payload, headers = headers)
+#     print("hello 2")
+#     end = time.time()
+#     print(end-start)
+#     response.raise_for_status() # raises HTTP error if any occurs.
+
+#     return response.json()["response"]
+
+
+# def CallLLM_Rewrite_query(rewrite_query_prompt):   # using LM studio
+#     """
+#     Call LLM and pass final prompt to it and return text response
+
+#     Args:
+#     final_prompt: final prompt with context and query in string format
+
+#     Returns:
+#     response content
+#     """
+
+#     # LM studio requires following format of input data to model
+#     payload = {
+#         "model": "mistralai/mistral-7b-instruct-v0.3",
+#         "messages": [
+#             {
+#                 "role": "user",
+#                 "content": rewrite_query_prompt
+#             }
+#         ],
+#         "temperature": 0.0,
+#         "top_p": 0.9,
+#         "max_tokens": 512,
+#         "stream": False
+#     }
+
+#     headers = {"Content-Type": "application/json"}  
+#     response = requests.post(initialize.LM_STUDIO_URL, json=payload, headers=headers)
+#     response.raise_for_status()
+#     return response.json()["choices"][0]["message"]["content"]
+
+
+def CallLLM_Rewrite_query(rewrite_query_prompt):   # using mistral official API for mistral 7b instruct
     """
     Call LLM and pass final prompt to it and return text response
 
@@ -261,25 +326,18 @@ def CallLLM_Rewrite_query(rewrite_query_prompt):   # using LM studio
     response content
     """
 
-    # LM studio requires following format of input data to model
-    payload = {
-        "model": "mistralai/mistral-7b-instruct-v0.3",
-        "messages": [
-            {
-                "role": "user",
-                "content": rewrite_query_prompt
-            }
-        ],
-        "temperature": 0.0,
-        "top_p": 0.9,
-        "max_tokens": 512,
-        "stream": False
-    }
+    response = initialize.Mistral_client.chat.complete(
+        model="open-mistral-7b",
+        temperature=0.0,
+        max_tokens=200,
+        top_p = 1,
+        stream = False,
+        messages=[
+            {"role": "user", "content": rewrite_query_prompt}
+        ]
+    )
 
-    headers = {"Content-Type": "application/json"}  
-    response = requests.post(initialize.LM_STUDIO_URL, json=payload, headers=headers)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
+    return response.choices[0].message.content
 
 def extract_clean_response(response):
     """

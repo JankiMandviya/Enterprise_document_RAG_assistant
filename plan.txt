@@ -100,43 +100,49 @@ Your Task (Stage 2)
  - Include exact answer text from book for comparison.
  - We will review your dataset before moving on.
 
-✅ Stage 3 — Retrieval Evaluation
+✅ Stage 3 — Retrieval Evaluation (Expanded)
+Core (what you already planned)
 
-Goal:
- - Measure how well FAISS retrieves relevant chunks.
+✔ Hit@k
+✔ Recall@k
+✔ MRR
+✔ Similarity distribution
+✔ Retrieved count
 
-Metrics:
- - Recall@k — Did the top-k retrieved chunks contain the ground truth chunk(s)?
- - Hit@k — Binary: at least one ground truth chunk retrieved?
- - MRR (Mean Reciprocal Rank) — Rank quality of first correct chunk.
- - Similarity scores distribution — Are good chunks scoring high?
- - Number of chunks retrieved — Check threshold behavior (you keep max 3).
+Optional Richer Metrics (if you want deeper insight)
 
-Your Task (Stage 3)
- - For each question in gold dataset:
- - Compare retrieved chunks vs. ground truth chunks.
- - Log rank, score, hit/miss.
- - Aggregate metrics across dataset.
+✔ Precision@k — Among top-k retrieved chunks, how many are relevant?
+✔ F1@k — Harmonic mean of precision and recall
+✔ nDCG@k — Rewards correct retrieval higher in ranking
+✔ MAP — Averages precision across ranking positions
 
-✅ Stage 4 — Generation Evaluation
+👉 You can compute these manually if you annotate whether each chunk is relevant or not.
+(You already planned manual marking — now we can derive precision/F1/MAP too.)
 
-Goal:
- - Measure quality of LLM-generated answers.
+✅ Stage 4 — Generation Evaluation (Expanded)
 
-Metrics:
- - Faithfulness — Is answer grounded in retrieved chunks?
- - Relevance — Does answer address the question?
- - Hallucination — Does answer include information not in retrieved context?
- - Answer length — Optional, can detect truncation.
+You planned manual scoring on:
 
-Evaluation Methods:
- - Manual scoring (recommended for personal project)
- - Optionally: LLM-as-judge (e.g., GPT-4) for quick scoring
+✔ Faithfulness
+✔ Relevance
+✔ Hallucination
 
-Scoring Example:
- - Faithful: 0 / 1
- - Relevant: 0 / 1
- - Hallucination: 0 / 1
+We can add:
+
+Automated metrics using your gold answer text:
+
+✔ BLEU/LG — n-gram lexical match
+✔ ROUGE — recall of n-grams
+✔ BERTScore — semantic similarity
+✔ Perplexity — fluency estimate
+(These require computing similarity of generated answer vs gold answer automatically.)
+
+End-to-End metrics:
+
+✔ Answer Relevance (overlap ratio)
+✔ Context Utilization
+✔ Groundedness
+✔ Hallucination Rate (token-level)
 
 Your Task (Stage 4)
 

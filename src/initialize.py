@@ -8,6 +8,8 @@ import pytz
 import faiss
 import time
 import pandas as pd
+from mistralai import Mistral # type: ignore
+from dotenv import load_dotenv
 from threading import Lock
 from datetime import datetime
 from sqlalchemy import DateTime
@@ -16,8 +18,12 @@ from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship, declarative_base
 
+OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
 DATABASE_URL = "sqlite:///../Persistent_data/chat_history.db"   # Use SQLite, Create (or open) a file named chat_history.db
+load_dotenv()
+api_key = os.getenv("Mistral_API")
+Mistral_client = Mistral(api_key=api_key)
 store = {}  # stores chat_history
 
 # setup for SQLite database
