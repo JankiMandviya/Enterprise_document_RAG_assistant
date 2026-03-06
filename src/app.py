@@ -155,6 +155,9 @@ prompt = st.chat_input("Ask something...")
 uploaded_file = st.file_uploader("Upload document", type=["pdf"], key="pdf_uploader")
 
 current_Session_id = st.query_params["key"]  # current open session in string
+if not current_Session_id:
+    current_Session_id = create_or_load_session(isNewChat = False)
+
 # display documents uploaded in current session
 current_session_int = db.query(initialize.Session).filter(initialize.Session.session_id == current_Session_id).scalar().id # in int
 docs = chat_history.return_all_documents(current_session_int) # return all documents present in current session from SQLite Document table
