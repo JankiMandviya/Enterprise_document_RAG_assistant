@@ -16,7 +16,7 @@ import Response_generator
 st.header(":blue[DocuMind] : Chat with your documents !")
 
 sessions = chat_history.return_all_sessions()
-DOCUMENT_FOLDER = "../stored_documents"
+DOCUMENT_FOLDER = "stored_documents"
 os.makedirs(DOCUMENT_FOLDER, exist_ok=True)
 db = next(initialize.get_db())
 query_id = 0

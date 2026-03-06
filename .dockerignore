@@ -1,0 +1,8 @@
+RAG_venv/
+__pycache__/
+src/__pycache__/
+stored_documents/
+LLM_test/
+src/.env
+.git
+.gitignore
