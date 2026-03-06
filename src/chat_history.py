@@ -232,7 +232,7 @@ def rewrite_query(query,chat_history):
     if not chat_history.messages:
         return query
 
-    with open('src/query_rewrite.txt','r') as f:
+    with open(os.path.join(initialize.BASE_DIR,'src/query_rewrite.txt'),'r') as f:
         rewrite_prompt = f.read()
 
     t = PromptTemplate(

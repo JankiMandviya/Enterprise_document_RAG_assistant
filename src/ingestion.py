@@ -13,10 +13,8 @@ This stage includes:
 # import dependencies
 import os
 import faiss
-import pickle
 import numpy as np
 import initialize
-import chat_history
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 

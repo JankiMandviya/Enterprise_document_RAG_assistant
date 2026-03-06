@@ -18,9 +18,10 @@ from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship, declarative_base
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
-DATABASE_URL = "sqlite:///Persistent_data/chat_history.db"   # Use SQLite, Create (or open) a file named chat_history.db
+DATABASE_URL = os.path.join("sqlite:///",BASE_DIR,"Persistent_data","chat_history.db")   # Use SQLite, Create (or open) a file named chat_history.db
 load_dotenv()
 api_key = os.getenv("Mistral_API")
 Mistral_client = Mistral(api_key=api_key)
@@ -206,7 +207,7 @@ def get_db():   # open a database session
 
 # embedding model 'e5-base-v2' loading
 embedding_model = SentenceTransformer('intfloat/e5-base-v2')
-index_path = "Persistent_data/FAISS.index"
+index_path = os.path.join(BASE_DIR,"Persistent_data/FAISS.index")
 faiss_lock = Lock()  # lock to prevent two/multiple simultaneous read/write operations on FAISS. It stops FAISS from getting corrupted and multiple overwrites of each other's data.
 
 dimension = 768  # Sentence transformer 'intfloat/e5-base-v2' outputs embedding vector of dimension 768.
@@ -221,7 +222,7 @@ else:
 
 # -----------------------Logging-----------------------
 
-query_csv = "Evaluation/queries.csv"  # Log per query
+query_csv = os.path.join(BASE_DIR,"Evaluation/queries.csv")  # Log per query
 # stores :
 # query_id (unique for evaluation)
 # session_id
@@ -234,7 +235,7 @@ query_csv = "Evaluation/queries.csv"  # Log per query
 # total_time
 # final_answer_length (tokens or characters)
 
-retrieval_csv = "Evaluation/retrieval_details.csv"  # Log per retrieved chunk
+retrieval_csv = os.path.join(BASE_DIR,"Evaluation/retrieval_details.csv")  # Log per retrieved chunk
 # stores:
 # query_id
 # rank (1 = most similar)
@@ -246,14 +247,14 @@ retrieval_csv = "Evaluation/retrieval_details.csv"  # Log per retrieved chunk
 # similarity_score
 # chunk_length (tokens/characters)
 
-evaluation_dataset = "Evaluation/evaluation_dataset.csv" # A ground truth dataset to measure correctness.
+evaluation_dataset = os.path.join(BASE_DIR,"Evaluation/evaluation_dataset.csv") # A ground truth dataset to measure correctness.
 # stores:
 # question_text
 # ground_truth_answer (manual extraction from book)
 # source_chunk_ids (optional, but ideal)
 # source_page_numbers (optional)
 
-generation_eval = "Evaluation/generation_eval.csv"  # Manual+LLM scoring of LLM answers
+generation_eval = os.path.join(BASE_DIR,"Evaluation/generation_eval.csv")  # Manual+LLM scoring of LLM answers
 # stores:
 # Metrics:
 #  - Faithfulness — Is answer grounded in retrieved chunks?
