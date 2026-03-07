@@ -17,16 +17,20 @@ from sqlalchemy.exc import SQLAlchemyError
 from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship, declarative_base
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
-DATABASE_URL = os.path.join("sqlite:///",BASE_DIR,"Persistent_data","chat_history.db")   # Use SQLite, Create (or open) a file named chat_history.db
+db_path = BASE_DIR / "Persistent_data" / "chat_history.db"
+DATABASE_URL = f"sqlite:///{db_path}"                   # Use SQLite, Create (or open) a file named chat_history.db
+# DATABASE_URL = os.path.join("sqlite:///",BASE_DIR,"Persistent_data","chat_history.db")   # Use SQLite, Create (or open) a file named chat_history.db
+
 load_dotenv()
 api_key = os.getenv("Mistral_API")
 Mistral_client = Mistral(api_key=api_key)
 store = {}  # stores chat_history
-
+print(DATABASE_URL)
 # setup for SQLite database
 Base = declarative_base()  # The base class for all database models, SQLAlchemy uses it to track tables, all classes must inherit from base class
 

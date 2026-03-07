@@ -23,7 +23,7 @@ query_id = 0
 
 # read URL of streamlit current chat and check if session with session_id from url exist. if yes return the session id as it is. if not, create session with url's session id 
 def create_or_load_session(isNewChat:bool):
-
+    sessions = chat_history.return_all_sessions()
     if isNewChat:  # new chat button pressed --> create new session with random uuid as session_id
         new_session_id = str(uuid.uuid4())
         new_session_id = chat_history.create_Session(new_session_id)
@@ -38,8 +38,8 @@ def create_or_load_session(isNewChat:bool):
     
     else:      # only tab reload without new chat button click action --> open currently open session from url.
         query_params = st.query_params
-
-        if query_params:
+        print(query_params)
+        if query_params and query_params["key"] != 'None':
             st.query_params["key"] = query_params["key"]  # if url had a session_id, after reload set current url's session id as previous one to open the same chat after reload.
             # session_id = chat_history.create_Session(query_params['key'], query_params['key'])              
             messages = chat_history.get_all_messages(st.query_params["key"])
@@ -62,16 +62,19 @@ def create_or_load_session(isNewChat:bool):
                 for m in messages:
                     with st.chat_message(str(m.role)):
                         st.markdown(m.content)
-
+                print("hello 1")
                 return new_session_id
             
             else:     # if previous sessions exist in sqlite database, open most recent chat/session
-                st.query_params["key"] = sessions[0].session_id
-                messages = chat_history.get_all_messages(st.query_params["key"])
+                for session in sessions:
+                    if session.session_id != None:
+                        st.query_params["key"] = session.session_id
+                        messages = chat_history.get_all_messages(st.query_params["key"])
 
-                for m in messages:
-                    with st.chat_message(str(m.role)):
-                        st.markdown(m.content)
+                        for m in messages:
+                            with st.chat_message(str(m.role)):
+                                st.markdown(m.content)
+                print("hello 2")
                 st.rerun()
         return query_params["key"]
 
@@ -135,13 +138,16 @@ for s in sessions:
     with col1:
         if st.sidebar.button(str(s.session_title)):
             st.query_params["key"] = s.session_id
+            st.rerun()
     with col2:
         if st.button("🗑", key=f"delete_{s.id}"):
             chat_history.delete_session(s.session_id) # type: ignore
 
             # If deleted session was active
             if st.query_params["key"] == s.session_id:
-                st.query_params["key"]  = sessions[0].session_id
+                print("deleted session was open")
+                st.query_params["key"] = None
+                current_Session_id = create_or_load_session(isNewChat = False)
             st.rerun()
 
 failed_docs = db.query(initialize.Document).filter(initialize.Document.status != "completed").all()
@@ -155,8 +161,6 @@ prompt = st.chat_input("Ask something...")
 uploaded_file = st.file_uploader("Upload document", type=["pdf"], key="pdf_uploader")
 
 current_Session_id = st.query_params["key"]  # current open session in string
-if not current_Session_id:
-    current_Session_id = create_or_load_session(isNewChat = False)
 
 # display documents uploaded in current session
 current_session_int = db.query(initialize.Session).filter(initialize.Session.session_id == current_Session_id).scalar().id # in int
@@ -219,6 +223,8 @@ if uploaded_file:
         st.error("document already exists")
 #----------------------{ if user enters a prompt/query }-----------------------------
 if prompt:
+    generation_time = 0
+    
     t3  = initialize.time.time() # start time when query is entered through UI
 
     query = prompt
