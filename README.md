@@ -302,6 +302,9 @@ The container automatically builds and runs the Streamlit app.
 # Output
 ![alt text](images/image.png)
 
+# Demo Video:
+https://youtu.be/3yeC--JF3lI
+
 # 📜 License
 
 This project is released under the MIT License.
