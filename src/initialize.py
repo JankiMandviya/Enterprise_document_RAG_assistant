@@ -8,6 +8,7 @@ import pytz
 import faiss
 import time
 import pandas as pd
+from pathlib import Path
 from mistralai import Mistral # type: ignore
 from dotenv import load_dotenv
 from threading import Lock
@@ -17,21 +18,76 @@ from sqlalchemy.exc import SQLAlchemyError
 from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship, declarative_base
-from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# ----------------------------------------- Path declaration --------------------------------------------------
 OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Database
 db_path = BASE_DIR / "Persistent_data" / "chat_history.db"
+db_path.parent.mkdir(parents=True, exist_ok=True)   # make sure the parent folder exists.
 DATABASE_URL = f"sqlite:///{db_path}"                   # Use SQLite, Create (or open) a file named chat_history.db
-# DATABASE_URL = os.path.join("sqlite:///",BASE_DIR,"Persistent_data","chat_history.db")   # Use SQLite, Create (or open) a file named chat_history.db
+
+# FAISS database:
+index_path = os.path.join(BASE_DIR,"Persistent_data/FAISS.index")
+
+# templates for LLM prompts
+QUERY_REWRITE_TEMPLATE_PATH = os.path.join(BASE_DIR,'src/query_rewrite.txt')         # Template for query rewrite LLM call
+RELAXED_PROMPT_TEMPLATE_PATH = os.path.join(BASE_DIR,'src/Relaxed_LLM_prompt.txt')   # Prompt template for response generation
+STRICT_PROMPT_TEMPLATE_PATH = os.path.join(BASE_DIR,'src/Strict_LLM_prompt.txt')     # Prompt template for response generation
+
+# Evaluation files
+eval_dir = BASE_DIR / "Evaluation"
+eval_dir.mkdir(parents=True, exist_ok=True)
+
+query_csv = eval_dir / "queries.csv"  # Log per query
+# stores :
+# query_id (unique for evaluation)
+# session_id
+# user query
+# timestamp
+# num_documents_in_session
+# retrieved_chunks_count (after threshold)
+# retrieval_time
+# generation_time
+# total_time
+# final_answer_length (tokens or characters)
+
+retrieval_csv = eval_dir / "retrieval_details.csv"  # Log per retrieved chunk
+# stores:
+# query_id
+# rank (1 = most similar)
+# chunk_id
+# document_id
+# doc_title
+# doc_source
+# page_number
+# similarity_score
+# chunk_length (tokens/characters)
+
+evaluation_dataset = eval_dir / "evaluation_dataset.csv" # A ground truth dataset to measure correctness.
+# stores:
+# question_text
+# ground_truth_answer (manual extraction from book)
+# source_chunk_ids (optional, but ideal)
+# source_page_numbers (optional)
+
+generation_eval = eval_dir / "generation_eval.csv"  # Manual+LLM scoring of LLM answers
+# stores:
+# Metrics:
+#  - Faithfulness — Is answer grounded in retrieved chunks?
+#  - Relevance — Does answer address the question?
+#  - Hallucination — Does answer include information not in retrieved context?
+#  - Answer length — Optional, can detect truncation.
 
 load_dotenv()
 api_key = os.getenv("Mistral_API")
 Mistral_client = Mistral(api_key=api_key)
 store = {}  # stores chat_history
-print(DATABASE_URL)
-# setup for SQLite database
+
+#-------------------------------------- setup for SQLite database ---------------------------------------------------
 Base = declarative_base()  # The base class for all database models, SQLAlchemy uses it to track tables, all classes must inherit from base class
 
 
@@ -209,9 +265,10 @@ def get_db():   # open a database session
         db.close()
 
 
-# embedding model 'e5-base-v2' loading
+# ---------------------------------------- embedding model 'e5-base-v2' loading ------------------------------------
 embedding_model = SentenceTransformer('intfloat/e5-base-v2')
-index_path = os.path.join(BASE_DIR,"Persistent_data/FAISS.index")
+
+# ----------------------------------------- FAISS index creation ----------------------------------------------------
 faiss_lock = Lock()  # lock to prevent two/multiple simultaneous read/write operations on FAISS. It stops FAISS from getting corrupted and multiple overwrites of each other's data.
 
 dimension = 768  # Sentence transformer 'intfloat/e5-base-v2' outputs embedding vector of dimension 768.
@@ -224,47 +281,7 @@ else:
     )
     faiss.write_index(index, index_path)
 
-# -----------------------Logging-----------------------
-
-query_csv = os.path.join(BASE_DIR,"Evaluation/queries.csv")  # Log per query
-# stores :
-# query_id (unique for evaluation)
-# session_id
-# user query
-# timestamp
-# num_documents_in_session
-# retrieved_chunks_count (after threshold)
-# retrieval_time
-# generation_time
-# total_time
-# final_answer_length (tokens or characters)
-
-retrieval_csv = os.path.join(BASE_DIR,"Evaluation/retrieval_details.csv")  # Log per retrieved chunk
-# stores:
-# query_id
-# rank (1 = most similar)
-# chunk_id
-# document_id
-# doc_title
-# doc_source
-# page_number
-# similarity_score
-# chunk_length (tokens/characters)
-
-evaluation_dataset = os.path.join(BASE_DIR,"Evaluation/evaluation_dataset.csv") # A ground truth dataset to measure correctness.
-# stores:
-# question_text
-# ground_truth_answer (manual extraction from book)
-# source_chunk_ids (optional, but ideal)
-# source_page_numbers (optional)
-
-generation_eval = os.path.join(BASE_DIR,"Evaluation/generation_eval.csv")  # Manual+LLM scoring of LLM answers
-# stores:
-# Metrics:
-#  - Faithfulness — Is answer grounded in retrieved chunks?
-#  - Relevance — Does answer address the question?
-#  - Hallucination — Does answer include information not in retrieved context?
-#  - Answer length — Optional, can detect truncation.
+# ------------------------------------------------Logging-------------------------------------------------
 
 headers_query = ["query_id", "session_id", "user_query","rewritten_query","mode", "timestamp", "num_documents_in_session", "retrieved_chunks_count", "LLM response", "retrieval_time(in s)", "generation_time(in s)", "total_time(in s)", "final_answer_length(in tokens)"]
 df_query = pd.DataFrame(columns = headers_query)

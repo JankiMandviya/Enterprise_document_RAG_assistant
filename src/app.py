@@ -16,8 +16,6 @@ import Response_generator
 st.header(":blue[DocuMind] : Chat with your documents !")
 
 sessions = chat_history.return_all_sessions()
-DOCUMENT_FOLDER = os.path.join(initialize.BASE_DIR,"stored_documents")
-os.makedirs(DOCUMENT_FOLDER, exist_ok=True)
 db = next(initialize.get_db())
 query_id = 0
 
@@ -161,6 +159,9 @@ prompt = st.chat_input("Ask something...")
 uploaded_file = st.file_uploader("Upload document", type=["pdf"], key="pdf_uploader")
 
 current_Session_id = st.query_params["key"]  # current open session in string
+if current_Session_id == 'None':
+    current_Session_id = create_or_load_session(isNewChat=False)
+    st.rerun()
 
 # display documents uploaded in current session
 current_session_int = db.query(initialize.Session).filter(initialize.Session.session_id == current_Session_id).scalar().id # in int
@@ -198,7 +199,7 @@ if uploaded_file:
         db = next(initialize.get_db())
 
         # Save file to disk
-        file_path = os.path.join(DOCUMENT_FOLDER, uploaded_file.name)
+        file_path = os.path.join(initialize.UPLOAD_DIR, uploaded_file.name)
 
         with open(file_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
@@ -262,7 +263,9 @@ if prompt:
     
     else:
         mode = "strict"
+        t2 = initialize.time.time()
         RAW_response = "I don't know. No information found for the entered query."
+        generation_time = initialize.time.time() - t2
 
     chat_history.save_message(current_Session_id, "AI", RAW_response) # save original raw response in AI message to db
     # show message on UI

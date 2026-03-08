@@ -54,11 +54,11 @@ def promptBuilder(Final_context, user_query, mode):
     """
     if mode == "relax":
         print("relaxed mode")
-        with open(os.path.join(initialize.BASE_DIR,'src/Relaxed_LLM_prompt.txt'),'r') as f:
+        with open(initialize.RELAXED_PROMPT_TEMPLATE_PATH,'r') as f:
             prompt_template = f.read()
     else:
         print("strict mode")
-        with open(os.path.join(initialize.BASE_DIR,'src/Strict_LLM_prompt.txt'),'r') as f:
+        with open(initialize.STRICT_PROMPT_TEMPLATE_PATH,'r') as f:
             prompt_template = f.read()
         
     t = PromptTemplate(

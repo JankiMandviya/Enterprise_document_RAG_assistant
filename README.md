@@ -281,7 +281,7 @@ The container automatically builds and runs the Streamlit app.
 
 ---
 
-# 📊 Example Workflow
+# 📊 Workflow
 
 1️⃣ Upload document
 
@@ -291,11 +291,16 @@ The container automatically builds and runs the Streamlit app.
 
 4️⃣ User asks question
 
-5️⃣ FAISS retrieves relevant context
+5️⃣ Rewrite query using user query and chat history
 
-6️⃣ Prompt constructed with retrieved context
+6️⃣ FAISS retrieves relevant context
 
-7️⃣ Mistral LLM generates answer
+7️⃣ Prompt constructed with retrieved context and appropriate prompt mode(strict/Relaxed) for hallucination proof responses
+
+8️⃣ Mistral LLM generates answer
+
+# Output
+![alt text](images/image.png)
 
 # 📜 License
 
