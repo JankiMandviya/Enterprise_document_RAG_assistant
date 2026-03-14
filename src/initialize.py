@@ -24,6 +24,7 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"   # URL where mistral model is hosted by LM studio
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+UPLOAD_DIR = str(BASE_DIR / "stored_documents/")
 
 # Database
 db_path = BASE_DIR / "Persistent_data" / "chat_history.db"

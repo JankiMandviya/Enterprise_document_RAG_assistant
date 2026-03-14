@@ -17,7 +17,9 @@ st.header(":blue[DocuMind] : Chat with your documents !")
 
 sessions = chat_history.return_all_sessions()
 db = next(initialize.get_db())
-query_id = 0
+
+if "query_id" not in st.session_state:
+    st.session_state["query_id"] = 0
 
 # read URL of streamlit current chat and check if session with session_id from url exist. if yes return the session id as it is. if not, create session with url's session id 
 def create_or_load_session(isNewChat:bool):
@@ -80,8 +82,9 @@ def log_queries(session_id:int, user_query:str, rewritten_query:str,mode:str, re
     """
     Logs query_id, session_id, user_query, rewritten_query,timestamp, num_documents_in_session, retrieved_chunks_count, retrieval_time(in s), generation_time(in s), total_time(in s), final_answer_length(in tokens) in queries.csv
     """
-    global query_id
+    query_id = st.session_state["query_id"]
     query_id+=1
+    st.session_state["query_id"] = query_id
     documents_in_session = db.query(initialize.Document).filter(initialize.Document.session_id == session_id).all()
     num_documents_in_session = len(documents_in_session)
     timestamp = initialize.datetime.now(initialize.pytz.timezone('Asia/Kolkata'))
@@ -94,7 +97,7 @@ def log_queries(session_id:int, user_query:str, rewritten_query:str,mode:str, re
     return
 
 def log_chunk_retrieval(results):
-    global query_id
+    query_id = st.session_state["query_id"]
     df = []
 
     for i,chunk in enumerate(results):

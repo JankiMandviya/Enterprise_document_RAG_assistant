@@ -1,111 +1,1662 @@
-query_id,rank,chunk_id,document_id,doc_title,doc_source,page_number,similarity_score,chunk_length,Relevance11,1,34,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,14,0.8444619178771973,44
-1,2,43,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,17,0.8319864273071289,132
-1,3,62,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,22,0.8211601376533508,146
-1,1,430,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,141,0.8017833232879639,67
-1,2,336,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,110,0.7980475425720215,133
-1,3,51,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,19,0.7978149056434631,141
-1,1,37,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,15,0.8350619673728943,144
-1,2,31,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,14,0.8270190954208374,137
-1,3,234,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,77,0.8244666457176208,140
-1,1,37,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,15,0.8347275257110596,144
-1,2,31,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,14,0.8267661929130554,137
-1,3,234,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,77,0.8242692947387695,140
-1,1,37,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,15,0.8347275257110596,144
-1,2,31,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,14,0.8267661929130554,137
-1,3,234,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,77,0.8242692947387695,140
-1,1,40,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,16,0.8223458528518677,134
-1,2,62,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,22,0.8210854530334473,146
-1,3,51,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,19,0.8181901574134827,141
-1,1,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,35,0.8449586033821106,133
-1,2,399,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,131,0.8424577713012695,58
-1,3,117,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,39,0.8398607969284058,47
-1,1,398,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,131,0.8556636571884155,150
-1,2,101,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,35,0.8554900884628296,130
-1,3,76,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,28,0.8547015190124512,38
-1,1,40,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,16,0.8310601115226746,134
-1,2,235,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,77,0.8277803659439087,143
-1,3,398,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,131,0.8235231637954712,150
-1,1,124,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,42,0.8566615581512451,116
-1,2,119,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,40,0.8554708361625671,130
-1,3,118,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,40,0.8549460172653198,129
-1,1,127,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,43,0.8306883573532104,91
-1,2,125,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,43,0.822618842124939,145
-1,3,143,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,48,0.8198451995849609,101
-1,1,137,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,46,0.8383996486663818,97
-1,2,143,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,48,0.8301451802253723,101
-1,3,138,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,47,0.8279851675033569,129
-1,1,137,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,46,0.8383996486663818,97
-1,2,143,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,48,0.8301451802253723,101
-1,3,138,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,47,0.8279851675033569,129
-1,1,145,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,49,0.8639873266220093,126
-1,2,154,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,52,0.8335113525390625,97
-1,3,287,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,93,0.8251481056213379,76
-1,1,151,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,51,0.8572669625282288,129
-1,2,149,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,50,0.8090173006057739,122
-1,3,150,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,50,0.8027896881103516,104
-1,1,164,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,57,0.8489391803741455,125
-1,2,168,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,58,0.8055685758590698,142
-1,3,165,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,57,0.7950922846794128,148
-1,1,180,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8306341171264648,135
-1,2,181,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8160760998725891,139
-1,3,185,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,62,0.8090734481811523,145
-1,1,180,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8496410250663757,135
-1,2,173,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,59,0.8415238857269287,123
-1,3,187,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,63,0.8344161510467529,80
-1,1,173,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,59,0.8656017780303955,123
-1,2,186,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,62,0.8445048928260803,51
-1,3,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,55,0.842838704586029,24
-1,1,180,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8490889668464661,135
-1,2,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,55,0.8259548544883728,24
-1,3,181,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8178550004959106,139
-1,1,173,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,59,0.8465943336486816,123
-1,2,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,55,0.843792200088501,24
-1,3,180,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,61,0.8299016952514648,135
-1,1,194,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,66,0.849786639213562,147
-1,2,199,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,67,0.8306829333305359,149
-1,3,205,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,69,0.8126798868179321,144
-1,1,206,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,69,0.8371454477310181,145
-1,2,191,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,65,0.8147120475769043,144
-1,3,192,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,65,0.8135645985603333,146
-1,1,231,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,76,0.8560423254966736,145
-1,2,232,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,76,0.8525345325469971,56
-1,3,225,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,74,0.8133871555328369,61
-1,1,271,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,88,0.891113817691803,136
-1,2,461,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,151,0.839057207107544,57
-1,3,240,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,80,0.836651623249054,135
-1,1,319,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,104,0.8816897869110107,35
-1,2,318,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,104,0.8402094841003418,120
-1,3,291,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,96,0.8229522705078125,68
-1,1,309,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,102,0.8290133476257324,153
-1,2,230,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,76,0.7657504081726074,146
-1,3,106,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,../stored_documents\book.pdf,37,0.7620996236801147,123
-1,1,34,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,14,0.7822386026382446,44
-1,2,43,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,17,0.778720498085022,132
-1,3,62,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,22,0.7643237709999084,146
-1,1,20,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,11,0.8357497453689575,123
-1,2,24,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.8340022563934326,146
-1,3,452,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,147,0.8197201490402222,128
-1,1,476,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,159,0.7821770906448364,8
-1,2,128,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,44,0.7686436176300049,152
-1,3,380,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,124,0.7644667625427246,159
-1,1,34,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,14,0.8444619178771973,44
-1,2,43,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,17,0.8319864273071289,132
-1,3,62,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,22,0.8211601376533508,146
-1,1,27,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,13,0.8348290920257568,140
-1,2,26,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.8186733722686768,100
-1,3,28,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,13,0.8073217272758484,136
-1,1,34,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,14,0.8177341222763062,44
-1,2,35,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,15,0.8036511540412903,140
-1,3,44,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,17,0.8000987768173218,120
-1,1,27,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,13,0.8314353227615356,140
-1,2,26,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.8174798488616943,100
-1,3,28,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,13,0.8029353618621826,136
-1,1,20,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,11,0.8357497453689575,123
-1,2,24,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.8340022563934326,146
-1,3,452,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,147,0.8197201490402222,128
-1,1,24,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.8349310159683228,146
-1,2,20,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,11,0.8219785690307617,123
-1,3,48,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,18,0.8120458126068115,50
-1,1,341,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,112,0.8543510437011719,47
-1,2,334,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,109,0.8493135571479797,147
-1,3,340,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,111,0.8428217172622681,117
+query_id,rank,chunk_id,document_id,doc_title,doc_source,page_number,similarity_score,chunk_length,chunk_content,Relevance
+1,1,211,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,71,0.768190742,139,"?A few monks, including myself, had taken a group of families to this
+beautiful part of the world for a spiritual retreat. After spending some time
+discussing the significance of the place we were at, we returned to our
+accommodation. The purpose of this trip was not only to visit all the places of
+spiritual virtue but, more importantly, to spend time with these families. There is
+no substitute to spending quality time with each other, and I have found that
+open communication with people in the midst of nature can do wonders to
+strengthen bonds. There could have been no better backdrop for this than the
+Himalayas!
+?As I returned to the townhouse that we had rented, I flicked open my laptop
+to check my email. Although time had stopped for me whilst I was away on this",0
+1,2,23,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.757403374,139,"situated in a high-rise in elegant Worli. This area of Mumbai is what Fifth
+Avenue is to New York, or Park Lane is to London. Indeed, if there were a
+version of the board game Monopoly for Mumbai, you would be paying a hefty
+price if you landed on Worli?s distinguished towers: Palais Royale or Omkar
+1973. And, here I was, a monk with hardly a rupee to my name, enjoying the
+cooling breeze from the Arabian Sea on the twenty-eighth-floor home of my
+gracious hosts. A word of caution: I have changed the names in this story. This
+adjustment is not only to be sensitive towards the couple whose secrets I am
+about to share, but also to avoid offending those who have ever fed me sambar
+that didn?t live up to the standard set by the Iyers.",1
+1,3,401,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,132,0.75136137,132,"at home; with the ones we love the most. Are we doing what we can to help
+them? Are we there for them to help them physically as well as emotionally?
+Relationships at home can work well only if all parties have low expectations of
+each other, but high expectations of themselves to help the other.
+At this moment, Harry was an example of serving the one you love. Another
+thought that came to my mind was of Lata Khare, whose story of sacrifice for
+her husband deeply touched my heart.
+Running Marathons
+Lata Bhagavan Khare was a sixty-five-year-old resident of a small village
+located in the Buldhana district of Maharashtra. Her life was simple. She and her
+husband would go daily to a landowner?s farm and make just enough to survive;",0
+2,1,51,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,19,0.820608616,141,"My father was fascinated by the updating software in the textile equipment at his
+factory. He wanted me to be one of those superheroes at his factory who could
+come in and solve any technical problem.?
+?You may not be a software engineer, but you seem to be doing well now.
+Aren?t you?? I pondered. ?You went to Harvard!?
+?Harvard was me rebelling!? Harry snapped. He took a deep breath, ?I had to
+get away from my parents and siblings. I wanted to live my own life, so I
+escaped to America. I know it seems ludicrous, but I didn?t think about the
+Harvard MBA programme thoroughly. I just took it without thinking, just to get
+away. I had a full scholarship. After years of studying the wrong thing, I wanted
+to live my own life.?
+?So was Harvard the solution??",1
+2,2,430,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,141,0.810435116,67,"an older one, as he followed him. The older doctor looked important and
+commanded the respect of ten, who seemed like students following him. They
+were captivated by every word he spoke. Harry overheard his surname and
+barged into the intimate circle of medical students with their tutor.
+?Did you say Iyer?? Harry asked the student. The student looked at his tutor,
+unsure of how to reply.",0
+2,3,336,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,110,0.803550899,133,"Finding balance between the four areas may be the route to having a life that one
+looks forward to living. Not everybody?s purpose will appear to have an impact
+on the course of the world at first?it could be something as simple as Sairaj?s
+was.
+?However, not everyone is as young as Sairaj,? Harry laughed as we were
+edging closer to more familiar parts of Mumbai. We had just passed some
+expensive designer shops. ?If you have a lifestyle that is linked to wearing such
+expensive clothes,? Harry pointed to the displays in the window, ?then it is hard
+to change your existing career and do what you love. At one point, I wanted to
+work with nature, as a conservationist to protect the environment, but that would
+not pay well,? he confessed.",0
+3,1,34,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,14,0.848783255,44,"Harry jumped out jingling his keys.
+?Where?s your Mercedes?? I asked curiously.
+?I had to sell it, unfortunately. The chassis was too low for the streets of
+Mumbai. I bought a Lexus instead. I heard having one is the mark of a true
+gentleman.?",1
+3,2,43,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,17,0.838575125,132,"found myself wondering: Had I said something wrong? Had I offended him?
+Insulting someone who has hosted you at their home is one of the most
+regrettable things one can do. Two minutes passed before I decided to break the
+deadlock.
+?So where did you buy this car?? I asked trying to change the subject to
+something more palatable.
+Harry appreciated that I was trying to find common ground and followed suit.
+He still didn?t feel comfortable sharing with me whatever it was he was thinking.
+?Well, I needed to buy a car after I sold the Mercedes. My wife and I were taking
+cabs everywhere for the first few weeks. One day when we were visiting some
+friends in Juhu, the cab stopped at a traffic light directly outside the Lexus",1
+3,3,33,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,14,0.825258732,133,"forgotten my keys,? he said, as he vigorously pressed the button for the elevator
+to take him back to the twenty-eighth floor. ?I?ll be right back.? He left me in
+what seemed like a deserted parking garage.
+As I walked deeper into the car park, automatic lights came on to reveal a
+young boy?s paradise?a festival of the most expensive cars imaginable. I
+walked around the garage, remembering how fascinated I was with cars in my
+childhood. I chuckled as I saw my reflection in the window of a Ferrari that was
+the same shade of orange as my robes. But I couldn?t see Harry?s Mercedes in
+the parking lot. The doors of the elevator sprung open, and soon an out-of-breath
+Harry jumped out jingling his keys.
+?Where?s your Mercedes?? I asked curiously.",0
+4,1,40,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,16,0.822345853,134,"made incredible progress in life. People only dream of the kind of success you
+have achieved. From studying at prestigious institutions around the world to
+having a loving partner, living on the top floor of a skyscraper, having a seven-
+figure salary and a professional reputation years ahead of your age, you have
+come a long way. However, I am so glad that you haven?t forgotten the keys to
+your happiness as you have moved up on the ladder of success. As a society, it?s
+all too easy to focus on our external achievements and forget to assess whether
+we are happy with the state of our life. I?m relieved that you haven?t neglected
+that aspect of your life.?
+?I suppose so . . .? Harry remarked uneasily. He wasn?t smiling any more. I",0
+4,2,62,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,22,0.821085453,146,"and even that Rolls-Royce in the distance.? Harry winced at the sight of a car
+better than his. ?We all have three things in common: we are all stuck, we all
+have a journey to complete, and we all have a destination. Now imagine the
+traffic jam all cleared up. We would all be free to complete our journeys in peace
+and reach the destination that we choose.?
+?What?s that got to do with my situation though?? Harry retorted.
+?There is a traffic jam within our minds, Harry. And that traffic jam is
+stopping each one of us from reaching our true potential. Imagine if we knew
+how to clear this disruption. No fumes of insecurity causing us to cough, no one
+honking at us, distracting us from what?s important and plenty of fuel to sustain
+us so that we can live a life worth living.?",0
+4,3,51,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,19,0.818190157,141,"My father was fascinated by the updating software in the textile equipment at his
+factory. He wanted me to be one of those superheroes at his factory who could
+come in and solve any technical problem.?
+?You may not be a software engineer, but you seem to be doing well now.
+Aren?t you?? I pondered. ?You went to Harvard!?
+?Harvard was me rebelling!? Harry snapped. He took a deep breath, ?I had to
+get away from my parents and siblings. I wanted to live my own life, so I
+escaped to America. I know it seems ludicrous, but I didn?t think about the
+Harvard MBA programme thoroughly. I just took it without thinking, just to get
+away. I had a full scholarship. After years of studying the wrong thing, I wanted
+to live my own life.?
+?So was Harvard the solution??",1
+5,1,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,35,0.844958603,133,"Think: Is there anything positive about this situation I am in?
+Being positive does not mean we neglect the negative. We must
+constructively deal with negative situations whilst simultaneously
+focusing on the positive.
+Just like our tongue can be obsessed with something stuck in our
+teeth, our mind has a default setting to be obsessed about the
+negative.
+Gratitude is a state of being that allows us to see the positive. It
+comes from realizing that there is good in the world, that some of that
+good is with us and that those good things are coming from an
+external reality. That state of consciousness imbibes us with
+positivity.
+Even in times of difficulty and sorrow, we can feel inner strength,
+when we are grateful for the support of caring friends and family.",0
+5,2,399,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.842457771,58,"In order to be happy, we should shift our attitude from being an ice
+cream to a candle, from being selfish to selfless. This is shown
+through service.
+We must be wary of compassion fatigue. This means we must have
+all our wheels balanced as we try to help others. This is the principle
+of being selfishly selfless.",0
+5,3,117,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,39,0.839860797,47,"push-ups on the beach.
+?Similarly, we must train the muscle of the mind. To some, gratitude is a
+natural disposition; to others, it?s a conscious priority. But like any muscle, you
+must ?use it or lose it?. At heightened levels of practice, we do not need to",0
+6,1,117,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,39,0.861138105,47,"push-ups on the beach.
+?Similarly, we must train the muscle of the mind. To some, gratitude is a
+natural disposition; to others, it?s a conscious priority. But like any muscle, you
+must ?use it or lose it?. At heightened levels of practice, we do not need to",0
+6,2,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,35,0.845021963,133,"Think: Is there anything positive about this situation I am in?
+Being positive does not mean we neglect the negative. We must
+constructively deal with negative situations whilst simultaneously
+focusing on the positive.
+Just like our tongue can be obsessed with something stuck in our
+teeth, our mind has a default setting to be obsessed about the
+negative.
+Gratitude is a state of being that allows us to see the positive. It
+comes from realizing that there is good in the world, that some of that
+good is with us and that those good things are coming from an
+external reality. That state of consciousness imbibes us with
+positivity.
+Even in times of difficulty and sorrow, we can feel inner strength,
+when we are grateful for the support of caring friends and family.",0
+6,3,118,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,40,0.831158042,129,"consciously practise gratitude?we live in gratitude. That?s a joy like no other,
+never missing moments like Joshua Bell!?
+?How do I reach that stage?? Harry questioned eagerly.
+?There is one evidence-based thing we can do. The only price is commitment
+and consistency. This is writing a gratitude log daily, which is based on three
+principles of gratitude: recognize, remember and reciprocate.?
+?Wow, thank you. Please tell me more!? Harry interjected.
+?Exactly, ?thank? and ?you? are two words that have so much power, but are
+overused without understanding. Let me explain,? I said. ?We should firstly
+recognize what good has been done to us to say ?thank you?. This is easy to do
+in the moment; like when someone holds the door for us or buys us a hot drink.",0
+7,1,399,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.835733294,58,"In order to be happy, we should shift our attitude from being an ice
+cream to a candle, from being selfish to selfless. This is shown
+through service.
+We must be wary of compassion fatigue. This means we must have
+all our wheels balanced as we try to help others. This is the principle
+of being selfishly selfless.",0
+7,2,12,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,9,0.822282195,145,"Preface
+Have you ever experienced the Indian monsoon? It brings one of the fiercest,
+most thunderous downpours of water from the heavens. If you?re caught in the
+heavy rain, it?s nearly impossible to stay dry. Similarly, it is hard not to get
+caught up in the challenges and negative situations of the world. Feeling
+peaceful, happy and content is not about avoiding challenges in our life, but
+about how we navigate through these challenges to reach the type of life we
+want to live.
+Aldous Huxley said, ?Experience is not what happens to a man, it is what a
+man does with what happens to him.? It?s how we respond that makes all the
+difference. If there is one possession we have that is the most valuable and can
+truly transform our lives completely, it is our free will. We are the authors of our",0
+7,3,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,35,0.820111394,133,"Think: Is there anything positive about this situation I am in?
+Being positive does not mean we neglect the negative. We must
+constructively deal with negative situations whilst simultaneously
+focusing on the positive.
+Just like our tongue can be obsessed with something stuck in our
+teeth, our mind has a default setting to be obsessed about the
+negative.
+Gratitude is a state of being that allows us to see the positive. It
+comes from realizing that there is good in the world, that some of that
+good is with us and that those good things are coming from an
+external reality. That state of consciousness imbibes us with
+positivity.
+Even in times of difficulty and sorrow, we can feel inner strength,
+when we are grateful for the support of caring friends and family.",0
+8,1,117,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,39,0.876309037,47,"push-ups on the beach.
+?Similarly, we must train the muscle of the mind. To some, gratitude is a
+natural disposition; to others, it?s a conscious priority. But like any muscle, you
+must ?use it or lose it?. At heightened levels of practice, we do not need to",1
+8,2,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,35,0.8561638,133,"Think: Is there anything positive about this situation I am in?
+Being positive does not mean we neglect the negative. We must
+constructively deal with negative situations whilst simultaneously
+focusing on the positive.
+Just like our tongue can be obsessed with something stuck in our
+teeth, our mind has a default setting to be obsessed about the
+negative.
+Gratitude is a state of being that allows us to see the positive. It
+comes from realizing that there is good in the world, that some of that
+good is with us and that those good things are coming from an
+external reality. That state of consciousness imbibes us with
+positivity.
+Even in times of difficulty and sorrow, we can feel inner strength,
+when we are grateful for the support of caring friends and family.",0
+8,3,118,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,40,0.83665657,129,"consciously practise gratitude?we live in gratitude. That?s a joy like no other,
+never missing moments like Joshua Bell!?
+?How do I reach that stage?? Harry questioned eagerly.
+?There is one evidence-based thing we can do. The only price is commitment
+and consistency. This is writing a gratitude log daily, which is based on three
+principles of gratitude: recognize, remember and reciprocate.?
+?Wow, thank you. Please tell me more!? Harry interjected.
+?Exactly, ?thank? and ?you? are two words that have so much power, but are
+overused without understanding. Let me explain,? I said. ?We should firstly
+recognize what good has been done to us to say ?thank you?. This is easy to do
+in the moment; like when someone holds the door for us or buys us a hot drink.",1
+9,1,127,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,43,0.830688357,91,"life?s next adventure.?
+And his next adventure changed the world. In the same year that he got
+rejected, on his birthday, WhatsApp was incorporated in Silicon Valley,
+California. The app grew exponentially, its success unparalleled. So much so that
+in 2014, Facebook decided to buy it, for a staggering $19 billion. By December
+2017, WhatsApp had 1.5 billion active users!
+Now that you have a clearer picture of the reach of WhatsApp, you will be
+able to appreciate my concern when I tell you that it was the same app that",1
+9,2,125,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,43,0.822618842,145,"SIX
+Why Worry
+When things are beyond your control and there is nothing you can do, why worry?
+?Worry never robs tomorrow of its sorrow, it only saps today of its joy.?
+?Leo Buscaglia
+One sultry evening, as I sat typing away at my laptop in my room, I received a
+WhatsApp message from a friend of mine. It did not look like anything out of
+the ordinary, but it had the potential to ruin my life. However, before I elaborate,
+I think it is important to tell the story of WhatsApp?s success for the benefit of
+those readers who are not familiar with how it came about.
+WhatsApp, as we all may know, is a free messaging and calling application
+that anyone can download, anywhere in the world except China. It was founded
+by Brian Acton, a software engineer who graduated from Stanford. Acton",1
+9,3,143,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,48,0.8198452,101,"The founders of WhatsApp did not get jobs at Twitter and Facebook
+when they applied, which worked out in their favour in the future.
+Hence, what we see as bad at one point in time can turn out to be the
+best thing to happen to us.
+Just as I could not control the virality of my ?out-of-context? video,
+similarly there are many situations in life that are out of our control.
+Think: Is this in my control? If yes, you can do something about it. If
+no, then you cannot do anything about it. Therefore, in both
+circumstances, why worry?",1
+10,1,137,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,46,0.838399649,97,"I sighed in relief, but it had only been twelve hours since the first person sent me
+the tormenting clip. I was still anxious. This lasted until I received a photo
+message from another monk.
+It is incredible how the mind works. At one moment you fear for your life,
+and a second later, you are entirely peaceful. Like a message from the heavens, I
+received a flowchart entitled: ?Why Worry?.
+I pulled out the infographic from my favourites folder on my phone and
+showed it to Harry.
+?Could you please share that with me?? he enquired.",1
+10,2,143,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,48,0.83014518,101,"The founders of WhatsApp did not get jobs at Twitter and Facebook
+when they applied, which worked out in their favour in the future.
+Hence, what we see as bad at one point in time can turn out to be the
+best thing to happen to us.
+Just as I could not control the virality of my ?out-of-context? video,
+similarly there are many situations in life that are out of our control.
+Think: Is this in my control? If yes, you can do something about it. If
+no, then you cannot do anything about it. Therefore, in both
+circumstances, why worry?",1
+10,3,138,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,47,0.827985168,129,"?Definitely? I replied, forwarding the image to him.
+For years I had been practising spirituality, but I had never seen the principle
+of detachment from things beyond our control put so simply. Sometimes the
+simple explanations touch the heart the most. No fancy language or abstract
+concepts, just essential truths presented modestly to awaken the soul. Simple
+ideas are accepted universally. That is why I think a clip of my lecture on the
+concept of ?Why Worry? was shared on Instagram by Sean Combs (better known
+as P. Diddy), one of the most renowned rap artists in the world.
+It?s impossible to stop a clip once it?s gone viral on the internet. When we
+have a problem beyond our control, we have to turn to our spiritual strength and",1
+11,1,145,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,49,0.863987327,126,"inadequate without us committing to a spiritual practice, or sadhana as it is
+known in Sanskrit.
+The simplest way to explain spiritual practice is to describe the hierarchy of
+connections. At any moment, we can be making three kinds of connections:
+Outside ourselves:
+ The majority of our time is spent in connecting with the
+world?networking, relationships, our work. It?s all crucial, but can lead us
+astray if we have no inner direction. The fear of missing out, thinking that the
+grass is greener elsewhere, and living a life out of balance are all symptoms of
+having incorrectly prioritized happiness outside of ourselves.
+Inside ourselves:
+ Beyond our everyday lives, many look for solace within.
+People struggling with life, those trying to work on themselves to conquer the",1
+11,2,154,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,52,0.833511353,97,"We are not human beings having spiritual experiences; we are
+spiritual beings having human experiences. We are not this body; we
+are a spiritual being.
+We need to understand the hierarchy of connections. Ultimately, we
+must connect to something above ourselves such as God. This can
+give us the power to spread happiness and joy around the world.
+There are many ways to connect to God. We may have our own,
+which is great, and we should go deeper into it. One of the most
+effective methods that has worked really well for me is mantra
+meditation.",1
+11,3,287,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,93,0.825148106,76,"better learn how to best utilize it in the right way.? It was also time to explain the
+third wheel of life.
+Summary:
+Our association is powerful: it can uplift us or bring us down.
+General interactions are dealings meant to do the needful and are
+simply neutral.
+Intimate dealings are built through the exchange of things, food,
+thoughts, values and belief systems. Our lifestyle is affected more by
+another person?s value systems than their habits.",0
+12,1,149,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,50,0.837481678,122,"sense of purpose, thus enabling us to become more creative, amongst many other
+benefits. However, ancient eastern literature gives us deeper insight.
+?Meditation is like a plane: It first takes you high, then far away and then
+further away imperceptibly. I see meditation like a plane because when you take
+off, you immediately start gaining altitude. We experience worry and anxiety in
+life because we take things out of perspective. Meditation enables us to look
+down at all our anxieties, problems and worries through a higher vantage-point,
+thus giving us a great sense of peace and calmness.
+?The deeper effect is that meditation carries us far. It completely transforms
+our character, develops the best of qualities within us and allows us to",1
+12,2,150,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,50,0.822421312,104,"our character, develops the best of qualities within us and allows us to
+experience self-realization. Through meditation we become the best versions of
+ourselves. But this takes time and is often imperceptible. For example, if you
+look outside the window on a plane it does not look like you are moving very
+fast. But eight hours later, you?re landing halfway across the world.
+?Meditation becomes difficult because of our mind. It is said that the mind is
+like a restless monkey, always jumping from one thought to another. It does not
+become peaceful just because you say so. It needs to be controlled. Therefore,",1
+12,3,151,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,51,0.815538347,129,"meditation is a discipline that helps us control the mind. For example, the trains
+of Mumbai keep the city?s economy moving. But what keeps them travelling is
+the fact that they are bound by the tracks, schedule and destinations. Similarly,
+the mind without being bound by the discipline of meditation will not be able to
+reach its destination. Some days it will feel like meditating, and some days it will
+not.?
+?Even understanding the concept of meditation takes time. I know many
+executives and celebrities practise it, but I?ve never felt like I have the time,?
+Harry interrupted. He seemed to be feeling overwhelmed at the variety of
+concepts I had presented.
+?People with no time to spare need it the most,? I chuckled. ?I am now able to",0
+13,1,145,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,49,0.846206367,126,"inadequate without us committing to a spiritual practice, or sadhana as it is
+known in Sanskrit.
+The simplest way to explain spiritual practice is to describe the hierarchy of
+connections. At any moment, we can be making three kinds of connections:
+Outside ourselves:
+ The majority of our time is spent in connecting with the
+world?networking, relationships, our work. It?s all crucial, but can lead us
+astray if we have no inner direction. The fear of missing out, thinking that the
+grass is greener elsewhere, and living a life out of balance are all symptoms of
+having incorrectly prioritized happiness outside of ourselves.
+Inside ourselves:
+ Beyond our everyday lives, many look for solace within.
+People struggling with life, those trying to work on themselves to conquer the",1
+13,2,346,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,114,0.834929585,120,"strong sense of compassion, but it was misplaced. Not fighting would have
+inundated the world with social injustice. Arjuna knew that, but knowing
+something and understanding it are two different things. 
+What is the use of a
+kingdom, a throne and all this opulence? I can just retire to the forest without
+harming anyone
+, he thought.
+That is the exact misconception that people have about spiritualists. If you
+practise spirituality, then you are 
+satisfied
+ with achieving the bare minimum.
+Why be the managing director of a company when you can be 
+satisfied
+ being a
+run-of-the-mill worker? In this way, people feel that spirituality kills ambition.
+Sri Krishna addressed this issue by urging Arjuna to fight. If Arjuna did not",0
+13,3,144,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,49,0.827689826,133,"SEVEN
+Spiritual Practice
+Spiritual practice is the foundation of our happiness. It guides us in times of turmoil and grounds us
+in times of joy.
+?Meditation can help us embrace our worries, our fear, our anger; and that is very healing. We let our
+own natural capacity of healing do the work.?
+?Thich Nhat Hanh
+Spirituality is based on the premise that we live in this world, but we are not
+from it. Many of our problems lie in not understanding our fundamental identity:
+we are not human beings having spiritual experiences; we are spiritual beings
+having human experiences. It?s impossible to realize this principle theoretically.
+We can attend hundreds of lectures and read volumes of books; but this is
+inadequate without us committing to a spiritual practice, or sadhana as it is",1
+14,1,151,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,51,0.857266963,129,"meditation is a discipline that helps us control the mind. For example, the trains
+of Mumbai keep the city?s economy moving. But what keeps them travelling is
+the fact that they are bound by the tracks, schedule and destinations. Similarly,
+the mind without being bound by the discipline of meditation will not be able to
+reach its destination. Some days it will feel like meditating, and some days it will
+not.?
+?Even understanding the concept of meditation takes time. I know many
+executives and celebrities practise it, but I?ve never felt like I have the time,?
+Harry interrupted. He seemed to be feeling overwhelmed at the variety of
+concepts I had presented.
+?People with no time to spare need it the most,? I chuckled. ?I am now able to",1
+14,2,149,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,50,0.809017301,122,"sense of purpose, thus enabling us to become more creative, amongst many other
+benefits. However, ancient eastern literature gives us deeper insight.
+?Meditation is like a plane: It first takes you high, then far away and then
+further away imperceptibly. I see meditation like a plane because when you take
+off, you immediately start gaining altitude. We experience worry and anxiety in
+life because we take things out of perspective. Meditation enables us to look
+down at all our anxieties, problems and worries through a higher vantage-point,
+thus giving us a great sense of peace and calmness.
+?The deeper effect is that meditation carries us far. It completely transforms
+our character, develops the best of qualities within us and allows us to",0
+14,3,150,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,50,0.802789688,104,"our character, develops the best of qualities within us and allows us to
+experience self-realization. Through meditation we become the best versions of
+ourselves. But this takes time and is often imperceptible. For example, if you
+look outside the window on a plane it does not look like you are moving very
+fast. But eight hours later, you?re landing halfway across the world.
+?Meditation becomes difficult because of our mind. It is said that the mind is
+like a restless monkey, always jumping from one thought to another. It does not
+become peaceful just because you say so. It needs to be controlled. Therefore,",1
+15,1,153,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,51,0.861449122,90,"asked.
+?Sure.?
+?People who meditate develop a habit of practising sincere gratitude which
+helps them in all their relationships. It is a ?relationship-strengthening emotion?
+because it requires us to see how we?ve been supported and affirmed by other
+people.?
+Harry began to fidget with the steering wheel again. ?What?s on your mind?? I
+asked.
+?I was thinking about how my wife and I treat each other,? he said, ready to
+take our conversation forward, and I knew it was time to tell him about the
+second wheel of life.
+Summary:",1
+15,2,102,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,35,0.843830347,133,"Think: Is there anything positive about this situation I am in?
+Being positive does not mean we neglect the negative. We must
+constructively deal with negative situations whilst simultaneously
+focusing on the positive.
+Just like our tongue can be obsessed with something stuck in our
+teeth, our mind has a default setting to be obsessed about the
+negative.
+Gratitude is a state of being that allows us to see the positive. It
+comes from realizing that there is good in the world, that some of that
+good is with us and that those good things are coming from an
+external reality. That state of consciousness imbibes us with
+positivity.
+Even in times of difficulty and sorrow, we can feel inner strength,
+when we are grateful for the support of caring friends and family.",0
+15,3,152,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,51,0.838446617,138,"concepts I had presented.
+?People with no time to spare need it the most,? I chuckled. ?I am now able to
+practise meditation for two hours a day. It was not like that in the beginning. I
+could cope with only ten minutes a day when I initially started and that didn?t
+seem so daunting.?
+Harry nodded, then asked, ?After all this time, have you noticed any changes
+in your character??
+?I have, quite honestly. One doesn?t have to wait to see the effects of
+meditation in the afterlife?we can see them in this life if we practise it
+diligently enough and under the right guidance.?
+He seemed impressed with that answer.
+?Do you remember what I said about the importance of gratitude earlier?? I
+asked.
+?Sure.?
+?People who meditate develop a habit of practising sincere gratitude which",1
+16,1,164,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,57,0.84893918,125,"?What do you do??
+?I?m a scuba-diving instructor,? she announced proudly.
+?Incredible. We may need your assistance in this weather,? I said politely.
+There had been storms all night and the morning I landed, typical of April on the
+British Isles.
+?Are you a part of ISKCON?? she asked abruptly, her tone had now slightly
+changed. Small talk was over, I sensed. Time to talk business. ISKCON is the
+International Society for Krishna Consciousness, founded by His Divine Grace
+A.C. Bhaktivedanta Swami Srila Prabhupada, who was affectionately addressed
+by his followers as Srila Prabhupada. She was correct; this was the institution of
+spiritually minded people I was a part of.
+?Yes,? I said hesitatingly, seeing the dissatisfaction on her face. She was quick
+to respond.",1
+16,2,168,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,58,0.805568576,142,"know at that point that ISKCON Chowpatty has a mentorship system to coach
+spiritual enthusiasts, which they called the counsellor system. I thought he was
+implying that I needed a psychological counsellor because there was something
+wrong with me. He told me that unless I had a counsellor, was a regular attendee
+of the temple programmes, followed this rule and followed that rule, I could not
+take the course I wanted to take. He told me that the requirements were clearly
+mentioned on the website, and then putting his earphones back in, returned to his
+laptop, not waiting for me to respond. The instructions were not on the website,
+as far as I knew, and I had never heard of the ridiculous rules he was mentioning.
+I just wanted to study the Bhagavad Gita. He was so rude and unpleasant in his",0
+16,3,165,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,57,0.795092285,148,"spiritually minded people I was a part of.
+?Yes,? I said hesitatingly, seeing the dissatisfaction on her face. She was quick
+to respond.
+?Well, ISKCON Chowpatty is the worst ISKCON temple I have ever been to!?
+she said, not knowing that it was the temple I had been a part of for over half my
+life.
+?Why do you say so? Did you have a bad experience?? I asked her. We both
+edged forward in the line.
+?Yes, a terrible experience. Growing up, I?ve always been curious to find my
+spiritual path and wanted to study the Bhagavad Gita. I found a course online on
+the ISKCON Chowpatty website where I could study the Gita in depth, verse by
+verse. So I visited the admissions office in the temple, excited to sign up.?
+Then Manasi?s head lowered. I think she didn?t want the others in the queue to",0
+17,1,180,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,61,0.835153759,135,"is
+ a big deal. Gaur Gopal, I want to share
+with you what I have learnt about relationships. When we treat inanimate
+objects, like buckets or our possessions, with disrespect or insensitivity, we will
+end up treating people the same. At one point in my life, I seemed to be losing a
+lot of my friends and I heard this advice from one of my guides. Insensitivity
+becomes part of our general attitude, and our instinct does not discriminate
+between things and people. Hence, when we treat our things badly, we might
+notice that insensitivity gradually creeping into our relationships with the people
+around us.?
+Then he patted me on my back, smiling, and walked away singing an Indian
+bhajan. I folded my hands in reverence and turned off the tap to reflect on what",1
+17,2,181,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,61,0.822678208,139,"bhajan. I folded my hands in reverence and turned off the tap to reflect on what
+had happened. This whole universe is connected, as are the parts of our life.
+When we treat things with disrespect, we may start doing the same with the
+people we love. All aspects of our life are integrated.
+In modern culture, it is common to use things once and throw them away. For
+example, plastic cups. In 2016, the Ellen MacArthur Foundation reported at the
+World Economic Forum that we will have more plastic in the sea than fish by
+2050 if we continue producing the substance at this rate. If we can have this
+mentality with our things, we may end up introducing disposability in our
+relationships as well.
+The memory of my mother, who is a voracious reader, reading the classic",1
+17,3,187,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,63,0.808869123,80,"do something. For example, Manasi?s negative experience at the
+ashram that I reside in affected her outlook on the whole community.
+How do we practise being sensitive? We must treat even inanimate
+objects with consideration and respect. If we do not, then the
+mentality of insensitivity may become a part of our general attitude.
+One?s instinct or general attitude does not discriminate between
+things and people. Treating things badly can affect our attitude
+negatively, which may percolate into our relationships.",1
+18,1,173,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,59,0.865514755,123,"relationship with them. Being attentive in our relationships is crucial to our
+success. How we behave towards others determines the quality of our life. ?It?s
+just my personality? is not an acceptable excuse to be insensitive towards others.
+My golden rule to know whether or not you are being adequately sensitive to
+another person is: treat someone better than you would like to be treated. Ask
+yourself the question, ?Does my tone of voice, body language and behaviour
+reflect sensitivity??
+As soon as I finished Harry asked, ?So did you see her again? Was she able to
+forgive the person who spoke harshly to her??
+?Fortunately, she did return and started attending my Gita sessions in the
+evening?I would say she forgave him!?",1
+18,2,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,55,0.844142556,24,"have respect for the other person, which is reflected in how sensitively we treat
+them.?
+I had another anecdote to share:
+Harsh Words Fly",0
+18,3,186,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,62,0.834094942,51,"it is easier to assess how we should behave with others,? I replied. ?Let?s talk
+about how we can see the positive in our relationships.?
+Summary:
+We must be sensitive with our words and actions. Being sensitive
+means to think about how the other person may feel before we say or",1
+19,1,187,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,63,0.855278969,80,"do something. For example, Manasi?s negative experience at the
+ashram that I reside in affected her outlook on the whole community.
+How do we practise being sensitive? We must treat even inanimate
+objects with consideration and respect. If we do not, then the
+mentality of insensitivity may become a part of our general attitude.
+One?s instinct or general attitude does not discriminate between
+things and people. Treating things badly can affect our attitude
+negatively, which may percolate into our relationships.",1
+19,2,186,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,62,0.849981427,51,"it is easier to assess how we should behave with others,? I replied. ?Let?s talk
+about how we can see the positive in our relationships.?
+Summary:
+We must be sensitive with our words and actions. Being sensitive
+means to think about how the other person may feel before we say or",1
+19,3,158,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,55,0.843592525,24,"have respect for the other person, which is reflected in how sensitively we treat
+them.?
+I had another anecdote to share:
+Harsh Words Fly",0
+20,1,194,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,66,0.871208787,147,"Isn?t it a fact that what we see in others depends on the window we are
+looking through? Washing our own windows can change our vision.
+But Type-1 people don?t even agree that their windows are dirty, what to
+speak of cleaning them. They not only continue to perceive the clean laundry as
+dirty but also keep bad-mouthing it.
+Type-2: A Person Who Sees Both, the Good and the Bad, But Chooses
+to Neglect the Good
+The second type of person sees the good and bad in people, but make a
+conscious decision to neglect the good and focus on the bad. Like some people
+have selective hearing, people of this type have a selective mindset.
+Many of my videos have gone viral over the last few years, but they do not
+come close to matching the popularity of dog videos. We tend to be infatuated by",1
+20,2,199,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,67,0.819648385,149,"?Yes. All that?s normal for him. But this is the second time he?s forgotten the
+keys to the house. It?s pathetic, I had to get up and open the door!? The man
+stood outside the apartment with his mouth wide open in disbelief at what he had
+just heard.
+Isn?t this the story of our lives? Our friends and family are doing so many
+good things, but we neglect them and focus solely on the negatives. Wonderful
+things are occurring all around us, and within the people we love, but this type of
+person can only think about how the other forgot the key!
+Type-3: A Person Who Sees the Good and the Bad and Is Neutral to
+Both
+The next type is a person who sees good and bad in others; s/he doesn?t focus on
+the bad, but is unconcerned about the good as well. Such people are",0
+20,3,188,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,64,0.816154718,133,"NINE
+A Virtuous Vision
+There are many ways to perceive others. We should start choosing the one which magnifies the
+positive and avoids the negative.
+?Anyone can find the dirt in someone. Be the one that finds the gold.?
+?Proverbs 11:27
+With car horns blaring around us and crows squawking above us, we were still
+stuck, but were also edging closer to our destination. We still did not know what
+was causing the traffic jam. Harry asked if he could switch off the air
+conditioning, saying, ?The AC gives me a sore throat sometimes. Is it ok if I
+open the window a little? I hope you don?t mind.?
+?Of course not,? I replied as we both rolled down the windows a few
+centimetres.
+?Please continue with what you were saying,? Harry said.",0
+21,1,194,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,66,0.864186764,147,"Isn?t it a fact that what we see in others depends on the window we are
+looking through? Washing our own windows can change our vision.
+But Type-1 people don?t even agree that their windows are dirty, what to
+speak of cleaning them. They not only continue to perceive the clean laundry as
+dirty but also keep bad-mouthing it.
+Type-2: A Person Who Sees Both, the Good and the Bad, But Chooses
+to Neglect the Good
+The second type of person sees the good and bad in people, but make a
+conscious decision to neglect the good and focus on the bad. Like some people
+have selective hearing, people of this type have a selective mindset.
+Many of my videos have gone viral over the last few years, but they do not
+come close to matching the popularity of dog videos. We tend to be infatuated by",1
+21,2,199,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,67,0.843512177,149,"?Yes. All that?s normal for him. But this is the second time he?s forgotten the
+keys to the house. It?s pathetic, I had to get up and open the door!? The man
+stood outside the apartment with his mouth wide open in disbelief at what he had
+just heard.
+Isn?t this the story of our lives? Our friends and family are doing so many
+good things, but we neglect them and focus solely on the negatives. Wonderful
+things are occurring all around us, and within the people we love, but this type of
+person can only think about how the other forgot the key!
+Type-3: A Person Who Sees the Good and the Bad and Is Neutral to
+Both
+The next type is a person who sees good and bad in others; s/he doesn?t focus on
+the bad, but is unconcerned about the good as well. Such people are",1
+21,3,205,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,69,0.828766525,144,"stage of seeing both the good and the bad, and consciously make the decision to
+focus on the good and neglect the bad.
+?I have never heard an explanation like that before!? Harry exclaimed.
+?It?s not my analysis, I heard it from Srila Prabhupada?s followers,? I replied.
+?Can you clarify one thing? How do you totally neglect the bad??
+?Neglecting the bad does not mean that we do not deal with it practically. It
+just means that we do not allow our mind to focus on and hover over the bad.?
+?Exactly!? Harry seemed to agree with the point vehemently, though I don?t
+think he fully understood it.
+?With my wife, I tend not to neglect the bad, but deal with it . . .? He paused. ?I
+try to deal with it sensitively in my opinion, but it always creates an awkward air",0
+22,1,201,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,68,0.839716315,140,"to make the conscious effort to stay away from the natural human tendency to
+see the bad. It can take a lot of work to continuously see the good.
+A recent article about the late industrialist Aditya Birla featured in the
+?Speaking Tree? section of the 
+Times of India
+ succinctly highlights the
+characteristics of this type of person.
+Aditya Birla was the CEO of the multibillion-dollar company Hindalco
+Industries. The article is about one of his senior executives who lost the
+company millions of dollars by mistake. Any other leader would have fired?if
+not sued?the employee, but not Aditya Birla. Before he had a meeting with
+him, Birla took out a notepad and wrote a title at the top: 
+Points in favour of this
+employee
+. He then made a list of all the strengths this man had, including the",1
+22,2,202,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,68,0.838433266,134,"Points in favour of this
+employee
+. He then made a list of all the strengths this man had, including the
+time he had made the company millions of dollars. Aditya Birla had consciously
+chosen to shift his attention to all the good that this executive had done for the
+company before making any judgement or dealing with the mistake.
+As news spread throughout the company that Birla did not sack this employee,
+a philosophy and culture of sensitive dealings evolved within the organization.
+Another senior executive in the company wrote, ?Whenever I am tempted to
+reprimand someone, I convince myself to sit down and write a list of all the good
+qualities they have. This may not necessarily change my decision, but it helps
+me put things into perspective and control my anger.?",1
+22,3,250,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,82,0.812960029,139,"community members. The reason I had to go to Ukraine was to help inspire the
+bhakti society there, but my passport was stuck at the Ukrainian embassy in New
+Delhi. My friend?s lashing out at me had left me feeling humiliated and I had
+returned to my room, distraught.
+What happened in my room thereafter is relevant here?I was able to move
+from anger to forgiveness because I remembered to separate the episode from
+the person. Of course, I must mention that this principle is not applicable in all
+situations?especially those of social justice, which I will discuss later?but in
+our personal interactions, for the most part, it works wonders.
+When I fail at something?whether it?s an exam or a relationship?I may
+think that I am a failure. But just because I failed one time or even more than",0
+23,1,205,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,69,0.853541195,144,"stage of seeing both the good and the bad, and consciously make the decision to
+focus on the good and neglect the bad.
+?I have never heard an explanation like that before!? Harry exclaimed.
+?It?s not my analysis, I heard it from Srila Prabhupada?s followers,? I replied.
+?Can you clarify one thing? How do you totally neglect the bad??
+?Neglecting the bad does not mean that we do not deal with it practically. It
+just means that we do not allow our mind to focus on and hover over the bad.?
+?Exactly!? Harry seemed to agree with the point vehemently, though I don?t
+think he fully understood it.
+?With my wife, I tend not to neglect the bad, but deal with it . . .? He paused. ?I
+try to deal with it sensitively in my opinion, but it always creates an awkward air",0
+23,2,199,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,67,0.829405665,149,"?Yes. All that?s normal for him. But this is the second time he?s forgotten the
+keys to the house. It?s pathetic, I had to get up and open the door!? The man
+stood outside the apartment with his mouth wide open in disbelief at what he had
+just heard.
+Isn?t this the story of our lives? Our friends and family are doing so many
+good things, but we neglect them and focus solely on the negatives. Wonderful
+things are occurring all around us, and within the people we love, but this type of
+person can only think about how the other forgot the key!
+Type-3: A Person Who Sees the Good and the Bad and Is Neutral to
+Both
+The next type is a person who sees good and bad in others; s/he doesn?t focus on
+the bad, but is unconcerned about the good as well. Such people are",0
+23,3,201,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,68,0.827466309,140,"to make the conscious effort to stay away from the natural human tendency to
+see the bad. It can take a lot of work to continuously see the good.
+A recent article about the late industrialist Aditya Birla featured in the
+?Speaking Tree? section of the 
+Times of India
+ succinctly highlights the
+characteristics of this type of person.
+Aditya Birla was the CEO of the multibillion-dollar company Hindalco
+Industries. The article is about one of his senior executives who lost the
+company millions of dollars by mistake. Any other leader would have fired?if
+not sued?the employee, but not Aditya Birla. Before he had a meeting with
+him, Birla took out a notepad and wrote a title at the top: 
+Points in favour of this
+employee
+. He then made a list of all the strengths this man had, including the",1
+24,1,206,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,69,0.822962046,145,"try to deal with it sensitively in my opinion, but it always creates an awkward air
+around us and leaves her feeling hurt, I think. Then she starts making sarcastic
+comments to me. Then I tell her not to, but the vicious cycle starts again. It?s
+frustrating!?
+Summary:
+Seeing the best in people can be challenging at times, especially
+when we are in constant proximity to them.
+We can perceive people in the following five ways:
+See only bad and magnify it.
+See good and bad, neglect the good and focus on the bad.
+See good and bad, and be neutral to both.
+See good and bad, choose to focus on the good and neglect
+the bad.
+See the good and magnify it.
+The ideal state is the fourth stage, in which one?s relationships
+flourish.
+Reaching the fourth stage takes consistent hard work and practice.",1
+24,2,192,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,65,0.809951007,146,"opinion. They see a speck of dirt on someone?s face and look at it as if the entire
+body of the person were bathed in mud.
+I am reminded of a story that I heard some time back. There was a young
+couple who lived in a nice home in a beautiful neighbourhood. For some reason,
+the wife just did not like the woman who was their next-door neighbour. One
+morning, as they were having breakfast, the lady looked out of the window and
+saw her neighbour hanging clothes on the clothes line.
+?Look at that,? she said to her husband. ?Did you see how dirty their clothes
+are even after washing them? I am shocked that a middle-aged housewife like
+her doesn?t know how to wash clothes clean. Maybe she should go back to her
+mom?s home and take lessons on how to wash correctly.?",0
+24,3,188,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,64,0.807243705,133,"NINE
+A Virtuous Vision
+There are many ways to perceive others. We should start choosing the one which magnifies the
+positive and avoids the negative.
+?Anyone can find the dirt in someone. Be the one that finds the gold.?
+?Proverbs 11:27
+With car horns blaring around us and crows squawking above us, we were still
+stuck, but were also edging closer to our destination. We still did not know what
+was causing the traffic jam. Harry asked if he could switch off the air
+conditioning, saying, ?The AC gives me a sore throat sometimes. Is it ok if I
+open the window a little? I hope you don?t mind.?
+?Of course not,? I replied as we both rolled down the windows a few
+centimetres.
+?Please continue with what you were saying,? Harry said.",0
+25,1,205,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,69,0.845766783,144,"stage of seeing both the good and the bad, and consciously make the decision to
+focus on the good and neglect the bad.
+?I have never heard an explanation like that before!? Harry exclaimed.
+?It?s not my analysis, I heard it from Srila Prabhupada?s followers,? I replied.
+?Can you clarify one thing? How do you totally neglect the bad??
+?Neglecting the bad does not mean that we do not deal with it practically. It
+just means that we do not allow our mind to focus on and hover over the bad.?
+?Exactly!? Harry seemed to agree with the point vehemently, though I don?t
+think he fully understood it.
+?With my wife, I tend not to neglect the bad, but deal with it . . .? He paused. ?I
+try to deal with it sensitively in my opinion, but it always creates an awkward air",0
+25,2,223,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.839339674,135,"but we need to learn the art of doing it correctly. Let me explain:
+Corrective Feedback: An Art
+?Beyond any other need, the greatest longing of every individual is 
+to give love
+and to be loved
+. It is our relationships that allow this mantra to come to fruition.
+However, it is surprising that the relationships we cherish and keep so close to
+our heart can easily be neglected and abused. For the most parts, this is not done
+on purpose, but out of ignorance and an inability to understand how one should
+behave. We may have the right intentions but giving advice inappropriately may
+do more harm than good. That is why we must learn to do it properly, and it
+takes practice and introspection to develop this ability. Any time you feel the",0
+25,3,252,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,83,0.833453715,139,"person like a failure? Should we not see that lapse as an independent event?
+Everyone is going through challenges concealed from the public eye, and we
+need the lens of empathy to be able to see that.
+This is not to say that we should tolerate abuse or not do the sensible thing and
+correct someone when they are wrong, but in order to practise forgiveness, we
+have to learn to separate the incident from the person. Disconnecting the person
+from the problem starts with the language we use to describe the incident:
+Saying ?it is 
+my
+ problem? causes us to feel guilty, and over time, one may
+develop an inferiority complex. We may begin to think that we are not
+tough enough to deal with situations and thus we may become morose
+over issues.
+Saying ?it is 
+your",0
+26,1,236,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,78,0.880585551,106,"praise and trust into a person before doing so.
+Think: With regard to the story in Nepal, I could deal with the
+emotional hurt because I realized how much the individual correcting
+me had done for me in the past.
+Corrective feedback is an art. It has four principles. Ask yourself:
+Am I the right person to give corrective feedback?
+Do I have the right motive to give corrective feedback?
+Do I know the right way to give corrective feedback?
+Is it the right time?
+The smooth implementation of these four principles takes time
+because giving corrective feedback insensitively has become an
+addictive habit for many.",1
+26,2,224,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.854197621,136,"takes practice and introspection to develop this ability. Any time you feel the
+need to give corrective feedback to someone, think of these four questions:
+Am I the right person to give corrective feedback?
+?Is it appropriate for you to correct that person? There is a joke that every
+woman thinks that the best child in the world is her child, and every man thinks
+that the best wife in the world is the neighbour?s wife. We would all scream at
+someone else?s child who is about to injure itself, but we are not talking of those
+exceptional situations. In any other situation would you give corrective feedback
+to someone else?s child? Would you give feedback to another?s spouse? In most
+situations, you would not. Therefore, we have to think, am I the right person to",0
+26,3,223,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.853096426,135,"but we need to learn the art of doing it correctly. Let me explain:
+Corrective Feedback: An Art
+?Beyond any other need, the greatest longing of every individual is 
+to give love
+and to be loved
+. It is our relationships that allow this mantra to come to fruition.
+However, it is surprising that the relationships we cherish and keep so close to
+our heart can easily be neglected and abused. For the most parts, this is not done
+on purpose, but out of ignorance and an inability to understand how one should
+behave. We may have the right intentions but giving advice inappropriately may
+do more harm than good. That is why we must learn to do it properly, and it
+takes practice and introspection to develop this ability. Any time you feel the",0
+27,1,226,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,75,0.864470482,147,"Do I have the right motive to give corrective feedback?
+?It is said that we can control two things in our life, our desires and our motives.
+Our desires govern 
+what
+ we want and our motives tell us 
+why
+ we want it. In
+many cases, we may correct others because we want to settle old accounts. We
+may have a grudge against them and we may use the opportunity to correct
+them, simply to exact our vengeance. But this should not be our motive. It
+should be to help them as a friend. We should be conscientious that our motive is
+appropriate; we want to help them come out of the wrong they are doing.
+Feedback from a place of love may seem unpalatable, but it tastes the sweetest if
+done appropriately and has the right effect.
+Do I know the right way to give corrective feedback?",1
+27,2,223,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.836243391,135,"but we need to learn the art of doing it correctly. Let me explain:
+Corrective Feedback: An Art
+?Beyond any other need, the greatest longing of every individual is 
+to give love
+and to be loved
+. It is our relationships that allow this mantra to come to fruition.
+However, it is surprising that the relationships we cherish and keep so close to
+our heart can easily be neglected and abused. For the most parts, this is not done
+on purpose, but out of ignorance and an inability to understand how one should
+behave. We may have the right intentions but giving advice inappropriately may
+do more harm than good. That is why we must learn to do it properly, and it
+takes practice and introspection to develop this ability. Any time you feel the",0
+27,3,224,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.82167685,136,"takes practice and introspection to develop this ability. Any time you feel the
+need to give corrective feedback to someone, think of these four questions:
+Am I the right person to give corrective feedback?
+?Is it appropriate for you to correct that person? There is a joke that every
+woman thinks that the best child in the world is her child, and every man thinks
+that the best wife in the world is the neighbour?s wife. We would all scream at
+someone else?s child who is about to injure itself, but we are not talking of those
+exceptional situations. In any other situation would you give corrective feedback
+to someone else?s child? Would you give feedback to another?s spouse? In most
+situations, you would not. Therefore, we have to think, am I the right person to",0
+28,1,231,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,76,0.856042325,145,"about the bland soup. It was horrible to experience someone giving me harsh
+feedback immediately after I had poured my heart and soul out. It may have
+been the case that my talk was atrocious, but like a man who misses his flight,
+this person had got the timing all wrong. If he had said the same things to me a
+few days later, we would have both been in a better state of mind. We should not
+simply let our anger loose?we should explain it. When we express what we
+feel, we do so at the risk of seeming unpleasant, but when we take the time to
+explain our emotions to people, they might be able to empathize with us. The
+bottom line: hot heads do not give good feedback?choose a better time.
+?Taking the time to ask these four questions before giving somebody",1
+28,2,232,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,76,0.852534533,56,"bottom line: hot heads do not give good feedback?choose a better time.
+?Taking the time to ask these four questions before giving somebody
+correctional feedback can change one?s life. To understand them deeply,
+contemplation and discussion with someone more experienced than oneself are
+required as every situation is different. The principles remain the same in every",1
+28,3,225,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,74,0.813387156,61,"situations, you would not. Therefore, we have to think, am I the right person to
+give this feedback or is someone else better suited? Am I a relative? Am I a
+friend? Am I an authority in any way to give correct feedback? If the answer to
+any of these questions is yes, then you can proceed to the next one.",0
+29,1,252,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,83,0.862880945,139,"person like a failure? Should we not see that lapse as an independent event?
+Everyone is going through challenges concealed from the public eye, and we
+need the lens of empathy to be able to see that.
+This is not to say that we should tolerate abuse or not do the sensible thing and
+correct someone when they are wrong, but in order to practise forgiveness, we
+have to learn to separate the incident from the person. Disconnecting the person
+from the problem starts with the language we use to describe the incident:
+Saying ?it is my problem? causes us to feel guilty, and over time, one may
+develop an inferiority complex. We may begin to think that we are not
+tough enough to deal with situations and thus we may become morose
+over issues. Saying ?it is your",1
+29,2,271,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,88,0.836470962,136,"Forgiveness is a deep and often obscure value to understand.
+The principles we should know about forgiveness are:
+Look beyond the situation: If we are hurt by someone?s
+words, try to understand why they spoke them. When people
+act harshly towards us, most of the time they are suffering too.
+This is empathy.
+Separate the episode from the person: Rather than being
+affected by the emotion of guilt by saying, ?I am wrong,? or
+anger by saying, ?You are wrong,? we should separate the 
+I
+ or
+the 
+You
+ and deal with the wrong.
+Higher purpose: Can we forgive based on a higher principle?
+For example, in my story, the husband forgave the wife
+because he loved her, and they had a duty to their community
+and son. If chosen, this approach takes support and time and",1
+29,3,270,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,87,0.835354328,53,"forgiveness is far from light. It is complicated and hard to understand, but I
+could see that he was trying to accept it. I explained, ?The topic of relationships
+has spiritual roots. If we can understand how to relate to people on a spiritual
+level, then we can transcend our dividing differences.?",0
+30,1,271,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,88,0.821205854,136,"Forgiveness is a deep and often obscure value to understand.
+The principles we should know about forgiveness are:
+Look beyond the situation: If we are hurt by someone?s
+words, try to understand why they spoke them. When people
+act harshly towards us, most of the time they are suffering too.
+This is empathy.
+Separate the episode from the person: Rather than being
+affected by the emotion of guilt by saying, ?I am wrong,? or
+anger by saying, ?You are wrong,? we should separate the 
+I
+ or
+the 
+You
+ and deal with the wrong.
+Higher purpose: Can we forgive based on a higher principle?
+For example, in my story, the husband forgave the wife
+because he loved her, and they had a duty to their community
+and son. If chosen, this approach takes support and time and",0
+30,2,272,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,88,0.817232251,99,"because he loved her, and they had a duty to their community
+and son. If chosen, this approach takes support and time and
+is not something that happens overnight.
+Justice: On a personal level, we can forgive the person who
+may have wronged us, but on a societal level, there should be
+strict justice to create an orderly society. No one should be
+able to break the law and get away with it in the name of
+forgiveness.
+Note: To help you reflect on forgiving someone in your own life, please
+complete the exercise in 
+Appendix 1
+ (Forgiveness Worksheet).",1
+30,3,252,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,83,0.815036714,139,"person like a failure? Should we not see that lapse as an independent event?
+Everyone is going through challenges concealed from the public eye, and we
+need the lens of empathy to be able to see that.
+This is not to say that we should tolerate abuse or not do the sensible thing and
+correct someone when they are wrong, but in order to practise forgiveness, we
+have to learn to separate the incident from the person. Disconnecting the person
+from the problem starts with the language we use to describe the incident:
+Saying ?it is 
+my
+ problem? causes us to feel guilty, and over time, one may
+develop an inferiority complex. We may begin to think that we are not
+tough enough to deal with situations and thus we may become morose
+over issues.
+Saying ?it is 
+your",0
+31,1,271,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,88,0.869492292,136,"Forgiveness is a deep and often obscure value to understand.
+The principles we should know about forgiveness are:
+Look beyond the situation: If we are hurt by someone?s
+words, try to understand why they spoke them. When people
+act harshly towards us, most of the time they are suffering too.
+This is empathy.
+Separate the episode from the person: Rather than being
+affected by the emotion of guilt by saying, ?I am wrong,? or
+anger by saying, ?You are wrong,? we should separate the 
+I
+ or
+the 
+You
+ and deal with the wrong.
+Higher purpose: Can we forgive based on a higher principle?
+For example, in my story, the husband forgave the wife
+because he loved her, and they had a duty to their community
+and son. If chosen, this approach takes support and time and",1
+31,2,252,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,83,0.849601448,139,"person like a failure? Should we not see that lapse as an independent event?
+Everyone is going through challenges concealed from the public eye, and we
+need the lens of empathy to be able to see that.
+This is not to say that we should tolerate abuse or not do the sensible thing and
+correct someone when they are wrong, but in order to practise forgiveness, we
+have to learn to separate the incident from the person. Disconnecting the person
+from the problem starts with the language we use to describe the incident:
+Saying ?it is 
+my
+ problem? causes us to feel guilty, and over time, one may
+develop an inferiority complex. We may begin to think that we are not
+tough enough to deal with situations and thus we may become morose
+over issues.
+Saying ?it is 
+your",1
+31,3,236,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,78,0.826226592,106,"praise and trust into a person before doing so.
+Think: With regard to the story in Nepal, I could deal with the
+emotional hurt because I realized how much the individual correcting
+me had done for me in the past.
+Corrective feedback is an art. It has four principles. Ask yourself:
+Am I the right person to give corrective feedback?
+Do I have the right motive to give corrective feedback?
+Do I know the right way to give corrective feedback?
+Is it the right time?
+The smooth implementation of these four principles takes time
+because giving corrective feedback insensitively has become an
+addictive habit for many.",1
+32,1,295,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,98,0.829701483,138,"?
+What could have driven him to be so competitive?
+ I thought as I walked back
+into the classroom.
+Jealousy or Envy
+?One reason I thought of was that he was, possibly, envious of me. When one
+harbours ill feelings towards others wanting to be like them or better than them
+but does not act on those feelings, it is called jealousy. Although the feeling eats
+one up from the inside, one still has the self-control to not harm the other person.
+However, when one does act on those feelings, jealously turns into envy. And
+envy is the root cause of being competitive with others in a way where one does
+not mind going to any extent to take their place.
+Uncontrolled Ambition
+?Another reason I could think of was that people want to be the best, sometimes",1
+32,2,318,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,104,0.823009849,120,"extreme cases like Jaymin?s, when it is impossible to stay surrounded by the
+negativity of bosses and colleagues, it is better to move on. Only if you have
+another work option, of course.?
+Summary:
+There are two causes of unhealthy competition, being envious of
+someone or uncontrolled ambition.
+We compete with people who have the same skills or outlook in life
+as us. When another person?s skills have no bearing on our life, we
+rarely feel threatened.
+Competition is found in all spheres of life. Some examples include
+sports, business, politics and the workplace.
+Jaymin?s story is an extreme case-study of unhealthy competition.
+Healthy competition is about competing with ourselves rather than
+others to become a better version of ourselves.",1
+32,3,319,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,104,0.807887316,35,"Healthy competition is about competing with ourselves rather than
+others to become a better version of ourselves.
+There will always be workplace politics but we should learn how to
+manage it in a clean way.",1
+33,1,296,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,98,0.856507897,126,"Uncontrolled Ambition
+?Another reason I could think of was that people want to be the best, sometimes
+at any cost. When there are limited resources and many takers, competition is
+natural. This is found in all domains of life, from music to sport and even among
+other species. Competition is a tendency that occurs in nearly every ecosystem in
+nature.
+?But human beings are not just another species. They have the ability to
+cooperate and subscribe to higher values such as harmony, loyalty and trust. Just
+as within natural ecosystems competition is greater within the same species,
+within humans competition is fierce within the same company or the same field
+of action. We compete with people who have the same skills or outlook in life as",1
+33,2,299,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,99,0.851546288,119,"more for oneself. And that?s fine, as long as such competition is driven by sheer
+ambition. But when ambition crosses the line of ethics and turns into greed, even
+reputed businesses can get involved with scandals as they vie for the largest
+piece of the pie.
+Politics
+Rather than contesting an election based on merit, politicians may sometimes be
+seen spreading lies to sway voters, suppressing voters on polling days,
+threatening opponents or even assassinating a candidate! And the root cause is
+unethical competition.
+Workplace
+?Although competition in the arena of sports, business or politics may be a
+distant reality for many, workplace politics and competition is something they
+may have very closely experienced. Gossip, back-stabbing, spreading lies and",1
+33,3,319,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,104,0.835749388,35,"Healthy competition is about competing with ourselves rather than
+others to become a better version of ourselves.
+There will always be workplace politics but we should learn how to
+manage it in a clean way.",0
+34,1,319,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,104,0.883419156,35,"Healthy competition is about competing with ourselves rather than
+others to become a better version of ourselves.
+There will always be workplace politics but we should learn how to
+manage it in a clean way.",1
+34,2,318,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,104,0.842360079,120,"extreme cases like Jaymin?s, when it is impossible to stay surrounded by the
+negativity of bosses and colleagues, it is better to move on. Only if you have
+another work option, of course.?
+Summary:
+There are two causes of unhealthy competition, being envious of
+someone or uncontrolled ambition.
+We compete with people who have the same skills or outlook in life
+as us. When another person?s skills have no bearing on our life, we
+rarely feel threatened.
+Competition is found in all spheres of life. Some examples include
+sports, business, politics and the workplace.
+Jaymin?s story is an extreme case-study of unhealthy competition.
+Healthy competition is about competing with ourselves rather than
+others to become a better version of ourselves.",0
+34,3,297,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,98,0.821755946,103,"of action. We compete with people who have the same skills or outlook in life as
+us. An engineer competes with another engineer, a musician with another
+musician and a doctor with another doctor. When another person?s skills have no
+bearing on our life, we rarely feel threatened. But if someone can outperform us
+by doing better in what we aspire to do, the base tendencies of competition can
+settle in.
+Sports
+Every sport has an element of competition to it and there is a joy in pushing
+yourself to the limit. But when the stakes are high, the prestige and prize of",0
+35,1,309,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,102,0.832693458,153,"yesterday. The actor Matthew McConaughey spoke about this principle in his
+2014 Oscar acceptance speech.?
+?Oh, yes. I have seen it on YouTube,? Harry replied.
+Since the car was still at a halt, I pulled out my phone and played the short
+video.
+The words of the American actor echoed around the car: ?And to my hero.
+That?s who I chase. Now when I was fifteen years old, I had a very important
+person in my life come to me and say, ?Who?s your hero?? And I said, ?I don?t
+know, I gotta think about that. Give me a couple of weeks.? I come back two
+weeks later, this person comes up and says, ?Who?s your hero?? I said, ?I
+thought about it. You know who it is? It?s me in ten years.? So I turned twenty-
+five. Ten years later, that same person comes to me and says, ?So, are you a",1
+35,2,230,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,76,0.775877714,146,"blunt and abusive can be emotionally draining for both, and the person receiving
+the feedback switches off after some time. As is commonly said, ?It was not
+what you said, it?s how you said it.? Our tone of voice, body language and facial
+expressions account for more than the words we use.
+Is it the right time?
+?The most ironic moment of my life occurred at Soho Square, central London. I
+had just finished giving a one-hour presentation on overcoming fault-finding,
+and a man came up to me at the end and said, ?Thank you for the class, but I
+really hated it.? I sat there stunned as he listed 
+in detail
+ what he did not like
+about the class and my delivery. I felt as Jill would have if Jack had shrieked
+about the bland soup. It was horrible to experience someone giving me harsh",0
+35,3,261,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,85,0.770200789,141,"What shall I do?
+ I thought. I am no one?s
+guru. Everyone must make their own choices; nobody should 
+tell
+ us what to do,
+but good advice greatly helps us in our growth. With that in mind I asked, ?Do
+you love your wife??
+?Without a doubt,? he said.
+?You should always keep that in mind when making any decisions. But right
+now, you only have two choices.? He calmed down a little. ?Do you want to
+choose justice or do you want to choose forgiveness? Either is fine, but you have
+to make the choice?justice may cost you your marriage and this news may go
+public, ruining many lives. And that?s fine, if justice is what you need. People
+have their own capacity for what is acceptable to them and what is not.?
+He started to focus on his priorities.",0
+36,1,308,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,101,0.836423874,52,"people, on the other hand, grow by developing themselves. They know that
+nobody is their competition. They are their own competition. Every day they
+keep striving to become better versions of themselves, even if the growth is only
+a tiny fragment. They feel uncomfortable if they remain the same as they were",
+36,2,320,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,105,0.833749533,148,"FOURTEEN
+Self-Discovery
+To find your purpose in life, you must go on a journey of self-discovery.
+?Sometimes the warrior feels as if he were living two lives at once . . . 
+There is a bridge that links
+what I do with what I would like to do
+, he thinks. Slowly, his dreams take over his everyday life, and
+then he realizes that he is ready for the thing he always wanted. Then all that is needed is a little
+daring, and his two lives become one.?
+?Paulo Coelho
+Harry thanked me for the insights. Wanting to take the conversation further, he
+asked, ?What do you think is the key element needed for self-improvement and
+competition with oneself??
+?If there is one thing that I think is the foundation of growth, it is
+understanding who you are. You can only compete with yourself if you have a",1
+36,3,321,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,105,0.833487451,137,"?If there is one thing that I think is the foundation of growth, it is
+understanding who you are. You can only compete with yourself if you have a
+clear idea of your potential, your capacities and certainly your limitations,? I
+replied.
+Harry listened with great interest as I elaborated the concept further.
+Understanding Ourselves
+We have to understand ourselves to be able to compete with ourselves. What are
+our tendencies? What do we like? What do we not like? Where do we want to be
+in the future? These are only a few preliminary questions we need to answer to
+succeed. And this process of inquiry begins our journey of self-discovery.
+We know by now that giving and receiving gifts can strengthen our
+relationships. One story about giving gifts which I find hilarious is about a",1
+37,1,340,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,111,0.896754742,117,"Summary:
+We should understand ourselves to know what is meaningful to us,
+and what we want to devote our time to. This can be done by
+understanding our purpose, which takes dedication and patience.
+Discovering our purpose is exciting, just as opening a gift gives the
+feeling of anticipation and joy. Reaching our purpose in life is a
+journey, not an event.
+The Japanese have a model called ikigai or a ?reason to live?, which
+is composed of four traits we need to understand: What do we love?
+What are we good at? What does the world need? What can we be
+paid for? Sairaj and his family discovered that for him early on in his
+life.",1
+37,2,334,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,109,0.884046376,147,"On the way back to the ashram after dinner, I thought to myself that if
+someone chooses what they love to do, there is no stress in their life. As they
+say, ?If you do what you love, you will never have to work a day in your life.?
+However, in reality, the majority of people are doing what they do not love to do,
+day in and day out.
+Ikigai
+Just like Sairaj, we all need to find purpose in our life, which has been linked
+with longer and happier lives. There are many psychological models that can aid
+us on our path to living fulfilling lives, one of which is the Japanese concept of
+ikigai
+.
+Ikigai has no direct English translation, but is understood to mean ?a reason to
+live? or having purpose in life. It comes from Japan, the country with the highest",1
+37,3,341,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,112,0.875298679,47,"If we are older and have not yet figured out our purpose, we can
+follow the principle: love what we have to do and do what we love to
+do.
+Note: To help you find your ikigai, you can complete an exercise in
+Appendix 2
+ (Ikigai Worksheet).",1
+38,1,320,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,105,0.857451975,148,"FOURTEEN
+Self-Discovery
+To find your purpose in life, you must go on a journey of self-discovery.
+?Sometimes the warrior feels as if he were living two lives at once . . . 
+There is a bridge that links
+what I do with what I would like to do
+, he thinks. Slowly, his dreams take over his everyday life, and
+then he realizes that he is ready for the thing he always wanted. Then all that is needed is a little
+daring, and his two lives become one.?
+?Paulo Coelho
+Harry thanked me for the insights. Wanting to take the conversation further, he
+asked, ?What do you think is the key element needed for self-improvement and
+competition with oneself??
+?If there is one thing that I think is the foundation of growth, it is
+understanding who you are. You can only compete with yourself if you have a",0
+38,2,340,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,111,0.818891943,117,"Summary:
+We should understand ourselves to know what is meaningful to us,
+and what we want to devote our time to. This can be done by
+understanding our purpose, which takes dedication and patience.
+Discovering our purpose is exciting, just as opening a gift gives the
+feeling of anticipation and joy. Reaching our purpose in life is a
+journey, not an event.
+The Japanese have a model called ikigai or a ?reason to live?, which
+is composed of four traits we need to understand: What do we love?
+What are we good at? What does the world need? What can we be
+paid for? Sairaj and his family discovered that for him early on in his
+life.",1
+38,3,321,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,105,0.818433881,137,"?If there is one thing that I think is the foundation of growth, it is
+understanding who you are. You can only compete with yourself if you have a
+clear idea of your potential, your capacities and certainly your limitations,? I
+replied.
+Harry listened with great interest as I elaborated the concept further.
+Understanding Ourselves
+We have to understand ourselves to be able to compete with ourselves. What are
+our tendencies? What do we like? What do we not like? Where do we want to be
+in the future? These are only a few preliminary questions we need to answer to
+succeed. And this process of inquiry begins our journey of self-discovery.
+We know by now that giving and receiving gifts can strengthen our
+relationships. One story about giving gifts which I find hilarious is about a",1
+39,1,344,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,113,0.858899474,55,"ambition to achieve is compromised. You become satisfied?Zen, like you,? he
+said.
+?Do I look satisfied?? I asked.
+?Well, sort of. I know you?re busy, but don?t you think you would have been
+more ambitious if you did not practise spirituality? I am sure some of your
+friends are now millionaires in America!? he said.",1
+39,2,351,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,115,0.858516991,129,"to our mind, but it does not give deep satisfaction to the heart. Only giving does
+that. Therefore, I encourage people to passionately pursue their ambitions. But I
+also tell them that when God blesses us with more because of doing so, we
+should not only increase the standard of our living but also the standard of our
+giving.
+?I don?t have a rebuttal to that. However, let?s say that my ambition does not
+get affected by practising spirituality, does it make me lose my cutting edge??
+Harry asked vaguely.
+?How so?? I replied as we neared the temple.
+?There is this perception about spiritualists. If you tell someone that you
+practise spirituality, they look at you funny, as if your ideas and lifestyle are so
+backward,? he whined.",1
+39,3,345,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,114,0.851767659,141,"It was a slightly cutting remark, but I was used to it. It?s one of the greatest
+misconceptions of spirituality. Among many others, this misconception was also
+addressed by Sri Krishna in the Bhagavad Gita.
+?Let me take your mind back to the battlefield of Kurukshetra,? I said.
+Does Spirituality Kill Ambition?
+By now we all know what happened to Arjuna, just as he was about to engage in
+warfare. For us, it would not be surprising to have a nervous breakdown before
+battle; most of us are not trained in the military arts and would be fearful of our
+own deaths. But not Arjuna. He feared harming his grandfathers, his teachers
+and his own brothers who stood on the other side with arms in hand. He had a
+strong sense of compassion, but it was misplaced. Not fighting would have",1
+40,1,364,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,119,0.864120364,135,"There are many misconceptions when it comes to being a spiritual-
+minded person and being successful in the world.
+One is that spirituality kills our ambitions and zest to achieve. This is
+false because spirituality just changes our motive to achieve. It makes
+us want to be hugely successful so that we can have the resources to
+help others. The story of Krishna and Arjuna in the Gita explains
+more: Fight and achieve to help others, but be internally content in
+your personal life.
+Another is that spiritual people get walked over in business because
+of their values. The story of the sage and the snake describes how we
+should stick to our values but be meticulous and straightforward in
+business.
+Though we can make as much money as we desire, and use it to",1
+40,2,351,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,115,0.844506025,129,"to our mind, but it does not give deep satisfaction to the heart. Only giving does
+that. Therefore, I encourage people to passionately pursue their ambitions. But I
+also tell them that when God blesses us with more because of doing so, we
+should not only increase the standard of our living but also the standard of our
+giving.
+?I don?t have a rebuttal to that. However, let?s say that my ambition does not
+get affected by practising spirituality, does it make me lose my cutting edge??
+Harry asked vaguely.
+?How so?? I replied as we neared the temple.
+?There is this perception about spiritualists. If you tell someone that you
+practise spirituality, they look at you funny, as if your ideas and lifestyle are so
+backward,? he whined.",0
+40,3,353,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,116,0.842973173,148,"?That?s true, but in the office . . .?
+?So we?re talking about the office!? I interrupted and laughed. ?Why did you
+not say so? We just talked about office politics and how an office is merely a
+microcosm.?
+Harry blushed. ?In the office . . .? he paused. ?If you tell people that you are
+having a monk over for lunch, they think you are slightly odd. People feel that
+because you like meditation and yoga and are trying to be humble, others can
+take advantage of you.? I understood what Harry was trying to say.
+?That is another misconception that is found in the working world: if you are
+trying to be virtuous, people will take advantage of you; that spiritual people will
+get walked over in business. Let me tell you an ancient story of why that is not
+true.?
+The Sage and the Snake",1
+41,1,366,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,120,0.850412667,138,"SIXTEEN
+Integrity and Character
+Spirituality helps develop good character. It is character that shines bright when words fail to do so.
+?Live your life in such a way that those who know you but don?t know God, will come to know God
+because they know you.?
+?Anonymous
+What motivates people to act righteously? Is it the lectures they listen to from
+charismatic speakers? Is it the entertaining philosophy they hear? Or is it the
+electrifying mood of the events they attend? All these can help, but according to
+spiritual literature, what motivates people to take action is not the conviction in
+their heads, but the inspiration of their hearts.
+This is because people are touched more by what we do than what we say. We
+feel inspired by those who live with the right conduct, character and integrity,",0
+41,2,375,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,122,0.848665595,135,"representing spirituality rightly. Hitesh later told me about this man?s
+conversation with the temple monks on this. ?At first the man whom I called
+about the dent was nervous that I would be angry. To his shock, he got a call
+saying that I wanted to give a larger donation. I suppose my car was blessed by
+Shri Jagannath,? he laughed.
+Philosophy without good character is of little or no value. There are three
+aspects of spirituality in practice:
+Vichaar
+: The philosophy that we seek answers from. This helps us
+understand how life should be lived, and how spirituality should be
+practised. These concepts, in turn, are the universal lighthouse principles
+that guide us towards living a life of value.
+Aachaar
+: Based on the philosophy is the physical action which leads to a",1
+41,3,2,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,3,0.847376347,72,"Contents
+Preface
+1. Forgetting the Keys
+2. Seeing beyond the Obvious
+3. The Journey Begins
+WHEEL 1: PERSONAL LIFE
+4. Growing through Gratitude
+5. Press Pause
+6. Why Worry
+7. Spiritual Practice
+WHEEL 2: RELATIONSHIPS
+8. Speaking Sensitively
+9. A Virtuous Vision
+10. Correcting Cautiously
+11. Forgiveness
+12. Association Matters
+WHEEL 3: WORK LIFE
+13. Competition Crossroads
+14. Self-Discovery
+15. Decoding Spirituality at Work
+16. Integrity and Character
+WHEEL 4: SOCIAL CONTRIBUTION",0
+42,1,391,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,129,0.905127883,140,"cream. There is no dessert as delicious as ice cream, especially in the tropics.
+However, the ideology behind the ice cream is: enjoy your life before it melts. It
+symbolizes hedonism; to savour every moment of your life through personal
+enjoyment.
+On the other hand, the candle is symbolic of another ideology: to give light to
+others before it melts. Both ice creams and candles melt, but their reason for
+doing so are completely different. The candle is formed from wax. Its very
+essence is burnt just to give light for other people to see. This is the selfless
+nature of a candle.
+On the spectrum below where do you lie?
+I am sure that you do not think of yourself as completely selfish. Nor can you
+put yourself down as completely selfless. We are all somewhere in between. Just",1
+42,2,398,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.873009324,150,"had nearly forgotten his phone and shoes at the temple. The rage he had spoken
+with about his wife earlier seemed completely pacified. Sometimes it is in
+testing situations that we realize how much love we feel for someone.
+As we zoomed in and out of traffic, back along the shore, I turned to Harry
+and said, ?Don?t worry, Harry. Everything is going to be fine. See how much
+love you have for your wife.? He gave me half a smile in gratitude, and then
+focused his attention fully on the road again. I returned to my thoughts.
+Summary:
+The philosophy of an ice cream is: Enjoy it before it melts.
+The philosophy of a candle is: Give light to others before it melts.
+In order to be happy, we should shift our attitude from being an ice
+cream to a candle, from being selfish to selfless. This is shown",1
+42,3,392,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,129,0.853493094,42,"put yourself down as completely selfless. We are all somewhere in between. Just
+because we cannot be candles fully, it does not mean we should simply remain
+selfish at the ice-cream end. The journey of life is moving from being an ice",1
+43,1,393,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,130,0.846188486,145,"cream to being a candle. That is the purpose of everyone?s life at the core: to
+share, give and contribute to others.
+?But why have we discussed three wheels about ourselves first, then?? you
+might ask. ?If the purpose of life is to give to others, why have we discussed
+understanding ourselves, being happy at work and in our relationships? Does this
+not sound selfish??
+To understand this we have to learn from the oxygen mask.
+A lot of stories in this book have been from my travels. Every flight has safety
+instructions that we all must follow. Some are about routine things like wearing a
+seat belt while others are for emergencies, which we hope that we never have to
+use, like wearing a life jacket or an oxygen mask.
+As the members of the cabin crew demonstrate the oxygen mask on the plane,",1
+43,2,394,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,130,0.84276247,133,"use, like wearing a life jacket or an oxygen mask.
+As the members of the cabin crew demonstrate the oxygen mask on the plane,
+the cabin supervisor makes an announcement, ?If there is a lack of oxygen
+supply in the cabin, oxygen masks will drop down from the panel above your
+heads. To activate the flow of oxygen, pull the mask towards you sharply, place
+it firmly over your nose and mouth, secure the elastic band behind your head and
+breathe normally. 
+Make sure that your mask is securely fastened before you help
+children, infants or others.
+? Does this last part not sound selfish? Surely we
+should be helping others before we help ourselves! However, it should be
+understood that unless we help ourselves and breathe in oxygen, we cannot be of",1
+43,3,389,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,128,0.832363009,27,"thought of how he at that moment was representing wheel four: to be selfless and
+to give back.
+The Ice Cream, the Candle and the Oxygen Mask",1
+44,1,399,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.86712563,58,"In order to be happy, we should shift our attitude from being an ice
+cream to a candle, from being selfish to selfless. This is shown
+through service.
+We must be wary of compassion fatigue. This means we must have
+all our wheels balanced as we try to help others. This is the principle
+of being selfishly selfless.",1
+44,2,395,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,130,0.862537742,137,"understood that unless we help ourselves and breathe in oxygen, we cannot be of
+any real help to others. We can only share wealth with others if we possess
+wealth. Similarly, we can love others only if we know what it feels like to be
+loved. We can only bring hope to others if we feel hope for ourselves. In
+conclusion, we can only give to others what we possess.
+If we try to help others without being satisfied and balanced in the first three
+wheels, we will not be able to give them something of value, and we could even
+experience ?compassion fatigue?. Compassion fatigue is a state of stress
+experienced by those who help others to the extent that they start suffering
+because of their preoccupation with the suffering of others. It can be detrimental",1
+44,3,396,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,130,0.836181223,66,"because of their preoccupation with the suffering of others. It can be detrimental
+to care too much; caregivers who do not focus on self-care can develop
+destructive behaviours over time. Therefore, we need to be slightly selfish to
+start our journey on a sure footing in order to reach the stage where we can
+afford to be completely selfless without causing damage to our own well-being.",1
+45,1,400,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,132,0.863318682,134," EIGHTEEN
+Family First
+The first step in selflessness is to practise it with our family.
+?You don?t choose your family. They are God?s gift to you, as you are to them.?
+?Desmond Tutu
+Our journey of selflessness from an ice cream to a candle must start somewhere.
+Often, people can display selflessness outside their home. People may help out
+in their community, or at temples or schools, and some may even make sure that
+they get a selfie to announce to the world that they have helped. But at home,
+they may not express the same service mentality. I believe that selflessness starts
+at home; with the ones we love the most. Are we doing what we can to help
+them? Are we there for them to help them physically as well as emotionally?",1
+45,2,396,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,130,0.854387641,66,"because of their preoccupation with the suffering of others. It can be detrimental
+to care too much; caregivers who do not focus on self-care can develop
+destructive behaviours over time. Therefore, we need to be slightly selfish to
+start our journey on a sure footing in order to reach the stage where we can
+afford to be completely selfless without causing damage to our own well-being.",0
+45,3,411,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,135,0.852124929,136,"I wanted to tell Harry this story, but it was not the right time. His situation was
+very similar to Lata?s. Just as she ran to help her love, Harry was doing
+everything he could at that moment to help his. Selflessness starts with our
+family, but it should not just end there. To expand our circle of selflessness, we
+should help those outside of our immediate care and affection too.
+Summary:
+On one level, we practise selflessness in helping our family. Our day-
+to-day sacrifices to maintain our family relations are acts of
+selflessness. We do not necessarily have to run marathons like Lata
+Khare to display our devotion to those we love.
+Our circle of selflessness should not end with our family. We should
+help those outside of our immediate care and affection too.",1
+46,1,411,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,135,0.835714817,136,"I wanted to tell Harry this story, but it was not the right time. His situation was
+very similar to Lata?s. Just as she ran to help her love, Harry was doing
+everything he could at that moment to help his. Selflessness starts with our
+family, but it should not just end there. To expand our circle of selflessness, we
+should help those outside of our immediate care and affection too.
+Summary:
+On one level, we practise selflessness in helping our family. Our day-
+to-day sacrifices to maintain our family relations are acts of
+selflessness. We do not necessarily have to run marathons like Lata
+Khare to display our devotion to those we love.
+Our circle of selflessness should not end with our family. We should
+help those outside of our immediate care and affection too.",1
+46,2,400,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,132,0.834631145,134,"EIGHTEEN
+Family First
+The first step in selflessness is to practise it with our family.
+?You don?t choose your family. They are God?s gift to you, as you are to them.?
+?Desmond Tutu
+Our journey of selflessness from an ice cream to a candle must start somewhere.
+Often, people can display selflessness outside their home. People may help out
+in their community, or at temples or schools, and some may even make sure that
+they get a selfie to announce to the world that they have helped. But at home,
+they may not express the same service mentality. I believe that selflessness starts
+at home; with the ones we love the most. Are we doing what we can to help
+them? Are we there for them to help them physically as well as emotionally?",1
+46,3,397,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.830257535,136,"I do believe it is possible to be completely selfless, but it is a journey, a
+process, and not a single event. It takes wisdom to know when we are being
+selfless and when we are simply causing harm to ourselves by being
+?overcaring?. The principle and practice of service involves being somewhere in
+the middle on the ice cream to candle spectrum: to be selfish yet selfless.
+My hand was still on Harry?s shoulder. We had become even closer in the last
+few hours. Remember, revealing the mind and allowing another person to reveal
+their mind to you breeds deep friendship. At that moment, Harry was displaying
+complete selflessness. His only thought was helping his wife. In the process, he
+had nearly forgotten his phone and shoes at the temple. The rage he had spoken",0
+47,1,412,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,136,0.850074589,136,"NINETEEN
+The Nation Narrative
+We can increase our scope of selflessness beyond our family by serving our community, city or even
+nation.
+?You need an attitude of service. You?re not just serving yourself. You help others to grow up and
+you grow with them.?
+?David Green
+We zigzagged in the traffic, using all our knowledge of the city to get to the
+hospital via back roads. It is incredible how much you miss when you just stick
+to the beaten path. I was seeing parts of the city that I had not seen before, and
+people were shocked to see a high-end car with a monk in the passenger seat
+zoom through their neighbourhood. The roar of the engine was deafening to the
+city-folk dwelling in these parts who were carrying out their daily duties of",0
+47,2,426,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,139,0.847953796,28,"meet his fate.
+Summary:
+When we expand the circle of selflessness, we can effectively serve
+our community and nation. This is shown by the heroic efforts of the",1
+47,3,411,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,135,0.837918997,136,"I wanted to tell Harry this story, but it was not the right time. His situation was
+very similar to Lata?s. Just as she ran to help her love, Harry was doing
+everything he could at that moment to help his. Selflessness starts with our
+family, but it should not just end there. To expand our circle of selflessness, we
+should help those outside of our immediate care and affection too.
+Summary:
+On one level, we practise selflessness in helping our family. Our day-
+to-day sacrifices to maintain our family relations are acts of
+selflessness. We do not necessarily have to run marathons like Lata
+Khare to display our devotion to those we love.
+Our circle of selflessness should not end with our family. We should
+help those outside of our immediate care and affection too.",0
+48,1,426,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,139,0.811249375,28,"meet his fate.
+Summary:
+When we expand the circle of selflessness, we can effectively serve
+our community and nation. This is shown by the heroic efforts of the",0
+48,2,3,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,4,0.797230959,28,"17. Selfless Sacrifice
+18. Family First
+19. The Nation Narrative
+20. Service Brings Joy
+Author?s Note
+Appendix 1: Forgiveness Worksheet
+Appendix 2: Ikigai Worksheet
+Acknowledgements
+Follow Penguin
+Copyright",0
+48,3,412,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,136,0.795930862,136,"NINETEEN
+The Nation Narrative
+We can increase our scope of selflessness beyond our family by serving our community, city or even
+nation.
+?You need an attitude of service. You?re not just serving yourself. You help others to grow up and
+you grow with them.?
+?David Green
+We zigzagged in the traffic, using all our knowledge of the city to get to the
+hospital via back roads. It is incredible how much you miss when you just stick
+to the beaten path. I was seeing parts of the city that I had not seen before, and
+people were shocked to see a high-end car with a monk in the passenger seat
+zoom through their neighbourhood. The roar of the engine was deafening to the
+city-folk dwelling in these parts who were carrying out their daily duties of",0
+49,1,443,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,145,0.846088111,133,"next to the mirror and I squatted down next to her. She stroked my hair with
+affection and I folded my hands to receive her blessings. ?What does this mean
+to you?? I asked her. ?It means that I can eat and chew properly. It means that
+my stomach can be filled at night,? she said as she smiled and her eyes glistened.
+It was a heart-touching moment for me, to know that my service had added some
+value to her life.?
+Seva
+So what is driving Vinay to serve? What is driving all the people who apply
+spirituality in their life to help others? When we connect to ourselves and with
+the divine, our understanding, values and paradigms transform. When we
+practise spirituality sincerely, we obtain a higher perspective of life. We",1
+49,2,399,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,131,0.844642282,58,"In order to be happy, we should shift our attitude from being an ice
+cream to a candle, from being selfish to selfless. This is shown
+through service.
+We must be wary of compassion fatigue. This means we must have
+all our wheels balanced as we try to help others. This is the principle
+of being selfishly selfless.",1
+49,3,154,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,52,0.835582256,97,"We are not human beings having spiritual experiences; we are
+spiritual beings having human experiences. We are not this body; we
+are a spiritual being.
+We need to understand the hierarchy of connections. Ultimately, we
+must connect to something above ourselves such as God. This can
+give us the power to spread happiness and joy around the world.
+There are many ways to connect to God. We may have our own,
+which is great, and we should go deeper into it. One of the most
+effective methods that has worked really well for me is mantra
+meditation.",0
+50,1,445,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,145,0.874252617,63,"hedonistic ideals. That profound joy is only possible when one feels love to
+serve others. And how is that love maintained? Through being connected to God
+through spirituality. Love for God is composed of three things:
+Right Action
+: We must express our love through the correct action. We
+must behave and act in a way that is in line with spiritual principles.",1
+50,2,443,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,145,0.84746927,133,"next to the mirror and I squatted down next to her. She stroked my hair with
+affection and I folded my hands to receive her blessings. ?What does this mean
+to you?? I asked her. ?It means that I can eat and chew properly. It means that
+my stomach can be filled at night,? she said as she smiled and her eyes glistened.
+It was a heart-touching moment for me, to know that my service had added some
+value to her life.?
+Seva
+So what is driving Vinay to serve? What is driving all the people who apply
+spirituality in their life to help others? When we connect to ourselves and with
+the divine, our understanding, values and paradigms transform. When we
+practise spirituality sincerely, we obtain a higher perspective of life. We",0
+50,3,453,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,148,0.826831698,36,"compassion and pain for the suffering that people go through in this
+world.?
+We have to do the right action, with the right intention and in the
+right mood for it to be classed as spiritual.",1
+51,1,449,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,146,0.883371711,84,"para dukha dukhi
+, one who feels pain in the pain of others.
+In the modern world, people sometimes become 
+para dukha sukhi,
+ where they
+take pleasure in seeing the pain of others. However, true compassion stems from
+spirituality.
+I could understand the pain that Harry was feeling, but I was not at the level of
+para dukha dukhi,
+ one who truly feels the pain others are going through. Still, I
+endeavoured to comfort him and give him words of solace all through this",1
+51,2,448,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,146,0.870320618,140,"God has a compassionate and empathetic heart. The true symptom of someone
+who is experiencing genuine love for God is that they experience compassion
+and the pain of the suffering that people go through in this world,? the saint said.
+Likewise, Jesus Christ said in the Bible, ?The highest commandment is to love
+thy God with all thy soul and all thy might and all thy heart.? He then said that
+because of following the highest commandment of loving God we begin to ?love
+thy neighbour as thy self?. This means when we become spiritually minded and
+experience the love of God, we feel compassion for the pain of others. In
+Sanskrit it is called 
+para dukha dukhi
+, one who feels pain in the pain of others.
+In the modern world, people sometimes become 
+para dukha sukhi,
+ where they",1
+51,3,443,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,145,0.83562696,133," next to the mirror and I squatted down next to her. She stroked my hair with
+affection and I folded my hands to receive her blessings. ?What does this mean
+to you?? I asked her. ?It means that I can eat and chew properly. It means that
+my stomach can be filled at night,? she said as she smiled and her eyes glistened.
+It was a heart-touching moment for me, to know that my service had added some
+value to her life.?
+Seva
+So what is driving Vinay to serve? What is driving all the people who apply
+spirituality in their life to help others? When we connect to ourselves and with
+the divine, our understanding, values and paradigms transform. When we
+practise spirituality sincerely, we obtain a higher perspective of life. We",0
+52,1,24,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,12,0.834931016,146,"about to share, but also to avoid offending those who have ever fed me sambar
+that didn?t live up to the standard set by the Iyers.
+The lunch started with me getting confused. I had never eaten sambar solely
+with a spoon, let alone three. They sat me at the head of their rich oak dining
+table, which overlooked the sea. A fragile, glittering centrepiece on the table
+illuminated the room as it shone in the midday sun. The table was set only for
+me?a weighty gold leaf-shaped plate with a satin napkin folded into a swan on
+it and cutlery of varying shapes and sizes around the plate?the three spoons lay
+in front of me, two knives to my right and four forks to my left. Four forks! I
+wasn?t sure if we had four in our entire ashram as nearly everyone just uses their",1
+52,2,20,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,11,0.821978569,123,"ONE
+Forgetting the Keys
+As you become successful, do not forget the keys to happiness.
+?Happiness resides not in possessions, and not in gold, happiness dwells in the soul.?
+?Democritus
+It may have been a mistake to publicly announce that my favourite cuisine
+comes from the south of India, because the whole year, it was sambar for
+breakfast, sambar for lunch and sambar for dinner. In fact, sambars followed me
+everywhere I went. For those of you who do not know, sambar is a lentil-based
+vegetable stew, which accompanies famous rice-based dishes such as dosa or
+idli. From the United Kingdom to Australia, everyone who invited me to their
+home fed me their version of this much-loved lentil soup. Having had so much",1
+52,3,48,1,Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com,H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf,18,0.812045813,50,"asked empathetically.
+?I?m sure you don?t have time for all of this.?
+?I have all the time in the world for you. Firstly because we?re going to be
+stuck here for a long time, and secondly because you have fed me the best
+sambar I?ve ever tasted in my life!?",0

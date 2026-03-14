@@ -1,255 +1,297 @@
 query_id,session_id,user_query,rewritten_query,mode,timestamp,num_documents_in_session,retrieved_chunks_count,LLM response,retrieval_time(in s),generation_time(in s),total_time(in s),final_answer_length(in tokens)
-1,1,which car does harry own?,which car does harry own?,relax,2026-03-05 20:45:16.724095+05:30,1,3,"1. Answer:
-Harry currently owns a **Lexus**. He sold his previous Mercedes because its low chassis was unsuitable for the streets of Mumbai.
+1,1,where do hosts live?,where do hosts live?,strict,2026-03-13 14:39:43.507774+05:30,1,3,"1. **Context Summary:**
+   The text describes a monk staying in a high-rise apartment in **Worli, Mumbai**, specifically on the **28th floor**, in the home of gracious hosts. The location is compared to prestigious areas like Fifth Avenue (New York) or Park Lane (London), emphasizing its elegance.
+
+2. **Answer:**
+   The hosts live in a high-rise apartment in **Worli, Mumbai**, on the **28th floor**.
+
+3. **Citations:**
+   [page 12 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.161787748,1.516035795,2.44174242,100
+2,1,what was harry's educational background?,what was Harry’s educational background?,strict,2026-03-13 14:40:36.863427+05:30,1,3,"1. **Context Summary:**
+   - Harry attended **Harvard** for an **MBA program** after receiving a full scholarship.
+   - He admitted he did not thoroughly consider the program initially and enrolled primarily to escape his family and live independently.
+   - There is no explicit mention of other degrees or fields of study beyond Harvard MBA.
+
+2. **Answer:**
+   Harry’s educational background includes a **Harvard MBA**.
+
+3. **Citations:**
+   [page 19 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.13303566,1.014810085,2.877391338,100
+3,1,which car did harry own?,which car did Harry own?,relax,2026-03-13 14:41:00.599853+05:30,1,3,"1. Answer:
+Harry initially owned a **Mercedes**, which he sold due to its low chassis height being unsuitable for the streets of Mumbai. After selling the Mercedes, he purchased a **Lexus**.
 
 2. Citations:
-[page 14 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-[page 17 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",2.4939656257629395,0.9480066299438477,5.059324264526367,100
-1,1,"what were harry's qualifications?
-",what were harry's qualifications?,strict,2026-03-05 20:45:48.973804+05:30,1,3,"1. **Context Summary:**
-   - Harry attended **Harvard** for an **MBA program** with a **full scholarship**.
-   - He initially pursued the MBA as a way to **escape his family and live independently**, not necessarily for career alignment.
-   - The context does not mention any other formal qualifications (e.g., undergraduate degrees, certifications, or technical expertise like software engineering).
+- [page 14 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+- [page 17 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.111783028,1.11838007,3.344119787,100
+4,1,"	why harry was not happy with his life?",why was Harry unhappy with his life?,strict,2026-03-13 14:41:24.576703+05:30,1,3,"1. **Context Summary:**
+   - Harry acknowledges external success (prestigious education, wealth, reputation) but feels uneasy about his happiness.
+   - He is distracted by material comparisons (e.g., seeing a Rolls-Royce) and feels ""stuck"" despite achievements.
+   - The narrator suggests his unhappiness stems from an internal ""traffic jam"" (mental blockages like insecurity) preventing him from reaching true fulfillment.
 
 2. **Answer:**
-   Harry’s only explicitly mentioned qualification is a **Harvard MBA**.
+   Harry was unhappy because he felt **stuck** and unable to focus on inner fulfillment despite external success, and his mind was cluttered with insecurity and distractions (e.g., comparing himself to others).
 
 3. **Citations:**
-   [page 19 | Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com]",0.6177237033843994,1.5388157367706299,4.750993013381958,100
-1,1,"where does harry(hariprasad) and lalita live?
-",where does harry and lalita live?,strict,2026-03-05 20:46:55.529559+05:30,1,3,"1. **Context Summary:**
-   - The text describes Harry and Lalita as a cultured and courteous couple who live in an apartment building with multiple floors (at least 15 floors).
-   - Harry jokes about walking up to their apartment, implying they reside in a high-rise or multi-story building.
-   - The conversation takes place during a lunch visit, and Harry offers to drive Lalita to the ashram, suggesting their home is nearby or accessible by car.
+   - [page 16 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 22 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.092182636,1.385919809,3.33611846,100
+5,1,how should we train our mind to be positive?,how should we train our mind to be positive?,relax,2026-03-13 14:41:55.583823+05:30,1,3,"1. **Answer:**
+Training your mind to be positive involves treating positivity like a muscle—it requires consistent practice and intentional effort. The context suggests two key approaches:
 
-2. **Answer:**
-   I don't know
+- **Develop gratitude as a habit**: Gratitude is described as a ""state of being"" that helps you recognize positive aspects in life, even during difficult times. To strengthen this ""muscle,"" you must actively cultivate it daily. This means consciously acknowledging good things in the world, the presence of positive elements in your life, and the external sources of those blessings. The more you practice gratitude, the more natural it becomes, reducing the mind’s default tendency to focus on negativity.
 
-3. **Citations:**
-   [page 15 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.5242831707000732,1.4365603923797607,4.223929405212402,100
-1,1,where do hosts live?,where do harry and lalita live?,strict,2026-03-05 20:47:58.799236+05:30,1,3,"1. **Context Summary:**
-   - The text describes Harry and Lalita as a cultured and courteous couple. Harry is a young director responsible for the firm’s Asia operations. They live in an apartment building with multiple floors (at least 15 floors, as referenced in the conversation). Harry offers to drive Lalita to the ashram instead of taking a cab, indicating their residence is nearby.
+- **Balance selflessness with self-care**: While shifting from a selfish to a selfless mindset (e.g., through service) can foster happiness, it’s important to avoid ""compassion fatigue."" This means you should help others while also ensuring your own well-being is maintained. The principle of **""selfishly selfless""**—prioritizing your own balance and energy—helps sustain long-term positivity and resilience.
 
-2. **Answer:**
-   I don't know
-
-3. **Citations:**
-   - [page 14 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 15 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.843350887298584,2.2265963554382324,4.705528497695923,100
-1,1,where do hosts of author live?,where do Harry and Lalita live?,strict,2026-03-05 20:48:31.089520+05:30,1,3,"1. **Context Summary:**
-   - The text describes Harry and Lalita as a cultured and courteous couple who live in an apartment building with multiple floors (at least 15 floors).
-   - Harry mentions walking up to their room with friends, implying they reside in a high-rise or multi-story building.
-   - The conversation takes place during a lunch visit, and Harry offers to drive Lalita to the ashram, suggesting their home is nearby or they have a vehicle.
-
-2. **Answer:**
-   I don't know.
-
-3. **Citations:**
-   [page 15 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2511410713195801,14.202907800674438,15.525763750076294,100
-1,1,"why harry was not happy with his life?
-",why was Harry unhappy with his life?,strict,2026-03-05 20:49:11.614297+05:30,1,3,"1. **Context Summary:**
-   - Harry acknowledges external success (prestigious education, wealth, career, relationships) but feels uneasy and unhappy.
-   - He winces at seeing others with greater material success (e.g., a Rolls-Royce), suggesting dissatisfaction with his own achievements.
-   - The narrator implies Harry may have forgotten or neglected his happiness despite his success.
-   - Harry later reacts defensively (""What’s that got to do with my situation though?"") when discussing internal ""traffic jams"" (mental blocks) preventing fulfillment.
-
-2. **Answer:**
-   Harry was unhappy because he felt **stuck despite external success**, struggled with **comparison to others’ achievements**, and likely **overlooked internal fulfillment** (e.g., happiness, purpose) in favor of material or social validation.
-
-3. **Citations:**
-   - [page 16 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-  ",0.925342321395874,1.5288238525390625,4.3310840129852295,100
-1,1,"how should we train our mind to be positive?
-",how should we train our mind to be positive?,relax,2026-03-05 20:49:52.222830+05:30,1,3,"1. Answer:
-To train your mind to be positive, you can focus on **gratitude** and **conscious practice**, similar to how you would train a physical muscle. Gratitude helps shift your mindset by recognizing the good in your life and the world around you. This involves actively acknowledging positive aspects, even during difficult times, and understanding that these positives come from external realities (e.g., support from loved ones or small joys).
-
-The context emphasizes that gratitude is not an innate trait for everyone—it requires deliberate effort. Like any skill, the more you practice gratitude, the stronger it becomes. This means intentionally reflecting on what you’re thankful for, even in challenging situations, to rewire your mind toward positivity over time.
+The mind, like the tongue, often fixates on negatives, so actively redirecting focus toward gratitude and balanced selflessness trains it to adopt a more positive outlook.
 
 ---
 
-2. Citations:
-- **[page 35 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
-  *""Gratitude is a state of",0.8281664848327637,1.5157983303070068,3.5438263416290283,100
-1,1,"Explain the key to happiness and positivity?
-",Explain the key to happiness and positivity as described in the context of Harry’s situation and the mind-training techniques mentioned earlier.,relax,2026-03-05 20:51:31.204758+05:30,1,3,"1. **Answer:**
-The context describes the **key to happiness and positivity** through two interconnected ideas—**selflessness** and **gratitude**—illustrated by Harry’s emotional journey and the mind-training techniques emphasized in the book.
+2. **Citations:**
+- **[page 35 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  (Gratitude as a ""muscle,"" default negativity, inner strength through gratitude)
 
-- **Selflessness as the ""candle philosophy"":**
-  Happiness is not found in selfishness (like an ""ice cream"" that melts quickly) but in contributing to others (like a ""candle"" that gives light before burning out). Harry’s moment of calm after an emotional outburst shows how recognizing love for his wife—even in stress—shifts focus from personal turmoil to connection. This aligns with the idea that **purpose comes from serving others**, not just personal fulfillment.
+- **[page 131 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  (Selfishly selfless principle, avoiding compassion fatigue)
 
-- **Gratitude as a mind-training tool:**
-  The book highlights gratitude as essential for maintaining positivity, especially in busy or chaotic lives (e.g., Harry’s ""emotional rollercoaster""). The dialogue emphasizes:
- ",0.938957929611206,2.1048831939697266,4.925862550735474,100
-1,1,give citations of previous answer,give citations of the answer about Harry’s unhappiness,relax,2026-03-05 20:52:00.647205+05:30,1,3,"1. **Answer:**
-Harry’s unhappiness stems from **internal conflict and emotional turmoil** related to his marriage. He is **struggling with regret, fear of divorce, and self-doubt** about his relationship. His unhappiness is tied to:
-- **Fear of judgment** from family and friends if he divorces his wife.
-- **Guilt and resentment** over perceived carelessness (""being careless about little things can really prove to be fatal"").
-- **Unresolved anger and hurt** from his wife’s ""cruel and hurtful"" words, making forgiveness difficult despite his love for her.
-- A **contradiction between his external success** (implied by earlier context) and his **internal dissatisfaction**, as he questions whether he has neglected his happiness in pursuit of achievements.
-
-The context also highlights his **emotional instability** (""churning emotions"") and **self-reflection** (""I suppose so...""), suggesting his unhappiness is",1.1074903011322021,1.6366922855377197,4.893599510192871,100
-1,1,"How to practice gratitude?
-",How to practice gratitude as mentioned in the previous answer?,strict,2026-03-05 20:52:27.440291+05:30,1,3,"1. **Context Summary:**
-   The context explains that gratitude is a way of life that can be learned and practiced through intentional actions. It highlights three key ways to practice gratitude:
-   - Recognizing and expressing gratitude in the moment (e.g., saying ""thank you"").
-   - Remembering and reflecting on past kindnesses (contemplation).
-   - Reciprocating through actions of giving back and living by values of gratitude.
-   The text also emphasizes prioritizing time for gratitude practices, such as writing a gratitude log daily, and internalizing gratitude through silent contemplation.
+- **[page 39 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  (Gratitude as a trainable habit, ""use it or lose it"")",0.078584909,3.054520369,5.385658503,100
+6,1,What does the author say about gratitude and how is it beneficial?,"What does the author say about gratitude as a ""muscle"" and how it can be trained to reduce the mind’s default tendency to focus on negativity?",strict,2026-03-13 14:42:22.864538+05:30,1,3,"1. **Context Summary:**
+   The author compares gratitude to a muscle that requires practice to strengthen. Like physical muscles, gratitude is not innate for everyone but can be developed through conscious effort. The mind often defaults to focusing on negativity, but training gratitude helps counteract this tendency by shifting attention toward positive aspects of life. The text emphasizes that gratitude is a skill that must be actively cultivated to sustain its benefits.
 
 2. **Answer:**
-   To practice gratitude as mentioned:
-   - **Recognize and express gratitude** in the moment (e.g., saying ""thank you"" when someone helps you).
-   - **Remember and mean it** by contemplating past kindnesses (e.g., spending time in silence reflecting on who has helped you).
-   - **Reciprocate through actions** by giving back",0.8354058265686035,2.852299690246582,5.5689849853515625,100
-1,1,"what is the story of success of Whatsapp?
-",what is the story of success of Whatsapp?,strict,2026-03-05 20:53:14.985040+05:30,1,3,"1. **Context Summary:**
-   - WhatsApp was founded by **Brian Acton**, a Stanford graduate and software engineer.
-   - It was **incorporated in Silicon Valley, California**, in the same year Acton was rejected from jobs at major tech companies (e.g., Twitter, Facebook).
-   - The app grew **exponentially** and became a global success, reaching **1.5 billion active users by December 2017**.
-   - Facebook acquired WhatsApp for **$19 billion in 2014**.
-   - The rejection from jobs initially seemed like a setback but later proved beneficial.
-
-2. **Answer:**
-   WhatsApp was founded by Brian Acton, a Stanford graduate. Despite being rejected from jobs at companies like Twitter and Facebook, he went on to create WhatsApp, which became a global messaging app with 1.5 billion users by 2017. Facebook later acquired it for $19 billion",0.24834775924682617,1.4984655380249023,3.37921404838562,100
-1,1,"explain the ""why worry?"" concept.
-","explain the ""why worry?"" concept.",strict,2026-03-05 20:53:41.783882+05:30,1,3,"1. **Context Summary:**
-   The text explains the **""Why Worry?""** concept as a principle of **detachment from situations beyond one’s control**. It emphasizes that worrying about uncontrollable events is futile, as outcomes may change over time (e.g., rejections turning into opportunities). The idea is presented simply—if something is within your control, act; if not, accept it and avoid unnecessary stress. The concept is framed as a **universal truth**, often conveyed through straightforward explanations (e.g., an infographic or a viral lecture clip). Spiritual strength is suggested as a tool to cope with uncontrollable problems.
-
----
-
-2. **Answer:**
-The **""Why Worry?""** concept teaches that **worrying about things outside your control is unnecessary**. The text states:
-- If a situation is **in your control**, take action.
-- If it is **not in your control**, you cannot change it, so why worry?
-This principle is rooted in **det",0.20980525016784668,1.637085199356079,3.338836908340454,100
-1,1,"explain the ""why worry?"" concept.
-","explain the ""why worry?"" concept.",strict,2026-03-05 20:56:58.228911+05:30,1,3,"1. **Context Summary:**
-   The ""Why Worry?"" concept emphasizes that many life situations are beyond our control. The text highlights that worrying about uncontrollable events is futile. It introduces a simple principle: if a situation is within your control, take action; if not, accept it and refrain from worrying. The idea is reinforced by a viral infographic titled *""Why Worry""* and the realization that perceived setbacks (like rejection or viral miscontextualization) can later become opportunities. Detachment from uncontrollable factors is presented as a key spiritual practice.
-
-2. **Answer:**
-   The ""Why Worry?"" concept teaches that worrying is unnecessary when a situation is beyond your control. The text states:
-   - *""Is this in my control? If yes, you can do something about it. If no, then you cannot do anything about it. Therefore, in both circumstances, why worry?""*
-   It also underscores that uncontrollable events (e.g., viral miscontextualization, external rejections) should not be sources of anxiety, as they may later prove beneficial. The principle is distilled into a simple, universally applicable truth: *""No fancy language or abstract concepts, just essential truths presented modestly to awaken the soul.""*
+   The author states that gratitude is like a muscle that must be ""used or lost it."" It is not naturally present for everyone but can be trained through practice. The mind has a default tendency to focus on the negative, similar to how the tongue may obsess over something stuck in the teeth. By consciously practicing gratitude, one can reduce this default negativity and cultivate a state of positivity.
 
 3. **Citations:**
-   - [page 46 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 47 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 48 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.333782434463501,2.1274445056915283,4.892165660858154,100
-1,1,"What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?
-","What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?",strict,2026-03-05 20:57:26.553035+05:30,1,3,"1. **Context Summary:**
-   The text describes a **hierarchy of connections** in spiritual practice, dividing them into three types:
+   [page 39 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.136804581,1.817712784,3.368077517,100
+7,1,Explain the key to happiness and positivity? ,Explain the key to happiness and positivity?,relax,2026-03-13 14:44:22.744225+05:30,1,3,"1. **Answer:**
+The key to happiness and positivity lies in shifting our mindset and approach to life, as suggested by the provided context. Here are the core principles:
+
+- **Shift from selfishness to selflessness**: Happiness is not found in being an ""ice cream"" (selfishly indulgent) but in being a ""candle"" (selflessly giving light to others). True fulfillment comes from service and helping others without expecting anything in return. This is framed as **""selfishly selfless""**—balancing self-care with acts of kindness to avoid burnout or ""compassion fatigue.""
+
+- **Navigating challenges with resilience**: Happiness isn’t about avoiding difficulties (like the ""Indian monsoon"" metaphor) but about *how* we respond to them. The context emphasizes **free will** as the most valuable tool—our ability to choose our reactions shapes our experience. As Aldous Huxley’s quote highlights: *""Experience is not what happens to a man, it is what a man does with what happens to him.""* Peace and contentment come from proactive, intentional responses rather than passive acceptance of negativity.
+
+- **Balance and self-awareness**: To sustain positivity, one must maintain equilibrium—like ""all wheels balanced"" while helping others. This means practicing selflessness *without* neglecting personal well-being, ensuring long-term fulfillment rather than temporary relief.
+
+---
+2. **Citations:**
+- [page 131 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+- [page 9 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.083981752,2.596446514,5.384301424,100
+8,1,How to practice gratitude?,"How to practice gratitude as a ""muscle"" to shift the mind's default negativity?",strict,2026-03-13 14:44:57.686065+05:30,1,3,"1. **Context Summary:**
+   - Gratitude is described as a ""muscle"" that must be consciously trained to shift the mind's default tendency toward negativity.
+   - Like physical muscles, gratitude requires practice (""use it or lose it"") to strengthen.
+   - The mind often defaults to focusing on negatives, but gratitude helps reframe attention toward positives.
+   - A structured approach involves **recognizing** good things, **remembering** them intentionally, and **reciprocating** (e.g., expressing thanks).
+   - Daily practice (e.g., a **gratitude log**) is an evidence-based method to cultivate this mindset.
+
+2. **Answer:**
+   To practice gratitude as a ""muscle"" to shift negativity:
+   - Treat gratitude like a muscle: **consciously prioritize it daily** to strengthen it.
+   - Use the three principles: **recognize** good things (e.g., acts of kindness), **remember** them intentionally, and **reciprocate** by expressing thanks.
+   - Implement a **daily gratitude log** as a commitment tool.
+
+3. **Citations:**
+   - [page 39 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 40 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.114556551,1.934911251,3.315536976,100
+9,1,what is the story of success of Whatsapp?,what is the story of success of Whatsapp?,strict,2026-03-13 14:45:25.142104+05:30,1,3,"1. **Context Summary:**
+   - WhatsApp was founded by **Brian Acton**, a Stanford-graduated software engineer.
+   - It began as a free messaging and calling app available worldwide except China.
+   - After being rejected by Facebook initially, WhatsApp grew **exponentially** and became a global success.
+   - In **2014**, Facebook acquired WhatsApp for **$19 billion**.
+   - By **December 2017**, WhatsApp had **1.5 billion active users**, making it one of the most widely used apps globally.
+
+2. **Answer:**
+   WhatsApp was founded by Brian Acton, a software engineer who graduated from Stanford. It started as a free messaging and calling application available worldwide except China. Despite initial rejection, WhatsApp grew rapidly and was acquired by Facebook in 2014 for $19 billion. By December 2017, it had 1.5 billion active users.
+
+3. **Citations:**
+   - [page 43 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 43 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.089148998,1.984370947,3.351148367,100
+10,1,"explain the ""why worry?"" concept.","explain the ""why worry?"" concept.",strict,2026-03-13 14:46:12.949658+05:30,1,3,"1. **Context Summary:**
+   - The text describes a moment of anxiety caused by an uncontrollable situation (a viral video clip).
+   - A flowchart titled **""Why Worry?""** is received, suggesting that worry is unnecessary whether a situation is within or outside one’s control.
+   - The concept is reinforced with the idea that what initially seems negative (e.g., rejection, viral misinformation) can later become beneficial.
+   - The key question posed is: *""Is this in my control? If yes, act; if no, accept—why worry?""*
+
+2. **Answer:**
+   The **""Why Worry?""** concept argues that worry is futile because:
+   - Many life situations are **out of our control** (e.g., viral spread of content, external events).
+   - Even if a situation is controllable, addressing it directly is better than worrying.
+   - Negative experiences (like rejection or viral misinformation) may later prove advantageous.
+   - The core principle is: **Worrying adds no value when outcomes are either actionable or unavoidable.**
+
+3. **Citations:**
+   - [page 46 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 48 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.155725002,1.946743965,4.048224926,100
+11,1,"	What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?","What are the three kinds of connections described in the hierarchy of spiritual practice, and how do they differ from one another?",strict,2026-03-13 14:47:02.657388+05:30,1,3,"1. **Context Summary:**
+   The text describes a **hierarchy of connections** in spiritual practice, categorizing them into three types:
    - **Connections outside ourselves** (e.g., networking, relationships, work).
-   - **Connections inside ourselves** (e.g., seeking solace within, self-reflection).
-   - **Connections to something above ourselves** (e.g., God, spiritual beings), emphasizing a higher purpose.
+   - **Connections inside ourselves** (e.g., seeking solace, self-reflection).
+   - **Connections to something above ourselves** (e.g., God, spiritual beings).
+   It also distinguishes between **types of associations** (uplifting, neutral, or intimate) but does not explicitly rename them as ""kinds of connections"" in the same context.
 
 2. **Answer:**
-   The three kinds of connections are:
-   - **Outside ourselves**: Involves external interactions like relationships, work, and social connections. These are essential but can mislead if prioritized over inner direction.
-   - **Inside ourselves**: Refers to inner exploration, self-work, and seeking solace within one’s own mind or spirit.
-   - **Above ourselves**: Connecting to a higher power or spiritual entity (e.g., God), which provides deeper meaning and the ability to spread joy.
+   The three kinds of connections described are:
+   - **Outside ourselves**: Connections with the world (e.g., relationships, work).
+   - **Inside ourselves**: Connections with inner solace or self-work.
+   - **To something above ourselves**: Connections to a higher power (e.g., God).
 
-   These differ in their scope: the first two are earthly (external or internal), while the third transcends the self toward a spiritual or divine realm.
+   These differ in focus: the first two are external/internal human experiences, while the third is a spiritual connection transcending the self.
 
 3. **Citations:**
-   - [page 49 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 52 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8101060390472412,1.9514102935791016,4.8595006465911865,100
-1,1,"What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?
-","What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?",strict,2026-03-05 20:58:25.025642+05:30,1,3,"1. **Context Summary:**
-   The text uses the analogy of **trains bound by tracks, schedules, and destinations** to explain how meditation acts as a discipline to control the mind. Without this discipline, the mind wanders aimlessly like a train without constraints. The analogy signifies that meditation provides structure and direction, ensuring the mind reaches its intended ""destination"" (clarity, focus, or purpose).
+   - [page 49 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 52 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.114963293,2.063222885,3.42525506,100
+12,1,"	How does the author use the airplane metaphor to explain the short-term and long-term effects of meditation?",How does the author use the airplane metaphor to illustrate the immediate and lasting impacts of meditation?,relax,2026-03-13 14:47:26.504546+05:30,1,3,"1. **Answer:**
+The author uses the airplane metaphor to illustrate two key aspects of meditation’s impact:
+
+- **Immediate effects (altitude and perspective):** Meditation is compared to a plane taking off, where the first benefit is an immediate ""gain in altitude."" This represents how meditation quickly helps us rise above our daily worries, anxieties, and problems by providing a higher vantage point. From this elevated perspective, we can observe our concerns with detachment, achieving a sense of peace and calmness right away.
+
+- **Lasting, transformative effects (distance and self-realization):** The deeper, less noticeable impact of meditation is likened to the plane’s journey over time. Just as a plane may not appear to move quickly from the window, meditation’s effects unfold gradually but powerfully. Over time, it transforms our character, cultivates positive qualities, and leads to self-realization—ultimately helping us become our best selves. The metaphor emphasizes that these changes are subtle but profound, like arriving at a distant destination after hours of flight.
+
+The author highlights that while the immediate benefits (peace, perspective) are visible, the lasting benefits (character growth, self-realization) require patience and are often imperceptible until their full impact is realized.
+
+---
+
+2. **Citations:**
+- [page 50 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+- [page 50 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.087873459,2.568574429,4.63405776,100
+13,1,Why is theoretical knowledge about spirituality considered insufficient without committing to a spiritual practice (sadhana)?,Why is the author’s claim that theoretical knowledge about spirituality is insufficient without committing to a spiritual practice (sadhana) justified?,strict,2026-03-13 14:48:27.813130+05:30,1,3,"1. **Context Summary:**
+   The author argues that **theoretical knowledge about spirituality (e.g., understanding concepts like compassion or non-violence) is insufficient** without **practical commitment to spiritual practice (sadhana)**. The text highlights two key points:
+   - **Knowing something ≠ understanding it**: Arjuna intellectually grasped the value of non-violence and compassion but lacked inner conviction to act without hesitation (e.g., fighting in battle). Spirituality requires **active engagement**, not passive acceptance.
+   - **Misconception of ""bare minimum"" satisfaction**: Spiritual practice is not about retreat or resignation (e.g., abandoning ambition or leadership roles). Instead, it demands **alignment of actions with inner values**, ensuring purpose and balance—whether in work, relationships, or personal growth—rather than superficial external connections.
 
 2. **Answer:**
-   The analogy used is **trains of Mumbai bound by tracks, schedule, and destinations**. It signifies that meditation requires discipline to guide the mind toward its goals, preventing it from straying off course.
+   The author justifies this claim by stating that **spirituality is not just intellectual knowledge but requires a hierarchy of connections and committed practice (sadhana)**. Without sadhana, one risks:
+   - **Misplaced priorities**: Focusing on external connections (e.g., work, social validation) while neglecting inner direction, leading to imbalance (e.g., ""fear of missing out,"" dissatisfaction).
+   - **Theoretical gaps**: Knowing spiritual principles (e.g., Arjuna’s compassion) does not translate to **actionable understanding** or fulfillment unless applied through practice.
+   - **Ambiguity about purpose**: Spirituality is not about passive resignation (e.g., quitting ambition) but about **integrating inner values into active, meaningful living**—whether in leadership or everyday roles.
 
 3. **Citations:**
-   [page 51 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.731163740158081,1.5301470756530762,3.7359778881073,100
-1,1,"who is the founder of ISKCON ?
-",who is the founder of ISKCON?,strict,2026-03-05 20:59:09.750277+05:30,1,3,"1. **Context Summary:**
+   - [page 49 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 114 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.103493929,4.941209793,6.886358738,100
+14,1,"What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?","What analogy is used to explain the importance of discipline in controlling the mind during meditation, and what does it signify?",strict,2026-03-13 14:49:07.163343+05:30,1,3,"1. **Context Summary:**
+   The text compares the mind to trains in Mumbai, explaining that trains move the city’s economy but only because they are bound by tracks, schedules, and destinations. Similarly, the mind without meditation lacks direction and control, as it wanders without discipline. The analogy emphasizes that meditation acts as the ""tracks"" to guide the mind toward its intended destination.
+
+2. **Answer:**
+   The analogy used is that **the mind is like the trains of Mumbai**, which require discipline (tracks, schedules, and destinations) to function effectively. This signifies that **meditation provides the necessary discipline to control and direct the mind toward its goals, preventing it from wandering aimlessly**.
+
+3. **Citations:**
+   [page 51 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.085838079,1.250321627,3.346447706,100
+15,1,"How does meditation contribute to developing gratitude, and why is gratitude described as a “relationship-strengthening emotion”?","How does meditation contribute to developing gratitude, and why is gratitude described as a “relationship-strengthening emotion”?",strict,2026-03-13 14:50:22.536031+05:30,1,3,"1. **Context Summary:**
+   - Meditation helps people develop a habit of **practicing sincere gratitude**, which strengthens relationships by encouraging individuals to recognize and appreciate the support and affirmation they receive from others.
+   - Gratitude is described as a **""relationship-strengthening emotion""** because it requires people to acknowledge how others have positively contributed to their lives.
+   - The context also explains that gratitude is a **state of being** that fosters positivity by focusing on the good in external reality, even during difficult times.
+
+2. **Answer:**
+   Meditation contributes to developing gratitude by fostering a habit of sincere gratitude. Gratitude is called a ""relationship-strengthening emotion"" because it involves recognizing and affirming how others have supported and affirmed you, which strengthens connections with them.
+
+3. **Citations:**
+   - [page 51 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.168826818,1.476476431,3.315335989,100
+16,1,who is the founder of ISKCON ?,who is the founder of ISKCON?,strict,2026-03-13 14:50:46.301544+05:30,1,3,"1. **Context Summary:**
    The text mentions that ISKCON (International Society for Krishna Consciousness) was founded by **His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada**, who was affectionately called **Srila Prabhupada** by his followers.
 
 2. **Answer:**
    His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada.
 
 3. **Citations:**
-   [page 57 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8515572547912598,1.1968398094177246,4.101845026016235,100
-1,1,"Why does the passage argue that treating inanimate objects with disrespect can negatively impact our relationships with people?
-",Why does the passage argue that showing disrespect to inanimate objects can harm or weaken our relationships with people?,strict,2026-03-05 20:59:40.600238+05:30,1,3,"1. **Context Summary:**
-   The passage explains that insensitivity toward inanimate objects (e.g., buckets, possessions) can seep into how we treat people. It describes a personal experience where the narrator lost friends due to a growing attitude of disrespect. The text also connects this to modern disposable culture (e.g., plastic waste) and warns that treating things carelessly may lead to treating relationships similarly. It emphasizes the interconnectedness of life’s aspects, suggesting that disrespect for objects reflects or corrupts our treatment of people.
+   [page 57 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.134431362,1.074450016,4.075188637,100
+17,1,Why does the passage argue that treating inanimate objects with disrespect can negatively impact our relationships with people?,Why does the passage argue that disrespecting inanimate objects can harm our relationships with people?,strict,2026-03-13 14:51:04.222240+05:30,1,3,"1. **Context Summary:**
+   The passage explains that treating inanimate objects (like buckets or possessions) with disrespect or insensitivity can lead to a general attitude of insensitivity. This insensitivity does not distinguish between objects and people, so when we mistreat things, we may begin to treat people around us with the same lack of care. The text also highlights that modern disposable culture (e.g., plastic waste) reinforces this mindset, potentially extending to relationships by introducing a ""disposable"" attitude toward people.
 
 2. **Answer:**
-   The passage argues that **insensitivity toward inanimate objects becomes ingrained in our general attitude**, and since our instincts do not distinguish between things and people, treating objects with disrespect may cause us to gradually adopt the same insensitivity in our relationships. Additionally, the passage highlights that **all aspects of life are integrated**, meaning disrespect for objects can spill over into how we treat people we love.
+   The passage argues that disrespecting inanimate objects can harm relationships because insensitivity toward things becomes part of a general attitude that does not discriminate between objects and people. When we treat our possessions or objects with disrespect, our instinct may carry over to how we treat people, leading to insensitivity in relationships.
 
 3. **Citations:**
-   [page 61 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   [page 61 | ../stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.25378918647766113,4.455472707748413,6.052827596664429,100
-1,1,"What is the author’s “golden rule” for sensitivity in relationships, and how does it go beyond the common idea of treating others as you would like to be treated?
-","What is the author’s “golden rule” for sensitivity in relationships, as described in the passage about treating inanimate objects with disrespect?",strict,2026-03-05 21:00:21.441466+05:30,1,3,"1. **Context Summary:**
-   The author emphasizes that insensitivity toward inanimate objects can spill over into relationships with people. The passage introduces a **""golden rule""** for sensitivity in relationships: **treat someone better than you would like to be treated yourself**. The author also advises self-reflection on tone, body language, and behavior to ensure sensitivity.
+   [page 61 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 61 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.149549723,2.113099575,3.459718943,100
+18,1,"What is the author’s “golden rule” for sensitivity in relationships, and how does it go beyond the common idea of treating others as you would like to be treated?","What is the author’s “golden rule” for sensitivity in relationships, and how does it differ from the idea of treating others as you would like to be treated?",strict,2026-03-13 14:51:33.760786+05:30,1,3,"1. **Context Summary:**
+   - The author emphasizes that sensitivity in relationships is crucial and is reflected in how we treat others.
+   - The author’s **""golden rule""** for sensitivity is: **""Treat someone better than you would like to be treated.""**
+   - This rule is contrasted with the idea of treating others **""as""** you would like to be treated.
+   - The author also highlights that sensitivity involves considering how one’s tone, body language, and behavior affect others.
 
 2. **Answer:**
-   The author’s “golden rule” for sensitivity in relationships is:
-   *""Treat someone better than you would like to be treated.""*
+   The author’s ""golden rule"" for sensitivity in relationships is to **treat someone better than you would like to be treated**. This differs from the idea of treating others **as** you would like to be treated, as the golden rule advocates for a higher standard of care and consideration.
 
 3. **Citations:**
-   [page 59 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.26470255851745605,1.2109944820404053,3.3921711444854736,100
-1,1,"How to practice being sensitive?
-",How to practice being sensitive *as described in the author’s “golden rule” for sensitivity in relationships*?,strict,2026-03-05 21:00:39.801279+05:30,1,3,"1. **Context Summary:**
-   The author emphasizes that sensitivity in relationships is crucial for personal success and quality of life. The **""golden rule""** for sensitivity is to **""treat someone better than you would like to be treated.""** This involves reflecting on one’s **tone of voice, body language, and behavior** to ensure they align with sensitivity. The author also highlights the importance of **considering how others feel** before speaking or acting.
+   - [page 59 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.161719799,1.489555597,3.444058657,100
+19,1,How to practice being sensitive?,How to practice being sensitive?,strict,2026-03-13 14:53:43.432809+05:30,1,3,"1. **Context Summary:**
+   - Practicing sensitivity involves treating **both people and inanimate objects** with **consideration and respect**.
+   - Insensitivity toward objects can negatively impact one’s general attitude, affecting relationships.
+   - Sensitivity means **thinking about how others may feel** before speaking or acting, ensuring words and actions reflect **respect** for others.
+   - Being sensitive is about **avoiding harshness** and maintaining a mindful approach in interactions.
 
 2. **Answer:**
-   To practice sensitivity as described in the author’s golden rule:
-   - **Ask yourself:** *""Does my tone of voice, body language, and behavior reflect sensitivity?""*
-   - **Apply the golden rule:** Treat others **better than you would want to be treated yourself**.
-   - **Be mindful of others’ feelings** before speaking or acting.
+   To practice being sensitive:
+   - Treat **even inanimate objects** with respect to avoid developing an insensitive mindset.
+   - Before speaking or acting, **consider how your words/actions may affect others** and ensure they are respectful.
+   - Avoid harshness in communication and interactions.
 
 3. **Citations:**
-   [page 59 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   [page 62 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2525138854980469,1.599034070968628,4.070207357406616,100
-1,1,"How does the “dirty window” story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a Type-1 person?
-","How does the **""bucket""** story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a person who treats inanimate objects with disrespect?",strict,2026-03-05 21:01:14.635580+05:30,1,3,"1. **Context Summary:**
-   - The text explains that treating inanimate objects (like buckets) with disrespect or insensitivity can influence how a person treats people.
-   - Insensitivity toward objects becomes part of a person’s general attitude, and their instinct does not distinguish between things and people.
-   - When a person loses friends, they may notice insensitivity creeping into their relationships with people, mirroring how they treat their possessions.
-   - The universe and life are interconnected, meaning disrespect toward objects can extend to relationships with loved ones.
+   - [page 63 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 62 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.073813677,1.571503878,4.044343948,100
+20,1,"How does the “dirty window” story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a Type-1 person?","How does the **""dirty window""** story in the text demonstrate that how we perceive others is shaped by our own mindset, and what does this reveal about the traits of a **Type-1 person** as described earlier?",strict,2026-03-13 14:54:08.170517+05:30,1,3,"1. **Context Summary:**
+   - The **""dirty window""** metaphor illustrates that perception of others depends on the ""window"" (mindset) through which we view them.
+   - **Type-1 people** deny their own windows are dirty and refuse to acknowledge flaws in their perception. They see others negatively despite evidence of good qualities (e.g., calling clean laundry ""dirty"" and criticizing it).
+   - The text emphasizes that Type-1 individuals are blind to their own biases and persist in negative judgments.
 
 2. **Answer:**
-   The **""bucket""** story illustrates that when a person treats inanimate objects (like buckets) with disrespect, their insensitivity generalizes to how they treat people. This happens because insensitivity becomes part of their overall attitude, and their instinct does not differentiate between objects and people. Thus, disrespect toward things reflects poorly on their relationships with others.
+   The **""dirty window""** story shows that our perception of others is shaped by our own mindset because Type-1 people refuse to recognize their own biases (dirty windows) and instead insist others are flawed, even when evidence contradicts this (e.g., calling clean laundry ""dirty""). This reveals that **Type-1 people** are unaware of their own distorted vision, deny their perception is skewed, and continue to criticize others without self-reflection.
 
 3. **Citations:**
-   [page 61 | Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life - PDFDrive.com]",2.1009116172790527,1.5846610069274902,6.038776397705078,100
-1,1,"How does the “dirty window” story illustrate the idea that our perception of others depends on our own mindset, and how does this relate to the characteristics of a Type-1 person? don't change this query","How does the **""bucket""** story illustrate that our perception of others depends on our own mindset, and how does this relate to the **""golden rule""** for sensitivity (*""treat someone better than you would like to be treated""*)?",relax,2026-03-05 21:01:54.584510+05:30,1,3,"1. Answer:
-The **""bucket""** story illustrates that insensitivity toward inanimate objects (like buckets or possessions) can spill over into how we treat people. The context explains that when we treat our belongings with disrespect, our general attitude becomes less sensitive, and this insensitivity doesn’t distinguish between objects and people. This means our mindset shapes our behavior—if we’re careless or rude toward things, we’re more likely to be the same way with others.
+   [page 66 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.17851615,1.59782505,3.339350224,100
+21,1,"How does the story of the intelligent dog illustrate the mindset of a Type-2 person, and what does it reveal about the tendency to focus on faults while neglecting consistent positive qualities?","How does the **""intelligent dog""** story illustrate the mindset of a **Type-2 person** (who *see both good and bad* but **consciously neglect the good**, focusing only on faults), and what does it reveal about the tendency to hyperfocus on negatives while ignoring consistent positive qualities?",strict,2026-03-13 14:55:15.963350+05:30,1,3,"1. **Context Summary:**
+   - The text describes **Type-2 people** as those who *see both good and bad* in others but **consciously choose to neglect the good**, focusing only on the negatives (e.g., ""selective mindset"").
+   - It mentions a comparison where people (like the narrator) **hyperfocus on flaws** (e.g., forgetting keys) while ignoring broader positive actions or qualities in others.
+   - The example of **""dog videos""** being more popular than other content illustrates how humans **prefer negativity or trivialities** over meaningful positives.
 
-This connects to the **""golden rule""** (*""treat someone better than you would like to be treated""*) because both emphasize **mindful sensitivity**. The bucket story highlights how insensitivity starts with small, overlooked actions (e.g., neglecting objects), while the golden rule actively encourages treating others with extra care—preventing the gradual erosion of respect that the bucket example warns against. By consciously choosing kindness toward people (as the golden rule suggests), we avoid the mindset that leads to treating others (or even objects) poorly.
+2. **Answer:**
+   The **""intelligent dog""** story (via the dog video comparison) does **not explicitly** illustrate a Type-2 mindset in the provided context. However, the broader text explains that **Type-2 people neglect positives** (e.g., friends’ good deeds) and **hyperfocus on negatives** (e.g., forgetting keys), which aligns with the tendency to **prioritize flaws over consistent positive qualities**—a pattern reflected in the context’s emphasis on selective perception of negatives over broader good.
+
+   *(Note: The ""intelligent dog"" example is incomplete in the context; the focus is on Type-2’s selective neglect of good, not dogs.)*
+
+3. **Citations:**
+   [page 66 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 67 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.227020264,2.342751503,4.631611586,100
+22,1,ow does the story of Aditya Birla illustrate the mindset of a Type-4 person in handling mistakes and relationships?,How does the story of Aditya Birla in the context illustrate the mindset of a Type-4 person regarding handling mistakes and relationships?,relax,2026-03-13 14:56:43.394527+05:30,1,3,"1. **Answer:**
+The story of Aditya Birla illustrates a **Type-4 mindset** (as implied by the context’s emphasis on balance, perspective, and positive framing) by demonstrating how to handle mistakes and relationships with **compassion, intentional positivity, and perspective-taking**. Here’s how:
+
+- **Prioritizing Strengths Over Faults:**
+  Birla’s approach was to **actively focus on the good** rather than defaulting to criticism. Before addressing the executive’s costly mistake, he **wrote a list of the employee’s strengths**, including past contributions (e.g., generating millions for the company). This reflects a **Type-4 tendency to seek balance**—acknowledging flaws while anchoring judgment in the person’s overall value. The context highlights this as a **conscious effort** to counteract the ""natural human tendency to see the bad.""
+
+- **Cultural Ripple Effect:**
+  Birla’s decision (not firing the employee) **spread a philosophy** within the organization. A senior executive later adopted a similar practice: **writing down positive qualities before reprimanding someone**. This shows how the mindset **shapes relationships** by fostering **sensitivity, empathy, and controlled responses**—even if the decision remains unchanged. The context frames this as a tool to **""put things into perspective""** and **""control anger,""** aligning with a Type-4 emphasis on emotional regulation and relational harmony.
+
+- **Judgment with Context:**
+  The story underscores that **Type-4 individuals don’t ignore mistakes** but approach them with **nuance**. Birla’s method—**listing strengths before addressing errors**—serves as a **structural way to avoid knee-jerk reactions**, a hallmark of Type-4 balance. The context explicitly states this process helps **""control anger""** and **""see the good,""** reinforcing the mindset’s focus on **holistic evaluation** over binary judgment.
+
+**Key Takeaway:**
+The narrative exemplifies a **Type-4 mindset** by modeling how to handle mistakes with **intentional positivity, perspective, and relational care**—without downplaying accountability. The emphasis on **active good-finding** and **cultural influence** reflects the broader theme from the book (*Life’s Amazing Secrets*) about **finding balance** in interactions.
 
 ---
 
-2. Citations:
-- [page 61 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-- [page 59 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*] (for the golden rule phrasing)",0.36219024658203125,2.0152747631073,4.699054479598999,100
-1,1,"How does the story of the intelligent dog illustrate the mindset of a Type-2 person, and what does it reveal about the tendency to focus on faults while neglecting consistent positive qualities?
-","How does the story of the intelligent dog illustrate the mindset of a Type-2 person, and what does it reveal about the tendency to focus on faults while neglecting consistent positive qualities?",strict,2026-03-05 21:02:34.839469+05:30,1,3,"1. **Context Summary:**
-   - The text describes **Type-2 people** as those who see both good and bad in others but **consciously choose to neglect the good** and focus only on the bad, akin to having a ""selective mindset.""
-   - It mentions a comparison to **selective hearing**—people of this type filter out positives and amplify negatives.
-   - The example of **dog videos** being more popular than other content highlights humanity’s tendency to **fixate on flaws** (e.g., forgetting keys) rather than appreciating consistent positive qualities (e.g., good deeds by loved ones).
-   - The narrative emphasizes how **Type-2 individuals overlook widespread goodness** and dwell on minor or repeated faults.
+2. **Citations:**
+- [page 68 | source: H:\projects\Enterprise_document_RAG_assistant\st",0.925200462,3.732302427,6.025369883,100
+23,1,What is the difference between neglecting the bad (Type-4) and ignoring the bad completely (Type-5)?,What is the difference between neglecting the bad (as seen in the Aditya Birla story illustrating Type-4) and ignoring the bad completely?,strict,2026-03-13 14:57:41.687814+05:30,1,3,"1. **Context Summary:**
+   - The text explains **""neglecting the bad""** as a conscious choice to *not allow the mind to focus on or dwell* on negative aspects, while still acknowledging or addressing them practically.
+   - It contrasts this with a person who *only focuses on the negatives* (e.g., forgetting keys) and ignores the positives around them.
+   - The term **""ignoring the bad completely""** is not explicitly defined in the context, but the passage implies that neglecting the bad is *not the same as outright ignoring it*—it involves selective mental focus rather than total disregard.
 
 2. **Answer:**
-   The story of the **intelligent dog** (referenced indirectly via the contrast with viral content) does not explicitly appear in the context. However, the **tendency to focus on faults** (e.g., forgetting keys) while neglecting broader positive qualities (e.g., loved ones’ good actions) is directly tied to **Type-2 people’s selective mindset**. The context explains that these individuals **consciously ignore the good** and magnify the bad, revealing their inability to appreciate consistent positives despite their presence.
+   Neglecting the bad means *not letting the mind linger on or obsess over* the negative, even while dealing with it practically. It is not about ignoring the bad entirely but about *choosing not to focus on it mentally*.
+   The context does not explicitly define ""ignoring the bad completely,"" so I cannot compare it directly.
 
 3. **Citations:**
-   - [page 66 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 67 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.7453691959381104,2.6354994773864746,5.412090539932251,100
-1,1,"In what ways we can perceive people?
-",In what ways we can perceive people?,strict,2026-03-05 21:03:12.509511+05:30,1,3,"1. **Context Summary:**
-   The context describes **five distinct ways** people perceive others in relationships:
-   - **Type-1:** Only sees the bad and magnifies it disproportionately.
-   - **Type-2:** Sees both good and bad but neglects the good, focusing only on the bad.
-   - **Type-3:** Sees good and bad but remains neutral to both.
-   - **Type-4:** Sees good and bad but chooses to focus on the good, neglecting the bad (ideal state for flourishing relationships).
-   - **Type-5:** Sees the good and magnifies it.
+   [page 69 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 67 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.147054195,2.595931292,4.663642406,100
+24,1,In what ways we can perceive people?,In what ways can humans perceive others?,strict,2026-03-13 14:58:37.302998+05:30,1,3,"1. **Context Summary:**
+   The context describes **five ways humans perceive others**:
+   - Seeing **only the bad** and magnifying it.
+   - Seeing **both good and bad**, but **neglecting the good** and focusing on the bad.
+   - Seeing **both good and bad**, but remaining **neutral** to both.
+   - Seeing **both good and bad**, but **choosing to focus on the good** and neglecting the bad.
+   - Seeing **only the good** and magnifying it.
+   The **ideal state** is the fourth stage, where relationships flourish.
 
 2. **Answer:**
-   According to the context, we can perceive people in **five ways**:
+   Humans can perceive others in the following ways:
    - See only bad and magnify it.
    - See good and bad, neglect the good and focus on the bad.
    - See good and bad, and be neutral to both.
@@ -257,176 +299,359 @@ This connects to the **""golden rule""** (*""treat someone better than you would
    - See the good and magnify it.
 
 3. **Citations:**
-   - [page 69 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 65 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.21105551719665527,2.055511236190796,3.503546714782715,100
-1,1,"Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?
-","Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?",strict,2026-03-05 21:03:34.102474+05:30,1,3,"1. **Context Summary:**
-   The passage emphasizes that giving feedback while emotionally charged (""hot heads"") is ineffective. It suggests that timing is crucial—feedback should not be given immediately after a sensitive moment (e.g., a personal talk) but rather when both parties are in a calmer state. The text also implies that feedback should be explained rather than expressed impulsively, as this may lead to better understanding and empathy.
+   [page 69 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.1016047,2.691461325,5.381649971,100
+25,1,"What does the principle “investment before withdrawal” mean in the context of relationships, and how does it apply when correcting someone?","What does the principle **""focusing on the good and dealing with the bad""** mean in the context of relationships, and how does it apply when correcting someone?",strict,2026-03-13 14:59:51.827550+05:30,1,3,"1. **Context Summary:**
+   - The principle involves **seeing both good and bad** in relationships but **choosing to focus on the good** while **practically addressing the bad** without letting the mind dwell on negativity.
+   - **""Neglecting the bad""** means not letting the mind obsess over it, not avoiding it entirely, but refraining from fixating on negativity.
+   - In relationships, **corrective feedback** (e.g., giving advice) must be done **sensitively and appropriately** to avoid harm, requiring practice and self-reflection.
+   - The text emphasizes that **relationships thrive on love**, but poor handling of feedback can damage them due to ignorance or misguided intentions.
 
 2. **Answer:**
-   The phrase **""hot heads do not give good feedback""** means that providing feedback when emotionally reactive or angry is counterproductive. The passage implies that **timing matters**—feedback should be given when both the giver and receiver are composed, not in the heat of the moment. Giving feedback under emotional stress risks poor reception and ineffective communication.
+   The principle means:
+   - **Focus on the good** in relationships (e.g., love, positive aspects) while **practically dealing with issues** (e.g., addressing problems sensitively).
+   - **""Neglecting the bad""** refers to **not letting the mind linger on negativity**—it doesn’t mean ignoring problems entirely but avoiding an obsessive focus on them.
+   - When correcting someone (e.g., giving feedback), the approach must be **careful and intentional** to prevent harm, as poorly delivered advice can undermine relationships despite good intentions.
 
 3. **Citations:**
-   - [page 76 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 76 | source: ../stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2598588466644287,2.025480270385742,3.4602463245391846,100
-1,1,"what principles we should know about forgiveness? 
-",what principles we should know about forgiveness?,strict,2026-03-05 21:04:03.338248+05:30,1,3,"1. **Context Summary:**
-   The text outlines key principles for understanding and practicing forgiveness:
-   - **Look beyond the situation**: Understand why someone acted harshly or spoke hurtfully, recognizing their potential suffering (empathy).
-   - **Separate the episode from the person**: Avoid labeling oneself or the other person as inherently wrong; focus on addressing the specific wrongdoing rather than personal guilt or anger.
-   - **Higher purpose**: Forgive based on a deeper principle (e.g., love, community duty) rather than personal resentment, which requires time and support.
-   - **Understand intentions**: Explore the reasons behind a person’s actions to ease forgiveness.
-   - **Forgiveness as a choice**: It is an active decision to heal relationships and achieve inner peace, described as ""warming the heart and cooling the sting.""
+   - [page 69 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 74 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.107364178,3.21881032,5.383499146,100
+26,1,What are the four principles one should consider before giving corrective feedback?,What are the four principles one should consider before giving corrective feedback in relationships?,strict,2026-03-13 15:00:37.702165+05:30,1,3,"1. **Context Summary:**
+   The context outlines that giving corrective feedback is an art requiring careful consideration. It emphasizes four key questions to assess whether feedback should be given:
+   - *""Am I the right person to give corrective feedback?""*
+   - *""Do I have the right motive to give corrective feedback?""*
+   - *""Do I know the right way to give corrective feedback?""*
+   - *""Is it the right time?""*
+   The text also highlights that insensitivity in feedback is a common habit and that thoughtful implementation takes time.
 
 2. **Answer:**
-   The principles we should know about forgiveness are:
-   - Look beyond the situation and understand why someone acted hurtfully.
-   - Separate the wrongful act from the person’s identity.
-   - Forgive based on a higher purpose or principle.
-   - Understand the intentions behind harmful actions.
-   - Recognize forgiveness as a conscious choice to restore peace and relationships.
+   The four principles to consider before giving corrective feedback are:
+   1. **Am I the right person to give corrective feedback?**
+   2. **Do I have the right motive to give corrective feedback?**
+   3. **Do I know the right way to give corrective feedback?**
+   4. **Is it the right time?**
 
 3. **Citations:**
-   - [page 88 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 151 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 80 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.8628394603729248,3.3363420963287354,6.755181789398193,100
-1,1,"According to the passage, what does healthy competition mean, and how is it different from competing with others? And what speech did Matthew McConaughey give?
-","According to the passage, what does healthy competition mean, and how is it different from competing with others?",strict,2026-03-05 21:04:56.993702+05:30,1,3,"1. **Context Summary:**
-   - Healthy competition is defined as competing **with oneself** to become a better version of yourself, rather than focusing on others.
-   - Unhealthy competition involves competing with others, often driven by envy or uncontrolled ambition.
-   - The passage emphasizes that healthy competition is about personal growth, while unhealthy competition arises when comparing oneself to others with similar skills or mindsets.
+   - [page 78 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]
+   - [page 74 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.095790625,2.00574398,3.337025404,100
+27,1,"Why is motive important when correcting someone, and what wrong motive does the passage warn against?","Why does the passage warn against having the wrong motive when giving corrective feedback, and what specific wrong motive does it caution against?",strict,2026-03-13 15:01:00.128705+05:30,1,3,"1. **Context Summary:**
+   The passage emphasizes that giving corrective feedback should be driven by the right motive. It warns that if the motive is not pure, the feedback may harm rather than help. Specifically, it cautions against giving feedback out of **vengeance or settling old grudges** rather than out of a genuine desire to help the person improve. The text also highlights that feedback rooted in love, though initially unpalatable, can have a positive effect if given appropriately.
 
 2. **Answer:**
-   Healthy competition means competing **with yourself** to improve and become a better version of yourself. It is different from competing with others because unhealthy competition involves rivalry with peers, driven by envy or ambition, rather than self-improvement.
+   The passage warns against having the wrong motive when giving corrective feedback because it may lead to harm rather than improvement. The specific wrong motive it cautions against is **giving feedback to exact vengeance or settle old accounts** instead of helping the person as a friend.
 
 3. **Citations:**
-   - [page 104 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 104 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2733340263366699,2.2856318950653076,4.716666221618652,100
-1,1,what speech did Matthew McConaughey give?,what speech did Matthew McConaughey give?,strict,2026-03-05 21:05:28.114242+05:30,1,3,"1. **Context Summary:**
-   The provided context mentions that **Matthew McConaughey referenced a principle in his 2014 Oscar acceptance speech** about identifying one’s hero. The speech excerpt includes McConaughey saying:
-   - *""And to my hero. That’s who I chase.""*
-   - His response to being asked about his hero at age 15: *""I don’t know, I gotta think about that. Give me a couple of weeks.""*
-   - Later, at 25, he declared: *""You know who it is? It’s me in ten years.""*
-   - The context does not provide the full speech but references a **short video** of his Oscar acceptance speech.
+   [page 75 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.098817348,1.499140739,3.345297337,100
+28,1,"Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?","Why does the passage say “hot heads do not give good feedback,” and what does this imply about timing?",strict,2026-03-13 15:02:26.335735+05:30,1,3,"1. **Context Summary:**
+   The passage emphasizes that giving feedback while emotionally charged (""hot heads"") is ineffective. It suggests that timing is crucial—feedback should not be given immediately after a sensitive moment (e.g., sharing personal thoughts) but rather when both parties are in a calmer state. The text also highlights the importance of explaining emotions to foster empathy and avoiding impulsive reactions. Additionally, it advises contemplating whether the giver is the right person to provide feedback (e.g., based on authority or relationship) before proceeding.
 
 2. **Answer:**
-   The context does **not explicitly state the full speech** or its title. It only references a **2014 Oscar acceptance speech** where McConaughey discussed identifying one’s hero and his personal journey. The exact speech title or full content is not provided.
-
-   **I don't know** the full speech or its title.
+   The phrase **""hot heads do not give good feedback""** means that providing feedback when one is emotionally agitated or angry leads to poor-quality feedback. This implies that **timing is critical**—feedback should be given when the giver is composed and the recipient is receptive, not during or immediately after a stressful or vulnerable moment. The passage explicitly states:
+   - *""We should not simply let our anger loose—we should explain it.""*
+   - *""hot heads do not give good feedback—choose a better time.""*
 
 3. **Citations:**
-   [page 102 | ../stored_documents/book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.2198479175567627,3.159247636795044,4.69231390953064,100
-1,1,which car does harrry own?,which car does harrry own?,strict,2026-03-07 10:12:43.436316+05:30,1,3,"1. **Context Summary:**
-   - Harry sold his Mercedes because its chassis was too low for Mumbai streets.
-   - He bought a Lexus, which he considers a mark of a true gentleman.
-   - The Lexus is mentioned as his current car, contrasting with other luxury cars like a Rolls-Royce.
+   - [page 76 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 76 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*] (repeated emphasis)",0.10862422,2.06192255,3.347383738,100
+29,1,"	What does it mean to “separate the episode from the person,” and how does changing our language help in practising forgiveness?","What does the passage mean by “separating the episode from the person,” and how does adjusting one’s language contribute to the practice of forgiveness?",strict,2026-03-13 15:03:18.035050+05:30,1,3,"1. **Context Summary:**
+   - The passage explains that **""separating the episode from the person""** means distinguishing the specific wrongful action or incident from the individual’s overall identity. It emphasizes avoiding language that ties guilt (""I am wrong"") or blame (""You are wrong"") to the person’s character, instead focusing on addressing the problem itself.
+   - Adjusting language (e.g., avoiding ""it is my problem"" or ""it is your problem"") helps shift focus from self-blame or anger toward the issue, reducing feelings of inferiority or resentment. This disconnect between the person and the mistake is foundational to forgiveness.
 
 2. **Answer:**
-   Harry owns a **Lexus**.
+   **""Separating the episode from the person""** means recognizing that a harmful action or mistake does not define the person’s entire character. The passage states this is achieved by avoiding language that conflates the individual with the wrongdoing (e.g., ""I am wrong"" or ""You are wrong""), which fuels guilt or anger. Instead, the focus should be on the *incident itself*, not the person’s identity. Adjusting language—such as reframing statements to isolate the problem—helps prevent emotional reactions (like guilt or resentment) that hinder forgiveness. For example, saying *""this is a problem""* (not *""I am a problem""*) reduces self-criticism and fosters detachment from the episode.
 
 3. **Citations:**
-   - [page 14 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 17 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",2.6854045391082764,1.6941916942596436,5.924336194992065,100
-1,1,what is sambar?,what is sambar?,strict,2026-03-07 11:05:05.803067+05:30,1,3,"1. **Context Summary:**
-   - Sambar is described as a **lentil-based vegetable stew**.
-   - It is commonly paired with **rice-based dishes** like **dosa or idli**.
-   - The author mentions eating sambar frequently (breakfast, lunch, dinner) and notes that it was served in various forms globally, including in the UK and Australia.
-   - The text also references the author’s preference for sambar from the **Iyers** (a South Indian community) as a standard.
+   - [page 83 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 88 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.127819061,2.895001888,4.79230094,100
+30,1,"	How does the passage reconcile personal forgiveness with the need for social justice?",How does the passage balance the act of forgiving oneself or others with addressing systemic or societal injustices?,relax,2026-03-13 15:04:22.565517+05:30,1,3,"1. **Answer:**
+The passage distinguishes between **personal forgiveness** and **systemic justice**, emphasizing that while forgiveness can heal individual relationships, it does not excuse or replace societal accountability. On a personal level, forgiveness is framed as an act of empathy, separating the wrongful *action* from the *person* (e.g., understanding that hurtful behavior often stems from suffering). It also highlights that forgiveness can be guided by a **higher purpose**, such as love or communal duty, though this requires time, support, and intentionality—not immediate resolution.
+
+However, the text explicitly warns against conflating forgiveness with impunity. It asserts that **justice must remain distinct** from forgiveness on a societal scale: laws and order must hold individuals accountable for wrongdoing, even if forgiveness is extended. This duality ensures that personal reconciliation does not undermine collective fairness or allow systemic harm to persist.
+
+---
+2. **Citations:**
+- **[page 88 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  - *""Separate the episode from the person""* (empathy/individual forgiveness).
+  - *""Higher purpose""* (love/community as motivation).
+  - *""is not something that happens overnight""* (time/support required).
+- **[page 88 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  - *""Justice: ... strict justice to create an orderly society. No one should be able to break the law and get away with it in the name of forgiveness.""* (systemic justice vs. personal forgiveness).",0.105441093,2.492254496,5.388215303,100
+31,1,what principles we should know about forgiveness?,"what principles should we know about separating the episode from the person, changing language to practice forgiveness, reconciling personal forgiveness with social justice, and the wrong motives for giving feedback?",strict,2026-03-13 15:05:14.499775+05:30,1,3,"1. **Context Summary:**
+   - Forgiveness involves **separating the episode (incident) from the person** by avoiding blame (""you are wrong"") or guilt (""I am wrong"") and instead addressing the wrong itself.
+   - **Language matters**: Saying *""it is my problem""* (internalizing blame) can lead to guilt or inferiority; framing issues as *""it is [incident]""* (detached from identity) helps avoid emotional entanglement.
+   - **Empathy is key**: People act harshly often due to their own suffering; recognizing this prevents conflating the person with their actions.
+   - **Higher purpose** (e.g., love, community duty) can guide forgiveness but requires time and support.
+   - **Not about tolerance of abuse**: Forgiveness does not excuse harmful behavior but helps detach the person from the wrongdoing.
 
 2. **Answer:**
-   Sambar is a lentil-based vegetable stew that accompanies rice-based dishes such as dosa or idli.
+   - **Separating the episode from the person**: Avoid labeling the person (""you are wrong"") or oneself (""I am wrong""). Instead, focus on the **incident itself** as an independent event, not a reflection of their character or worth.
+   - **Changing language**: Use phrases like *""it is [the problem]""* (e.g., *""it is the argument""*) rather than *""it is my problem""* or *""it is your fault""* to reduce guilt or shame. This disconnects the person from the issue.
+   - **Reconciling personal forgiveness with social justice**: Forgiveness is not about excusing harm but about **empathy and detachment**—recognizing that people act from suffering, while still holding them accountable for actions. Higher principles (e.g., love, community) can motivate forgiveness but require intentional effort.
+   - **Wrong motives for giving feedback**: The context does **not explicitly address** wrong motives for feedback (e.g., malice, manipulation). *I don’t know.*
 
 3. **Citations:**
-   [page 11 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",2.757148027420044,1.4196689128875732,6.467364311218262,100
-1,1,hi,hi,strict,2026-03-07 11:06:29.282827+05:30,1,3,"1. **Context Summary:**
-   - The narrator receives a video message from an old friend they haven’t spoken to in years.
-   - They initially ignore their phone during productive hours but later check it due to persistent notifications.
-   - Upon opening WhatsApp, they find a flood of messages (likely related to a viral video shared about them).
+   - [page 88 | *Life’s Amazing Secrets* | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 83 | *Life’s Amazing Secrets* | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.124655008,3.096360922,4.688696861,100
+32,1,"What is the difference between jealousy and envy, and how does envy lead to destructive competition?","What is the difference between jealousy and envy, and how does envy lead to destructive competition?",strict,2026-03-13 15:05:49.916238+05:30,1,3,"1. **Context Summary:**
+   - Jealousy is a feeling of resentment toward someone who possesses something desired (e.g., skills, success) but is not acted upon—it remains internal and controlled.
+   - Envy is when jealousy escalates into harmful action, where one seeks to undermine or surpass the other person at any cost.
+   - Envy drives destructive competition because it fuels a desire to eliminate or replace the person seen as a threat, rather than personal growth.
 
 2. **Answer:**
-   I don't know.
+   Jealousy is the internal resentment of another’s success or qualities without acting on it, while envy is when those feelings turn into destructive behavior to surpass or harm the other person. Envy leads to destructive competition because it pushes someone to go to extreme lengths to take another’s place or diminish their success.
 
 3. **Citations:**
-   [page 44 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.09043598175048828,0.9610757827758789,2.168181896209717,100
-1,1,hi,hi,strict,2026-03-07 11:14:51.160535+05:30,0,0,I don't know. No information found for the entered query.,0.004027128219604492,0,0.8118774890899658,100
-1,1,hello,hello,strict,2026-03-07 11:15:04.470753+05:30,0,0,I don't know. No information found for the entered query.,0.003995180130004883,0,2.2071876525878906,100
-1,2,which car does harry own?,which car does harry own?,relax,2026-03-07 12:10:22.427537+05:30,1,3,"1. Answer:
-Harry currently owns a **Lexus**. He sold his previous Mercedes because its low chassis was unsuitable for the streets of Mumbai.
+   [page 98 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.103935003,1.591964483,3.340009212,100
+33,1,"	How does uncontrolled ambition cause competition to cross ethical boundaries in sports, business, and politics?","How does uncontrolled ambition cause competition to cross ethical boundaries in sports, business, and politics?",relax,2026-03-13 15:06:51.104060+05:30,1,3,"1. Answer:
+Uncontrolled ambition drives competition to cross ethical boundaries by pushing individuals or entities to prioritize personal gain or dominance over moral principles. In **sports**, while competition is natural, unchecked ambition can lead to cheating (e.g., doping, match-fixing) or aggressive tactics that harm opponents or the integrity of the game. In **business**, ambition may escalate into unethical practices like fraud, bribery, or exploitative tactics to secure market dominance, even if it damages competitors, customers, or society. In **politics**, unethical competition manifests as voter suppression, spreading misinformation, intimidation of rivals, or extreme measures (e.g., assassination) to win elections, undermining democratic values.
+
+The root issue is that when ambition shifts from **sheer ambition** (driven by personal growth or achievement) to **greed** (selfish gain at any cost), ethical lines are blurred. The text emphasizes that competition becomes destructive when it prioritizes victory over fairness, honesty, or collaboration—leading to scandals, reputational damage, and systemic harm.
+
+---
 
 2. Citations:
-[page 14 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-[page 17 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.1362004280090332,2.9187724590301514,3.8555641174316406,100
-1,2,what is hariprasad's qualifications?,what is hariprasad's qualifications?,strict,2026-03-07 12:10:44.041436+05:30,1,3,"1. **Context Summary:**
-   - Hariprasad grew up in a small village near Chennai.
-   - His father worked in a textile factory, earning wages that supported the family.
-   - Hariprasad is the youngest of his siblings and mentions his father’s hard work and the family’s modest background.
-   - The text does **not** mention any formal education, qualifications, or professional degrees for Hariprasad.
+- **[98 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* (PDFDrive.com)]**
+  *""But when ambition crosses the line of ethics and turns into greed, even reputed businesses can get involved with scandals as they vie for the largest piece of the pie.""*
+  *""Competition is fierce within the same company or the same field of action.""*
+
+- **[99 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* (PDFDrive.com)]**
+  *""Politicians may sometimes be seen spreading lies to sway voters, suppressing voters on polling days, threatening opponents or even assassinating a candidate!""*
+  *""The root cause is unethical competition.""*
+
+- *(Note: The context does not explicitly mention sports as a domain where unchecked ambition leads to ethical breaches, but the pattern of ""competition at any cost"" implied in business/politics logically extends to sports based on the broader theme of unethical ambition.)*",0.104973793,2.904370546,4.688827515,100
+34,1,"According to the passage, what does healthy competition mean, and how is it different from competing with others?","what does healthy competition mean according to the passage, and how does it differ from competing with others?",strict,2026-03-13 15:07:46.619966+05:30,1,3,"1. **Context Summary:**
+   - Healthy competition is defined as competing **with oneself** to become a better version of yourself, rather than focusing on others.
+   - Unhealthy competition arises when comparing oneself to others with similar skills or aspirations, leading to envy or uncontrolled ambition.
+   - The passage emphasizes that healthy competition is about personal growth, while competing with others often stems from feelings of threat or rivalry.
 
 2. **Answer:**
-   I don't know
+   Healthy competition means **competing with yourself** to improve and become a better version of yourself, not competing against others. It differs from competing with others because unhealthy competition involves rivalry, envy, or ambition driven by comparisons with peers who share similar skills or goals.
 
 3. **Citations:**
-   - [page 13 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 12 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.12794852256774902,1.2534348964691162,4.200254201889038,100
-1,2,what are harry's qualifications?,what are the qualifications of the person who owns a Lexus?,strict,2026-03-07 12:11:06.705487+05:30,1,3,"1. **Context Summary:**
-   - The owner of the Lexus is described as someone of significant wealth, influence, and stature.
-   - The individual is referred to as a ""true gentleman"" due to their choice of vehicle.
-   - The person is also implied to have reconnected with their spiritual roots, suggesting a deeper personal or philosophical perspective.
-   - The owner is Harry, who previously owned a Mercedes but sold it due to its low chassis height being unsuitable for Mumbai streets.
+   - [page 104 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 104 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*] (second occurrence)
+   - [page 98 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.10010457,3.565671682,5.522448301,100
+35,1, And what speech did Matthew McConaughey give?,And what speech did Matthew McConaughey give?,strict,2026-03-13 15:08:08.390255+05:30,1,3,"1. **Context Summary:**
+   The provided context includes a brief excerpt of **Matthew McConaughey’s 2014 Oscar acceptance speech** as referenced in a conversation. The speech highlights his reflection on defining his hero as himself in the future (""*me in ten years*"") and his journey of self-discovery.
 
 2. **Answer:**
-   I don't know.
+   The speech excerpt includes:
+   > *“And to my hero. That’s who I chase. Now when I was fifteen years old, I had a very important person in my life come to me and say, ‘Who’s your hero?’ And I said, ‘I don’t know, I gotta think about that. Give me a couple of weeks.’ I come back two weeks later, this person comes up and says, ‘Who’s your hero?’ I said, ‘I thought about it. You know who it is? It’s me in ten years.’”*
 
 3. **Citations:**
-   - [page 14 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 15 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.0710146427154541,3.722949504852295,6.133174657821655,100
-1,2,what are hariprasad's qualifications?,what are Hariprasad's qualifications?,strict,2026-03-07 12:11:57.087800+05:30,1,3,"1. **Context Summary:**
-   - Hariprasad grew up in a small village near Chennai with a father who worked in a textile factory.
-   - His father’s wages supported the family, and the factory provided free cotton clothes.
-   - Hariprasad is the youngest of many siblings, often wearing hand-me-down clothes from his brothers and sisters.
-   - He attributes his humility to his simple South Indian upbringing, raised by loving parents.
-   - The text does not mention any formal education, professional qualifications, or specific achievements beyond his humble background and family circumstances.
+   [page 102 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.134927511,1.694619417,4.838618994,100
+36,1,Why is self-discovery considered the foundation of growth?,Why is self-discovery considered the foundation of growth?,strict,2026-03-13 15:09:05.731261+05:30,1,3,"1. **Context Summary:**
+   - Self-discovery is described as the **foundation of growth** because it allows individuals to **understand who they are**, which is essential for competing with themselves.
+   - The text emphasizes that **growth comes from developing oneself** and that **self-awareness** enables people to recognize their potential for improvement.
+   - The quote from Paulo Coelho illustrates how aligning one’s **daily actions with dreams** (a form of self-discovery) leads to readiness for personal fulfillment.
 
 2. **Answer:**
-   I don't know
+   Self-discovery is considered the foundation of growth because **you can only compete with yourself if you have a clear understanding of who you are**. Without self-awareness, personal growth and improvement are not possible.
 
 3. **Citations:**
-   - [page 12 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-   - [page 13 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.08971643447875977,1.458451509475708,3.4402146339416504,100
-1,2,what is sambar?,what is sambar?,strict,2026-03-07 12:12:10.897603+05:30,1,3,"1. **Context Summary:**
-   - Sambar is described as a **lentil-based vegetable stew**.
-   - It is commonly paired with **rice-based dishes** like **dosa or idli**.
-   - The author mentions eating sambar **multiple times a day** (breakfast, lunch, dinner) and traveling with it.
-   - The text references **""Iyers""** (likely a reference to Tamil Brahmin communities) as a benchmark for high-quality sambar.
+   - [page 105 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 101 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.084798574,2.238385677,4.237687111,100
+37,1,"What does the Japanese concept of ikigai mean, and what four questions help in finding one’s purpose?","What does the Japanese concept of ikigai mean, and what four questions help in finding one’s purpose?",strict,2026-03-13 15:09:33.055006+05:30,1,3,"1. **Context Summary:**
+   - The Japanese concept of **ikigai** refers to a **""reason to live""** or having **purpose in life**. It is a model composed of **four key traits/questions** to help individuals discover their purpose:
+     1. What do we love?
+     2. What are we good at?
+     3. What does the world need?
+     4. What can we be paid for?
+   - Finding ikigai is described as a **journey**, not an event, and is linked to longer, happier lives. The text also mentions that doing what one loves reduces stress and brings fulfillment.
 
 2. **Answer:**
-   Sambar is a lentil-based vegetable stew.
+   The Japanese concept of **ikigai** means **""a reason to live""** or having purpose in life. The four questions to help find one’s purpose are:
+   - What do we love?
+   - What are we good at?
+   - What does the world need?
+   - What can we be paid for?
 
 3. **Citations:**
-   [page 11 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.1114809513092041,1.3028547763824463,4.467504501342773,100
-1,2,how to make it?,how to make sambar?,strict,2026-03-07 12:12:32.050428+05:30,1,3,"1. **Context Summary:**
-   The provided context describes **sambar** as a **lentil-based vegetable stew** commonly served as a side dish with rice-based meals like **dosa or idli**. It is a beloved dish in South Indian cuisine, frequently mentioned in the text as a staple in the author’s meals (breakfast, lunch, dinner) and shared by hosts worldwide. The context does *not* include any **recipe details, ingredients, or preparation steps**.
+   - [page 111 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 109 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.112597704,2.726032734,4.661565065,100
+38,1,What principle should people follow if they have not yet discovered their purpose in life?,"What principle should people follow if they have not yet discovered their purpose in life, as discussed in the context of competing with oneself and self-discovery?",strict,2026-03-13 15:09:52.284014+05:30,1,3,"1. **Context Summary:**
+   - Self-discovery is essential to finding one’s purpose in life.
+   - The key to self-improvement and competing with oneself is **understanding who you are**.
+   - Discovering purpose involves asking: *What do we love? What are we good at? What does the world need? What can we be paid for?* (Ikigai model).
+   - Purpose is a journey requiring **dedication, patience, and anticipation**, not a single event.
+   - The warrior metaphor emphasizes bridging the gap between what one *does* and what one *wants to do*, followed by ""a little daring"" to align the two lives.
+
+2. **Answer:**
+   People should follow the principle of **understanding who they are** as the foundation for self-improvement and competing with themselves. Additionally, they should explore their purpose through self-discovery by examining their passions, strengths, societal needs, and potential income—aligning these to bridge their current and desired lives with patience and daring.
+
+3. **Citations:**
+   - [page 105 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 111 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.112178326,2.558957577,4.671735525,100
+39,1,How does spirituality affect ambition according to the author? Does it suppress ambition or transform it?,How does the author describe the relationship between spirituality and ambition? Does it inhibit ambition or reshape it?,relax,2026-03-13 15:10:23.655256+05:30,1,3,"1. Answer:
+The author describes the relationship between spirituality and ambition as one of **reshaping rather than inhibiting** ambition. According to the text, spirituality does not diminish ambition but instead encourages a deeper, more purposeful approach to it. The author emphasizes that while ambition is important, the true fulfillment comes from **giving back**—when blessings from ambition are used to elevate both personal living standards *and* the standard of generosity.
+
+The dialogue suggests that spirituality may make one appear ""satisfied"" or less driven by material success alone, but this is framed as a **shift in priorities** rather than a loss of ambition. The author acknowledges that some may perceive spiritualists as ""backward"" or less ambitious, but the text implies that spirituality reframes ambition toward **meaningful contribution** rather than purely personal gain.
+
+Key points:
+- Ambition is **not suppressed** by spirituality; instead, it is **redirected** toward purposeful action.
+- The ""satisfaction"" from spirituality comes from **giving** rather than accumulation.
+- The author encourages **passionate ambition** but with an expanded focus on generosity.
+
+2. Citations:
+- [page 113 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+  *""You become satisfied—Zen, like you... don’t you think you would have been more ambitious if you did not practise spirituality?""*
+- [page 115 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+  *""Only giving does [that]. Therefore, I encourage people to passionately pursue their ambitions... when God blesses us with more... we should not only increase the standard of our living but also the standard of our giving.""*",0.122835398,3.531266928,6.008299351,100
+40,1,Why is it incorrect to believe that spiritual people get taken advantage of in business?,"Why is it incorrect to believe that spiritual people are more likely to be taken advantage of in business, given the author’s perspective on ambition and generosity?",strict,2026-03-13 15:12:51.980337+05:30,1,3,"1. **Context Summary:**
+   - The author argues that spirituality does not diminish ambition or success; instead, it shifts the motive from personal gain to using success for helping others.
+   - A common misconception is that spiritual people are ""walked over"" in business due to their values. The author counters this by referencing the story of a **sage and a snake**, emphasizing that spiritual individuals should **stick to their values but remain meticulous, straightforward, and firm in business dealings**.
+   - The author also highlights that generosity (giving) brings deeper satisfaction than mere accumulation, but this does not imply weakness in business—rather, it suggests a balanced approach where success is leveraged for higher purpose without compromising integrity or effectiveness.
+
+2. **Answer:**
+   It is incorrect to believe spiritual people are more likely to be taken advantage of in business because the author explicitly states that spiritual individuals should **not be passive or weak** in business. Instead, they should **maintain their values while being meticulous, straightforward, and firm**—as illustrated by the story of the sage and the snake. This implies that spiritual people can protect themselves from exploitation by upholding integrity without sacrificing professional rigor.
+
+3. **Citations:**
+   [page 119 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 115 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.119144201,2.274428606,5.367847919,100
+41,1,"What are the three aspects of spirituality in practice, and how do they help in developing good character?","What are the three aspects of spirituality in practice, as described in the text, and how do they contribute to developing good character?",strict,2026-03-13 15:13:21.556521+05:30,1,3,"1. **Context Summary:**
+   The text describes **three aspects of spirituality in practice**:
+   - **Vichaar**: The philosophical foundation that provides principles for living a meaningful life and guiding spiritual practice.
+   - **Aachaar**: The physical actions derived from the philosophy, which lead to ethical conduct and character development.
+   The text emphasizes that **philosophy alone is insufficient without good character**, and these aspects collectively contribute to living with integrity and inspiring others through actions.
+
+2. **Answer:**
+   The three aspects of spirituality in practice are:
+   - **Vichaar** (philosophical principles guiding life and spirituality).
+   - **Aachaar** (physical actions based on those principles).
+   The text does **not explicitly state** how they *contribute* to developing good character beyond:
+     - Vichaar provides universal principles (e.g., ""how life should be lived"").
+     - Aachaar leads to ""physical action which leads to a [life of value/integrity].""
+
+3. **Citations:**
+   [page 122 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.130467415,2.258817196,4.669148684,100
+42,1,"What do the ice cream and the candle symbolize, and how do their philosophies differ?","What do the **ice cream** and the **candle** symbolize, and how do their philosophies differ?",strict,2026-03-13 15:14:11.832777+05:30,1,3,"1. **Context Summary:**
+   - The **ice cream** symbolizes **hedonism** and the philosophy of **""enjoying life before it melts""**—savoring personal pleasure and moments of enjoyment.
+   - The **candle** symbolizes **selflessness** and the philosophy of **""giving light to others before it melts""**—burning away its essence to benefit others.
+   - Their core difference lies in their purpose: ice cream is for **self-indulgence**, while the candle is for **serving others**.
+
+2. **Answer:**
+   The ice cream symbolizes **hedonism** and the ideology of enjoying life through personal enjoyment before it melts. The candle symbolizes **selflessness**, representing the act of giving light to others before it melts. Their philosophies differ in that ice cream embodies **selfish enjoyment**, while the candle embodies **selfless service**.
+
+3. **Citations:**
+   [page 129 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   [page 131 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.112951756,2.355358601,4.67315793,100
+43,1,"	Why does the oxygen mask example show that we must help ourselves before helping others?",Why does the **oxygen mask** example illustrate the necessity of prioritizing self-preservation before assisting others?,strict,2026-03-13 15:14:43.948133+05:30,1,3,"1. **Context Summary:**
+   The oxygen mask example explains that in an emergency, passengers must secure their own oxygen masks before assisting others (e.g., children or infants). The cabin crew instructs: *""Make sure that your mask is securely fastened before you help children, infants or others.""* This is framed as counterintuitive because it appears selfish, but the reasoning is that **you cannot help others if you are unable to breathe due to lack of oxygen**.
+
+2. **Answer:**
+   The oxygen mask example illustrates that prioritizing self-preservation (securing your own mask) is necessary because **unless you help yourself and breathe in oxygen, you cannot be of use to others**. Failing to secure your own mask first would leave you unable to assist anyone else.
+
+3. **Citations:**
+   - [page 130 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 130 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.106088877,2.245738983,5.36274457,100
+44,1,"What is compassion fatigue, and why must we be careful about it while serving others?","What is compassion fatigue, and why must we be careful about it while serving others?",strict,2026-03-13 15:15:16.283695+05:30,1,3,"1. **Context Summary:**
+   - Compassion fatigue is a state of stress experienced by those who help others excessively, leading to suffering due to preoccupation with others' suffering.
+   - It occurs when caregivers focus only on selfless service without balancing self-care, potentially causing destructive behaviors over time.
+   - The text emphasizes the need to be ""selfishly selfless""—ensuring personal balance (e.g., self-satisfaction, well-being) before fully committing to selfless service to avoid compassion fatigue.
+
+2. **Answer:**
+   Compassion fatigue is a state of stress where individuals who help others excessively begin suffering because they are overly concerned with others' suffering. It happens when people neglect their own well-being while serving others, risking harmful behaviors. The context warns that without balancing self-care (e.g., being ""selfishly selfless""), compassion fatigue can make helping others ineffective or damaging.
+
+3. **Citations:**
+   - [page 130 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 130 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 131 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.111606836,2.430101633,4.663752556,100
+45,1,Why selflessness should begin at home?,Why selflessness should start with one’s own well-being and family before extending to others?,strict,2026-03-13 15:16:01.508842+05:30,1,3,"1. **Context Summary:**
+   - The text emphasizes that **selflessness should begin at home** with family, as they are deeply connected to us (""You don’t choose your family. They are God’s gift to you"").
+   - It warns that **overemphasizing selflessness without self-care can lead to destructive behaviors** due to neglecting one’s own well-being.
+   - The author argues that **selflessness must be balanced with self-care** to sustain it long-term, ensuring it doesn’t harm the helper’s mental or emotional health.
+   - The journey from selfishness (e.g., prioritizing oneself) to selflessness (e.g., helping others) requires **starting with family** and **prioritizing personal well-being** to avoid burnout.
+
+2. **Answer:**
+   Selflessness should start with one’s own well-being and family because:
+   - **Family is the foundation of selflessness**—practicing it at home ensures care for those closest to us.
+   - **Neglecting self-care can lead to harmful behaviors** if caregivers focus only on others’ suffering without balance.
+   - **Selfishness (e.g., prioritizing personal needs) must precede selflessness** to avoid depletion, allowing sustainable service to others.
+
+3. **Citations:**
+   - [page 130 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]
+   - [page 132 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | PDFDrive.com]",0.096666813,1.930690527,3.320922613,100
+46,1,Should selflessness be limited only to family members? Why or why not?,"Should selflessness be restricted only to family members? If so, why? If not, why can selfless service extend beyond family?",strict,2026-03-13 15:16:41.624930+05:30,1,3,"1. **Context Summary:**
+   - Selflessness begins with family, as it is the first circle where we practice selfless acts daily (e.g., sacrifices for family relations).
+   - The text emphasizes that selflessness should **not** be restricted to family alone. Expanding beyond immediate family to help others outside our circle of care and affection is encouraged.
+   - The example of Lata Khare (running to help her love) and Harry (helping his loved one) illustrates selflessness in personal contexts, but the broader message is that selflessness should extend beyond family to include others in need.
+
+2. **Answer:**
+   Selflessness **should not** be restricted only to family members. The context explicitly states that while selflessness starts with family, it should not end there. Expanding one’s circle of selflessness to help those outside immediate care and affection is encouraged.
+
+3. **Citations:**
+   - [page 135 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 132 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.120896816,1.736017466,4.011949539,100
+47,1,How does expanding our circle of selflessness lead to serving the community and nation?,How does extending selflessness beyond family to include others in need contribute to serving the community and nation?,relax,2026-03-13 15:17:56.306303+05:30,1,3,"1. Answer:
+Extending selflessness beyond the family to include others in need fosters a broader sense of service that strengthens the community and nation. The context highlights that selflessness is not limited to immediate family but should expand to help those outside our close circle. This broader approach allows individuals to contribute meaningfully to their community and nation by supporting others’ growth and well-being.
+
+Specifically, the text emphasizes that selflessness beyond family enables personal growth alongside the growth of others. By serving the community—whether through acts of kindness, volunteerism, or collective efforts—individuals create a ripple effect that benefits society as a whole. The narrative also suggests that stepping outside familiar paths (like taking unconventional routes to assist others) reveals new perspectives and opportunities to make a difference, reinforcing the idea that community and national service are essential extensions of selflessness.
+
+---
+
+2. Citations:
+- **[page 135 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  *""Selflessness starts with our family, but it should not just end there. ... Our circle of selflessness should not end with our family. We should help those outside of our immediate care and affection too.""*
+
+- **[page 136 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  *""We can increase our scope of selflessness beyond our family by serving our community, city or even nation. ... You’re not just serving yourself. You help others to grow up and you grow with them.""* (David Green)
+
+- **[page 139 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]**
+  *""When we expand the circle of selflessness, we can effectively serve our community and nation.""*",0.123213053,3.074898958,5.990865469,100
+48,1,"	Why does the author say that citizens should strive to be worthy of the sacrifices made by the armed forces?",Why does the author argue that citizens must honor the sacrifices of armed forces members by expanding their selflessness to include national service?,strict,2026-03-13 15:19:41.429586+05:30,1,3,"1. **Context Summary:**
+   - The text emphasizes that selflessness can extend beyond personal or familial boundaries to include serving the **community, city, or nation**.
+   - It highlights that **serving others (including national service) helps individuals grow alongside those they assist**, fostering mutual development.
+   - The author suggests that **expanding selflessness to national service is a way to honor collective efforts**, including those of armed forces members, by contributing to the greater good.
+   - The phrase *""You’re not just serving yourself""* underscores the idea that selfless national service benefits society as a whole.
+
+2. **Answer:**
+   The author argues that citizens must honor the sacrifices of armed forces members by expanding their selflessness to include national service because **serving the nation allows individuals to grow alongside others and collectively uplift the community**, reinforcing the idea that selflessness beyond personal/family boundaries strengthens society.
+
+3. **Citations:**
+   - [page 136 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | *The Nation Narrative*]
+   - [page 139 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* | *Summary of selfless service*]",0.115637541,1.588931561,4.033948421,100
+49,1,How does practising spirituality transform our understanding of service and bring deeper joy?,"How does **practicing spirituality**—as described in the text (e.g., shifting from ""an ice cream"" to ""a candle,"" connecting to a higher power, or using mantra meditation)—transform our understanding of service (e.g., expanding beyond family/community to national service) and bring deeper joy?",relax,2026-03-13 15:21:50.493640+05:30,1,3,"1. **Answer:**
+Practicing spirituality transforms our understanding of service by shifting our focus from selfishness to selflessness, while also deepening our connection to a higher purpose. Here’s how it works based on the provided context:
+
+- **Shifting from ""ice cream"" to ""candle"":**
+  Spirituality encourages a fundamental attitude change—moving from being self-centered (""ice cream,"" consuming happiness for oneself) to being a source of light and warmth for others (""candle""). This perspective reframes service as an act of giving rather than receiving, expanding its scope beyond immediate family or community to broader, even national or global, levels. For example, service becomes less about personal gain and more about uplifting others, which aligns with the idea of **""selfishly selfless""**—balancing self-care with the well-being of others (page 131).
+
+- **Connecting to a higher power (divine/spiritual essence):**
+  The text emphasizes that we are **""spiritual beings having human experiences,""** not the other way around. When we prioritize this spiritual connection—whether through mantra meditation or other practices—our values and priorities shift. This higher perspective grants clarity on how to serve meaningfully, often beyond limited circles. For instance, the ability to **""spread happiness and joy around the world""** emerges from this connection, suggesting service can transcend local boundaries (page 52). The example of the woman receiving blessings (page 145) illustrates how small acts of service, rooted in spiritual awareness, can create profound value for others.
+
+- **Expanding service through deeper joy:**
+  Spiritual practice doesn’t just change *what* we do but *why* we do it. The joy derived from service isn’t external (e.g., praise or recognition) but internal—a byproduct of aligning actions with a higher truth. This joy becomes a motivator to serve on larger scales, as the text implies that **""obtaining a higher perspective of life""** through spirituality transforms our understanding of purpose. For example, the woman’s gratitude for basic needs (eating, sleeping) highlights how service, when rooted in spirituality, addresses root causes of suffering rather than superficial ones (page 145).
+
+- **Balancing compassion with self-awareness:**
+  The concept of **""compassion fatigue""** warns against burnout, reinforcing that service must be sustainable. Spirituality provides the tools to **""have all our wheels",0.174733639,3.141159296,4.65687418,100
+50,1,What are the three components of loving God that make service truly spiritual?,What are the three components of loving God that make service truly spiritual?,strict,2026-03-13 15:22:26.921473+05:30,1,3,"1. **Context Summary:**
+   The text explains that loving God is composed of three elements: **Right Action**, **Right Intention**, and **Right Mood**. It emphasizes that service is truly spiritual when actions align with spiritual principles, are performed with compassion, and are rooted in a higher perspective derived from spirituality.
+
+2. **Answer:**
+   The three components of loving God that make service truly spiritual are:
+   - **Right Action** (acting in line with spiritual principles)
+   - **Right Intention** (serving with compassion and love)
+   - **Right Mood** (performing actions with the correct spiritual mindset)
+
+3. **Citations:**
+   - [page 145 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 148 | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.084605455,1.507525206,4.03227663,100
+51,1,"What is meant by para dukha dukhi, and how does it relate to genuine compassion?",What is meant by *para dukha dukhi* and how does it relate to the genuine compassion described in the spiritual understanding of service?,strict,2026-03-13 15:22:44.140348+05:30,1,3,"1. **Context Summary:**
+   - *Para dukha dukhi* refers to a person who **feels pain in the pain of others**—experiencing genuine empathy and suffering alongside others' distress.
+   - This concept is tied to **spirituality** and **genuine compassion**, where spiritual love for God or divine connection leads to empathy for human suffering.
+   - The text contrasts this with *para dukha sukhi*, where individuals derive pleasure from others' pain.
+   - The highest spiritual commandment (e.g., ""love thy neighbor as thyself"") is linked to developing *para dukha dukhi* through spiritual mindfulness.
+
+2. **Answer:**
+   *Para dukha dukhi* is a Sanskrit term describing someone who **feels the pain of others as their own pain**, embodying true compassion rooted in spirituality. This aligns with genuine compassion because spiritual love for God or divine connection fosters empathy for human suffering, enabling one to genuinely share in others' distress.
+
+3. **Citations:**
+   - [page 146 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
+   - [page 146 | H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.120655298,2.043937206,3.326422453,100
+52,1,how to make sambar?,how to make sambar?,strict,2026-03-13 15:23:03.972572+05:30,1,3,"1. **Context Summary:**
+   The text describes **sambar** as a **lentil-based vegetable stew** commonly served with rice dishes like **dosa or idli**. It is a beloved dish in South Indian cuisine, frequently mentioned as a staple in the author’s meals (breakfast, lunch, dinner) and shared by hosts worldwide. The context does not provide a **step-by-step recipe** but highlights its cultural significance and popularity.
 
 2. **Answer:**
    I don’t know.
 
 3. **Citations:**
-   [page 11 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.08020901679992676,1.1983757019042969,3.5028977394104004,100
-1,2,explain ikigai in detail,explain ikigai in detail,relax,2026-03-07 12:12:57.852610+05:30,1,3,"1. **Answer:**
-Ikigai is a Japanese concept that refers to **""a reason to live""** or the sense of purpose and fulfillment in life. It is linked to longer, happier lives and is considered essential for a meaningful existence.
-
-The term *ikigai* does not have a direct English translation but embodies the idea of finding alignment between what you love, what you are good at, what the world needs, and what you can be paid for. This balance helps individuals derive joy and motivation from their daily activities.
-
-The context highlights that discovering ikigai is a **journey**, not a single event. It requires self-reflection to understand what is meaningful to you and what you want to devote your time to. The process involves:
-- **What you love** (passions or interests).
-- **What you are good at** (skills or talents).
-- **What the world needs** (contributions or value you provide).
-- **What you can be paid for** (sustainability or financial viability).
-
-The book also notes that if people do what they love, they experience less stress and greater fulfillment. However, many people struggle because they are forced into roles they dislike. Ikigai encourages finding harmony between these four elements to create a fulfilling life.
-
----
-
-2. **Citations:**
-- [page 109 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]
-- [page 111 | source: H:\projects\Enterprise_document_RAG_assistant\stored_documents\book.pdf | title: *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life*]",0.11092448234558105,2.4454703330993652,4.827452659606934,100
+   [page 11 | book.pdf | *Life’s Amazing Secrets: How to Find Balance and Purpose in Your Life* – PDFDrive.com]",0.091685057,1.154827118,3.3015306,100

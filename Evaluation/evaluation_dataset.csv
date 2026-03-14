@@ -1,5 +1,5 @@
 query_id,book,question_text,ground_truth_answer,source_page_numbers,,,,,,
-1,Life's amazing secret,where does harry(hariprasad) and lalita live?,"But one only felt like
+1,Life's amazing secret,where do the hosts live?,"But one only felt like
 that at sea level, not in the cloud-bound apartment of Hariprasad and Lalita Iyer
 situated in a high-rise in elegant Worli. This area of Mumbai is what Fifth
 Avenue is to New York, or Park Lane is to London. Indeed, if there were a
@@ -8,7 +8,7 @@ price if you landed on Worli’s distinguished towers: Palais Royale or Omkar
 1973. And, here I was, a monk with hardly a rupee to my name, enjoying the
 cooling breeze from the Arabian Sea on the twenty-eighth-floor home of my
 gracious hosts.","12, 13",,,,,,Simple factual
-2,Life's amazing secret,what were harry's qualifications?,"Hariprasad took no notice of my comment and continued, ‘I remember the
+2,Life's amazing secret,what was harry's educational background?,"Hariprasad took no notice of my comment and continued, ‘I remember the
 stress of both getting into IIT Bombay and then performing well there. It was
 worth it though because the Harvard MBA programme accepted me
 immediately, given that I secured a gold medal at IIT.’",14,,,,,,Definition-based
@@ -374,3 +374,4 @@ Right Action: We must express our love through the correct action. We must behav
 Right Intention: Our intentions must be selfless. When we want something for ourselves in return for our service, such as prestige or money, our intentions become tainted. Just as distilling water multiple times makes it cleaner, continuously checking our intentions makes them purer. 
 Right Mood: We must serve in a way that is favourable for our growth. Serving because ‘we have to’ or because ‘it’s the right thing to do’ is good, but it’s not the same as serving from the depths of our hearts.","146, 147",,,,,,
 50,Life's amazing secret,"What is meant by para dukha dukhi, and how does it relate to genuine compassion?","Likewise, Jesus Christ said in the Bible, ‘The highest commandment is to love thy God with all thy soul and all thy might and all thy heart.’ He then said that because of following the highest commandment of loving God we begin to ‘love thy neighbour as thy self’. This means when we become spiritually minded and experience the love of God, we feel compassion for the pain of others. In Sanskrit it is called para dukha dukhi, one who feels pain in the pain of others. In the modern world, people sometimes become para dukha sukhi, where they take pleasure in seeing the pain of others. However, true compassion stems from spirituality",147,,,,,,
+51,Life's amazing secret,how to make sambar?,I don't know,12,,,,,,
