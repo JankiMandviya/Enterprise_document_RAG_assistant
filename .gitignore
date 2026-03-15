@@ -17,7 +17,8 @@ src/__pycache__/
 stored_documents/
 LLM_test/
 src/.env
-
+Evaluation/.env
+Evaluation/eval_venv/
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
