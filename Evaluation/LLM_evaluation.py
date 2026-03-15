@@ -1,6 +1,7 @@
 import os
 import re
 import pandas as pd
+from pathlib import Path
 from dotenv import load_dotenv
 from datasets import Dataset, Features, Value, Sequence
 from ragas import evaluate
@@ -21,10 +22,11 @@ print("Starting evaluation...")
 # -------------------------
 # Load dataset
 # -------------------------
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load the evaluation dataset from Excel
 # This file contains queries, model answers, retrieved contexts, and ground truth answers
-df = pd.read_excel("Evaluation/LLM_evaluation.xlsx")
+df = pd.read_excel(str(BASE_DIR/"Evaluation/LLM_evaluation.xlsx"))
 
 # Rename columns to match the schema expected by RAG evaluation frameworks
 # RAGAS expects: question, answer, contexts, ground_truth
@@ -102,18 +104,14 @@ embeddings = HuggingfaceEmbeddings(model_name="intfloat/e5-base-v2")
 # -------------------------
 
 load_dotenv()
-
-api_key = os.getenv("OPENAI_API_KEY")
-if api_key is None:
-    raise ValueError("OPENAI_API_KEY missing")
-
+MISTRAL_API_KEY = os.getenv("Mistral_API")
 # -------------------------
 # Initialize LLM
 # -------------------------
 
 llm = ChatOpenAI(
     model="mistral-small-latest",
-    api_key=os.getenv("MISTRAL_API_KEY"),
+    api_key=MISTRAL_API_KEY,
     base_url="https://api.mistral.ai/v1",
     temperature=0
 )

@@ -76,7 +76,7 @@ Final Answer
 | LLM             | Mistral-7B Instruct API |
 | Deployment      | Docker                  |
 | Hosting         | HuggingFace Spaces      |
-
+| Evaluation         | RAGAS (LLM as a judge : mistral-small-latest)     |
 ---
 
 # ⚙️ Installation (Local Setup)
@@ -301,6 +301,26 @@ The container automatically builds and runs the Streamlit app.
 
 # Output
 ![alt text](images/image.png)
+
+# Evaluation results:
+### Retrieval
+| Matric                       | Result              |
+| -----------------------------|---------------------|
+| Hit@3                        | 0.9038              |
+| Precision@3                  | 0.5769              | 
+| Recall@3                     | 0.9038              |
+| F1@3                         | 0.7531              |
+| MRR (Mean Reciprocal Rank)   | 0.8205              | 
+| nDCG@3                       | 0.8319              |
+| MAP (Mean Average Precision) | 0.67                |
+
+### Generation
+| Matric              | Result              |
+| --------------------|---------------------|
+| Faithfulness        | 0.96                |
+| Answer Relevancy    | 0.89                | 
+| Context Precision   | 0.83                |
+| Context Recall      | 0.82                |
 
 # Demo Video:
 https://youtu.be/3yeC--JF3lI
